@@ -175,6 +175,8 @@ module tb_pulp;
 
          JTAG     jtag();
 
+         UART     uart();
+
          QSPI     qspi_0  ();
          QSPI_CS  qspi_0_csn_0  ();
          QSPI_CS  qspi_0_csn_1  ();
@@ -187,6 +189,8 @@ module tb_pulp;
          assign w_bridge_trstn = jtag.trst;
          assign jtag.tdo       = w_bridge_tdo;
 
+         assign w_uart_tx      = uart.tx;
+         assign uart.rx        = w_uart_rx;
 
          assign w_spi_master_sdio0 = qspi_0.data_0_out;
          assign qspi_0.data_0_in = w_spi_master_sdio0;
@@ -206,6 +210,7 @@ module tb_pulp;
             tb_driver::tb_driver i_tb_driver = new;
 
             i_tb_driver.register_qspim_itf(0, qspi_0, {qspi_0_csn_0, qspi_0_csn_1});
+            i_tb_driver.register_uart_itf(0, uart);
             i_tb_driver.register_jtag_itf(0, jtag);
             i_tb_driver.register_ctrl_itf(0, ctrl);
             i_tb_driver.build_from_json(CONFIG_FILE);
@@ -235,7 +240,9 @@ module tb_pulp;
    assign s_tdo        = w_tdo;
    assign w_bridge_tdo = w_tdo;
 
-   assign w_uart_tx = w_uart_rx;
+   if (CONFIG_FILE == "NONE") begin
+      assign w_uart_tx = w_uart_rx;
+   end
    assign w_bootsel = 1'b0;
 
    /* JTAG DPI-based verification IP */
@@ -276,15 +283,17 @@ module tb_pulp;
       end
    endgenerate
 
-   /* UART receiver */
-   uart_tb_rx #(
-      .BAUD_RATE ( BAUDRATE   ),
-      .PARITY_EN ( 0          )
-   ) i_rx_mod (
-      .rx        ( w_uart_rx       ),
-      .rx_en     ( uart_tb_rx_en ),
-      .word_done (               )
-   );
+   if (CONFIG_FILE == "NONE") begin
+      /* UART receiver */
+      uart_tb_rx #(
+         .BAUD_RATE ( BAUDRATE   ),
+         .PARITY_EN ( 0          )
+      ) i_rx_mod (
+         .rx        ( w_uart_rx       ),
+         .rx_en     ( uart_tb_rx_en ),
+         .word_done (               )
+      );
+   end
 
    if (!ENABLE_DEV_DPI) begin
 
