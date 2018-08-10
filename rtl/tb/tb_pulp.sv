@@ -181,7 +181,7 @@ module tb_pulp;
          QSPI_CS  qspi_0_csn_0  ();
          QSPI_CS  qspi_0_csn_1  ();
 
-         assign s_rst_dpi_n   = ctrl.reset;
+         assign s_rst_dpi_n   = ~ctrl.reset;
 
          assign w_bridge_tck   = jtag.tck;
          assign w_bridge_tdi   = jtag.tdi;
