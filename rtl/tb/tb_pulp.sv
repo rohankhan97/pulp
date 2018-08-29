@@ -177,8 +177,7 @@ module tb_pulp;
          CPI      cpi();
 
          QSPI     qspi_0  ();
-         QSPI_CS  qspi_0_csn_0  ();
-         QSPI_CS  qspi_0_csn_1  ();
+         QSPI_CS  qspi_0_csn [0:1]  ();
 
          assign s_rst_dpi_n   = ~ctrl.reset;
 
@@ -200,8 +199,8 @@ module tb_pulp;
          assign w_spi_master_sdio3 = qspi_0.data_3_out;
          assign qspi_0.data_3_in = w_spi_master_sdio3;
          assign qspi_0.sck = w_spi_master_sck;
-         assign qspi_0_csn_0.csn = w_spi_master_csn0;
-         assign qspi_0_csn_1.csn = w_spi_master_csn1;
+         assign qspi_0_csn[0].csn = w_spi_master_csn0;
+         assign qspi_0_csn[1].csn = w_spi_master_csn1;
       
          assign w_cam_pclk = cpi.pclk;
          assign w_cam_hsync = cpi.href;
@@ -220,7 +219,12 @@ module tb_pulp;
 
             tb_driver::tb_driver i_tb_driver = new;
 
-            i_tb_driver.register_qspim_itf(0, qspi_0, {qspi_0_csn_0, qspi_0_csn_1});
+            qspi_0.data_0_out = 'bz;
+            qspi_0.data_1_out = 'bz;
+            qspi_0.data_2_out = 'bz;
+            qspi_0.data_3_out = 'bz;
+
+            i_tb_driver.register_qspim_itf(0, qspi_0, qspi_0_csn);
             i_tb_driver.register_uart_itf(0, uart);
             i_tb_driver.register_jtag_itf(0, jtag);
             i_tb_driver.register_cpi_itf(0, cpi);
