@@ -19,8 +19,8 @@
 #
 
 pulp_soc:
-  commit: master
+  commit: 42f7429fbb964b901d3dec368f0a97742248e747
   group:  pulp-platform
 pulp_cluster:
-  commit: master
+  commit: 9d9580e4355cb5dfa2961aa669f15d0aa293cf25
   group:  pulp-platform
