@@ -19,10 +19,10 @@
 #
 
 pulp_soc:
-  commit: 42f7429fbb964b901d3dec368f0a97742248e747
+  commit: 1351d1f250b67b6a9952ad70e6f65e420d8d60b4
   group:  pulp-platform
 pulp_cluster:
-  commit: 9d9580e4355cb5dfa2961aa669f15d0aa293cf25
+  commit: d5eb2acb82596620f4725669319613391128c276
   group:  pulp-platform
   
 tbtools:
