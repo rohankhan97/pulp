@@ -19,7 +19,7 @@
 #
 
 pulp_soc:
-  commit: 1351d1f250b67b6a9952ad70e6f65e420d8d60b4
+  commit: 4bf8bc69cdf1c5e5234060e576a29fe963491f87
   group:  pulp-platform
 pulp_cluster:
   commit: d5eb2acb82596620f4725669319613391128c276
