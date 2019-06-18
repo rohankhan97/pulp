@@ -112,6 +112,8 @@ module tb_pulp;
    tri                   w_spi_master_csn1;
    tri                   w_spi_master_sck;
 
+   tri                   w_sdio_data0;
+
    wire                  w_i2c0_scl;
    wire                  w_i2c0_sda;
 
@@ -179,6 +181,8 @@ module tb_pulp;
          QSPI     qspi_0  ();
          QSPI_CS  qspi_0_csn [0:1]  ();
 
+         GPIO     gpio_22();
+
          assign s_rst_dpi_n   = ~ctrl.reset;
 
          assign w_bridge_tck   = jtag.tck;
@@ -214,6 +218,8 @@ module tb_pulp;
          assign w_cam_data[6] = cpi.data[6];
          assign w_cam_data[7] = cpi.data[7];
 
+         assign w_sdio_data0  = gpio_22.data_out;
+
          initial
          begin
 
@@ -229,6 +235,7 @@ module tb_pulp;
             i_tb_driver.register_jtag_itf(0, jtag);
             i_tb_driver.register_cpi_itf(0, cpi);
             i_tb_driver.register_ctrl_itf(0, ctrl);
+            i_tb_driver.register_gpio_itf(22, gpio_22);
             i_tb_driver.build_from_json(CONFIG_FILE);
 
          end
@@ -451,7 +458,7 @@ module tb_pulp;
 
       .pad_sdio_clk       (                    ),
       .pad_sdio_cmd       (                    ),
-      .pad_sdio_data0     (                    ),
+      .pad_sdio_data0     ( w_sdio_data0       ),
       .pad_sdio_data1     (                    ),
       .pad_sdio_data2     (                    ),
       .pad_sdio_data3     (                    ),
