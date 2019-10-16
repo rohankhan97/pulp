@@ -81,13 +81,8 @@ see `ips/hwpe-stream/doc` and https://arxiv.org/abs/1612.05974.
 ## Getting Started
 
 ### Prerequisites
-<<<<<<< HEAD
-To be able to use the PULP platform, you need to have installed 
-development kit for PULP.
-=======
 To be able to use the PULPissimo platform, you need to have installed the software
 development kit for PULP/PULPissimo.
->>>>>>> integration
 
 First install the system dependencies indicated here:
 https://github.com/pulp-platform/pulp-builder/blob/master/README.md
@@ -96,12 +91,6 @@ Then execute the following commands:
 ```
 git clone https://github.com/pulp-platform/pulp-builder.git
 cd pulp-builder
-<<<<<<< HEAD
-source configs/pulp.sh
-./scripts/build-runtime
-source sdk-setup.sh
-source configs/rtl.sh
-=======
 git checkout 7bd925324fcecae2aad9875f4da45b27d8356796
 source configs/pulpissimo.sh
 ./scripts/clean
@@ -110,7 +99,6 @@ source configs/pulpissimo.sh
 source sdk-setup.sh
 source configs/rtl.sh
 cd ..
->>>>>>> integration
 ```
 
 ### Building the RTL simulation platform

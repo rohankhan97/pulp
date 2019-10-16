@@ -19,28 +19,15 @@
 #
 
 pulp_soc:
-<<<<<<< HEAD
-  commit: 09fac125bf8eee7de4bd86c3db16da22b20b3c3e
-=======
   commit: integration
   server: https://github.com
->>>>>>> integration
   group:  pulp-platform
 
 pulp_cluster:
-<<<<<<< HEAD
-  commit: d5eb2acb82596620f4725669319613391128c276
-=======
   commit: fpu_integration
   server: https://github.com
   group:  pulp-platform
 
-tbtools:
-  commit: master
-  server: https://github.com
->>>>>>> integration
-  group:  pulp-platform
-  
 tbtools:
   commit: master
   server: https://github.com
