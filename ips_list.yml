@@ -19,12 +19,12 @@
 #
 
 pulp_soc:
-  commit: 66af92bb3e0648e53de9294dfac9a988c96588f4
+  commit: 0731cb7815a547e33741b57b557f23e84d9cae38
   server: https://github.com
   group:  pulp-platform
 
 pulp_cluster:
-  commit: master
+  commit: 16323e6915208fcd419e2228a85ca88f1a8572e4
   server: https://github.com
   group:  pulp-platform
 
