@@ -19,7 +19,7 @@
 #
 
 pulp_soc:
-  commit: integration
+  commit: 66af92bb3e0648e53de9294dfac9a988c96588f4
   server: https://github.com
   group:  pulp-platform
 
