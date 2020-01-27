@@ -410,7 +410,7 @@ module tb_pulp;
    end
 
    /* I2C memory models */
-   if (USE_24FC1025_MODEL == 1) begin
+   if(USE_24FC1025_MODEL) begin
       M24FC1025 i_i2c_mem_0 (
          .A0    ( 1'b0       ),
          .A1    ( 1'b0       ),
@@ -763,7 +763,13 @@ module tb_pulp;
 
                // we have set dpc and loaded the binary, we can go now
                $display("[TB] %t - Resuming the CORE", $realtime);
-               debug_mode_if.resume_harts(s_tck, s_tms, s_trstn, s_tdi, s_tdo);
+               //debug_mode_if.resume_harts(s_tck, s_tms, s_trstn, s_tdi, s_tdo);
+
+
+               pulp_tap.init(s_tck, s_tms, s_trstn, s_tdi);
+               pulp_tap.write32(32'h10200008, 1, 32'h00000001,
+                   s_tck, s_tms, s_trstn, s_tdi, s_tdo);
+
             end
 
             if (ENABLE_DPI == 1) begin
