@@ -1,0 +1,13 @@
+#! /bin/bash
+
+# be sure to start clean
+rm -rf csrc simv*
+
+# compile/elaborate/link using values from parent script
+vcsi +vpi +acc+2 -sverilog \
+      ../src/vlab_probes.c \
+      ../src/vlab_probes_pkg.sv \
+      ../test/test.sv
+      
+# run with timing
+time ./simv

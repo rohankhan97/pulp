@@ -1,0 +1,5 @@
+Block Name,Block Description,Block Coverage,Block Backdoor,Block Component Name,Block Instance Name,Block Instance Type,Block Instance Description,Block Instance Dimension,Block Instance Backdoor,Block Instance No Reg Tests,Block Instance No Reg Access Test,Block Instance No Reg Shared Access Test,Block Instance No Reg Bit Bash Test,Block Instance No Reg HW Reset Test,Block Instance No Mem Tests,Block Instance No Mem Access Test,Block Instance No Mem Shared Access Test,Block Instance No Mem Walk Test,Project Extra Imports
+cluster_write_fifo_block,,,,,,,,,,,,,,,,,,,
+cluster_write_fifo_block,,,,cluster_write_fifo_status,status,reg,"The current fill state, error count and other status of the cluster write fifo",,%(FIELDS),,,,,,,,,,
+cluster_write_fifo_block,,,,cluster_write_fifo_ctrl,ctrl,reg,Allows flushing the various FIFOs within the module.,,%(FIELDS),,,,,,,,,,
+cluster_write_fifo_block,,,,cluster_write_fifo_error_rsp_fifo,error_rsp_fifo,reg,Read from error response FIFO. The error response FIFO contains the address of every request that was answered with an error response. Every read from this reg will pop one error item from the FIFO.,,%(FIELDS),,,,,,,,,,

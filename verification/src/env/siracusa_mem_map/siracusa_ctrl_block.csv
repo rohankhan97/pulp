@@ -1,0 +1,4 @@
+Block Name,Block Description,Block Coverage,Block Backdoor,Block Component Name,Block Instance Name,Block Instance Type,Block Instance Description,Block Instance Dimension,Block Instance Backdoor,Block Instance No Reg Tests,Block Instance No Reg Access Test,Block Instance No Reg Shared Access Test,Block Instance No Reg Bit Bash Test,Block Instance No Reg HW Reset Test,Block Instance No Mem Tests,Block Instance No Mem Access Test,Block Instance No Mem Shared Access Test,Block Instance No Mem Walk Test,Project Extra Imports
+siracusa_ctrl_block,,,,,,,,,,,,,,,,,,,
+siracusa_ctrl_block,,,,siracusa_ctrl_pad_dbg_mode_en_0,pad_dbg_mode_en_0,reg,Enable the corresponding GPIO pads debug functionality. ,,%(FIELDS),,,,,,,,,,
+siracusa_ctrl_block,,,,siracusa_ctrl_pad_dbg_mode_en_1,pad_dbg_mode_en_1,reg,Enable the corresponding GPIO pads debug functionality. ,,%(FIELDS),,,,,,,,,,

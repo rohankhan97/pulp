@@ -1,0 +1,59 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved,Field Backdoor
+weight_memory_config_cfg,Change settings for virtual memory mode of the weight memory,0,32,,0,,,,,,,,,
+weight_memory_config_cfg,,,,,,prio_mode,Change the priority mode for arbitration betweeen cluster and accelerator access,0,2,RW,0,0,,u_cfg_prio_mode.q
+weight_memory_config_cfg,,,,,,vmm_en,Enable weight memory virtual memory mode.,2,1,RW,0,0,,u_cfg_vmm_en.q
+weight_memory_config_vmm_mram_page_idx,Index of the currently stored page in MRAM.,4,32,,0,,,,,,,,,
+weight_memory_config_vmm_mram_page_idx,,,,,,vmm_mram_page_idx,,0,10,RW,,0,,u_vmm_mram_page_idx.q
+weight_memory_config_vmm_sram_page_idx,Index of the currently stored page in SRAM.,8,32,,0,,,,,,,,,
+weight_memory_config_vmm_sram_page_idx,,,,,,vmm_sram_page_idx,,0,10,RW,,0,,u_vmm_sram_page_idx.q
+weight_memory_config_vmm_status,Status of virtual memory mode.,12,32,,0,,,,,,,,,
+weight_memory_config_vmm_status,,,,,,vmm_pf_idx,Index of the page that caused a page fault. Only valid if VMM_PF_STATUS == 1,0,10,RO,,1,,u_vmm_status_vmm_pf_idx.qs
+weight_memory_config_vmm_status,,,,,,vmm_pf_status,Indicates if there is a pending page fault. Clear the page fault by writing the right page to either MRAM or SRAM and updating the VMM_<XXX>_PAGE_IDX register.,16,1,RO,,1,,u_vmm_status_vmm_pf_status.qs
+weight_memory_config_mram_clk_div,"Change the clock divider settings of the MRAM banks. The MRAMs are
+driven with SoC Clock divided by CLK_DIV_CFG*2 (thus even division only).
+A value of zero bypasses the divider thus directly driving MRAM with SoC clock.",16,32,,0,,,,,,,,,
+weight_memory_config_mram_clk_div,,,,,,mram_clk_div,,0,4,RW,,0,,u_mram_clk_div.q
+weight_memory_config_mram_bank_pwr_0,Change the power state of the individual MRAM banks,20,32,,1,,,,,,,,,
+weight_memory_config_mram_bank_pwr_0,,,,,,pwr_on_0,Initiate power on/off cycling sequence,0,1,RW,1,0,,u_mram_bank_pwr_0_pwr_on_0.q
+weight_memory_config_mram_bank_pwr_0,,,,,,sleep_en_0,Initiate lightsleep/wakeup sequence,1,1,RW,0,0,,u_mram_bank_pwr_0_sleep_en_0.q
+weight_memory_config_mram_bank_pwr_1,Change the power state of the individual MRAM banks,24,32,,1,,,,,,,,,
+weight_memory_config_mram_bank_pwr_1,,,,,,pwr_on_1,For MRAM_BANK_PWR1,0,1,RW,1,0,,u_mram_bank_pwr_1_pwr_on_1.q
+weight_memory_config_mram_bank_pwr_1,,,,,,sleep_en_1,For MRAM_BANK_PWR1,1,1,RW,0,0,,u_mram_bank_pwr_1_sleep_en_1.q
+weight_memory_config_mram_bank_pwr_2,Change the power state of the individual MRAM banks,28,32,,1,,,,,,,,,
+weight_memory_config_mram_bank_pwr_2,,,,,,pwr_on_2,For MRAM_BANK_PWR2,0,1,RW,1,0,,u_mram_bank_pwr_2_pwr_on_2.q
+weight_memory_config_mram_bank_pwr_2,,,,,,sleep_en_2,For MRAM_BANK_PWR2,1,1,RW,0,0,,u_mram_bank_pwr_2_sleep_en_2.q
+weight_memory_config_mram_bank_pwr_3,Change the power state of the individual MRAM banks,32,32,,1,,,,,,,,,
+weight_memory_config_mram_bank_pwr_3,,,,,,pwr_on_3,For MRAM_BANK_PWR3,0,1,RW,1,0,,u_mram_bank_pwr_3_pwr_on_3.q
+weight_memory_config_mram_bank_pwr_3,,,,,,sleep_en_3,For MRAM_BANK_PWR3,1,1,RW,0,0,,u_mram_bank_pwr_3_sleep_en_3.q
+weight_memory_config_mram_bank_status_0,Change the power state of the individual MRAM banks,36,32,,0,,,,,,,,,
+weight_memory_config_mram_bank_status_0,,,,,,status_cut0_0,Initiate power on/off cycling sequence,0,4,RO,0,1,,u_mram_bank_status_0_status_cut0_0.qs
+weight_memory_config_mram_bank_status_0,,,,,,status_cut1_0,Initiate lightsleep/wakeup sequence,4,4,RO,0,1,,u_mram_bank_status_0_status_cut1_0.qs
+weight_memory_config_mram_bank_status_1,Change the power state of the individual MRAM banks,40,32,,0,,,,,,,,,
+weight_memory_config_mram_bank_status_1,,,,,,status_cut0_1,For MRAM_BANK_STATUS1,0,4,RO,0,1,,u_mram_bank_status_1_status_cut0_1.qs
+weight_memory_config_mram_bank_status_1,,,,,,status_cut1_1,For MRAM_BANK_STATUS1,4,4,RO,0,1,,u_mram_bank_status_1_status_cut1_1.qs
+weight_memory_config_mram_bank_status_2,Change the power state of the individual MRAM banks,44,32,,0,,,,,,,,,
+weight_memory_config_mram_bank_status_2,,,,,,status_cut0_2,For MRAM_BANK_STATUS2,0,4,RO,0,1,,u_mram_bank_status_2_status_cut0_2.qs
+weight_memory_config_mram_bank_status_2,,,,,,status_cut1_2,For MRAM_BANK_STATUS2,4,4,RO,0,1,,u_mram_bank_status_2_status_cut1_2.qs
+weight_memory_config_mram_bank_status_3,Change the power state of the individual MRAM banks,48,32,,0,,,,,,,,,
+weight_memory_config_mram_bank_status_3,,,,,,status_cut0_3,For MRAM_BANK_STATUS3,0,4,RO,0,1,,u_mram_bank_status_3_status_cut0_3.qs
+weight_memory_config_mram_bank_status_3,,,,,,status_cut1_3,For MRAM_BANK_STATUS3,4,4,RO,0,1,,u_mram_bank_status_3_status_cut1_3.qs
+weight_memory_config_mram_bank_seq_cfga_0,Change the power sequencing durations,52,32,,163840005,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfga_0,,,,,,trst_dur_0,Number of cycles to wait between power_on and rst_b deassertion,0,16,RW,5,0,,u_mram_bank_seq_cfga_0_trst_dur_0.q
+weight_memory_config_mram_bank_seq_cfga_0,,,,,,ds_dur_0,Number of cycles to wait between rst_b deassertion and start of normal operation,16,16,RW,2500,0,,u_mram_bank_seq_cfga_0_ds_dur_0.q
+weight_memory_config_mram_bank_seq_cfga_1,Change the power sequencing durations,56,32,,163840005,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfga_1,,,,,,trst_dur_1,For MRAM_BANK_SEQ_CFGA1,0,16,RW,5,0,,u_mram_bank_seq_cfga_1_trst_dur_1.q
+weight_memory_config_mram_bank_seq_cfga_1,,,,,,ds_dur_1,For MRAM_BANK_SEQ_CFGA1,16,16,RW,2500,0,,u_mram_bank_seq_cfga_1_ds_dur_1.q
+weight_memory_config_mram_bank_seq_cfga_2,Change the power sequencing durations,60,32,,163840005,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfga_2,,,,,,trst_dur_2,For MRAM_BANK_SEQ_CFGA2,0,16,RW,5,0,,u_mram_bank_seq_cfga_2_trst_dur_2.q
+weight_memory_config_mram_bank_seq_cfga_2,,,,,,ds_dur_2,For MRAM_BANK_SEQ_CFGA2,16,16,RW,2500,0,,u_mram_bank_seq_cfga_2_ds_dur_2.q
+weight_memory_config_mram_bank_seq_cfga_3,Change the power sequencing durations,64,32,,163840005,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfga_3,,,,,,trst_dur_3,For MRAM_BANK_SEQ_CFGA3,0,16,RW,5,0,,u_mram_bank_seq_cfga_3_trst_dur_3.q
+weight_memory_config_mram_bank_seq_cfga_3,,,,,,ds_dur_3,For MRAM_BANK_SEQ_CFGA3,16,16,RW,2500,0,,u_mram_bank_seq_cfga_3_ds_dur_3.q
+weight_memory_config_mram_bank_seq_cfgb_0,Change the power sequencing durations,68,32,,50,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfgb_0,,,,,,ls_dur_0,Number of cycles to wait between ls deassertion and start of normal operation,0,16,RW,50,0,,u_mram_bank_seq_cfgb_0.q
+weight_memory_config_mram_bank_seq_cfgb_1,Change the power sequencing durations,72,32,,50,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfgb_1,,,,,,ls_dur_1,For MRAM_BANK_SEQ_CFGB1,0,16,RW,50,0,,u_mram_bank_seq_cfgb_1.q
+weight_memory_config_mram_bank_seq_cfgb_2,Change the power sequencing durations,76,32,,50,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfgb_2,,,,,,ls_dur_2,For MRAM_BANK_SEQ_CFGB2,0,16,RW,50,0,,u_mram_bank_seq_cfgb_2.q
+weight_memory_config_mram_bank_seq_cfgb_3,Change the power sequencing durations,80,32,,50,,,,,,,,,
+weight_memory_config_mram_bank_seq_cfgb_3,,,,,,ls_dur_3,For MRAM_BANK_SEQ_CFGB3,0,16,RW,50,0,,u_mram_bank_seq_cfgb_3.q

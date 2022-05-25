@@ -1,0 +1,6 @@
+Block Name,BlockMap Name,BlockMap Description,BlockMap is default,BlockMap Instance Name,BlockMap Instance Address,BlockMap Instance Access,BlockMap Address Offset
+pll_config_block,pll_config_map,Default Map,True,,,,
+pll_config_block,pll_config_map,,,status,0,,
+pll_config_block,pll_config_map,,,cfg1,4,,
+pll_config_block,pll_config_map,,,cfg2,8,,
+pll_config_block,pll_config_map,,,cfg3,12,,

@@ -1,0 +1,948 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved,Field Backdoor
+gpio_info,Info register that contains information about this peripheral.,0,32,,1024,,,,,,,,,
+gpio_info,,,,,,gpio_cnt,Contains the number of GPIOs controlled by this peripheral.,0,10,RO,,1,,u_info_gpio_cnt.qs
+gpio_info,,,,,,version,The version number of the IPs.,10,10,RO,1,1,,u_info_version.qs
+gpio_cfg,Global configuration register for the peripheral,4,32,,0,,,,,,,,,
+gpio_cfg,,,,,,intrpt_mode,"If 1, keep the interrupt line asserted until all
+interrupts are cleared. If 0, generate one cycle wide pulse for every interrupt.",0,1,RW,0,0,,u_cfg_intrpt_mode.q
+gpio_cfg,,,,,,reserved, Reserved for future use,1,1,RW,,0,,u_cfg_reserved.q
+gpio_gpio_mode_0,Set the IO Mode of the GPIO.,8,32,,0,,,,,,,,,
+gpio_gpio_mode_0,,,,,,mode_0,Change the IO  mode of the GPIO.,0,2,RW,0,0,,u_gpio_mode_0_mode_0.q
+gpio_gpio_mode_0,,,,,,mode_1,Change the IO  mode of the GPIO.,2,2,RW,0,0,,u_gpio_mode_0_mode_1.q
+gpio_gpio_mode_0,,,,,,mode_2,Change the IO  mode of the GPIO.,4,2,RW,0,0,,u_gpio_mode_0_mode_2.q
+gpio_gpio_mode_0,,,,,,mode_3,Change the IO  mode of the GPIO.,6,2,RW,0,0,,u_gpio_mode_0_mode_3.q
+gpio_gpio_mode_0,,,,,,mode_4,Change the IO  mode of the GPIO.,8,2,RW,0,0,,u_gpio_mode_0_mode_4.q
+gpio_gpio_mode_0,,,,,,mode_5,Change the IO  mode of the GPIO.,10,2,RW,0,0,,u_gpio_mode_0_mode_5.q
+gpio_gpio_mode_0,,,,,,mode_6,Change the IO  mode of the GPIO.,12,2,RW,0,0,,u_gpio_mode_0_mode_6.q
+gpio_gpio_mode_0,,,,,,mode_7,Change the IO  mode of the GPIO.,14,2,RW,0,0,,u_gpio_mode_0_mode_7.q
+gpio_gpio_mode_0,,,,,,mode_8,Change the IO  mode of the GPIO.,16,2,RW,0,0,,u_gpio_mode_0_mode_8.q
+gpio_gpio_mode_0,,,,,,mode_9,Change the IO  mode of the GPIO.,18,2,RW,0,0,,u_gpio_mode_0_mode_9.q
+gpio_gpio_mode_0,,,,,,mode_10,Change the IO  mode of the GPIO.,20,2,RW,0,0,,u_gpio_mode_0_mode_10.q
+gpio_gpio_mode_0,,,,,,mode_11,Change the IO  mode of the GPIO.,22,2,RW,0,0,,u_gpio_mode_0_mode_11.q
+gpio_gpio_mode_0,,,,,,mode_12,Change the IO  mode of the GPIO.,24,2,RW,0,0,,u_gpio_mode_0_mode_12.q
+gpio_gpio_mode_0,,,,,,mode_13,Change the IO  mode of the GPIO.,26,2,RW,0,0,,u_gpio_mode_0_mode_13.q
+gpio_gpio_mode_0,,,,,,mode_14,Change the IO  mode of the GPIO.,28,2,RW,0,0,,u_gpio_mode_0_mode_14.q
+gpio_gpio_mode_0,,,,,,mode_15,Change the IO  mode of the GPIO.,30,2,RW,0,0,,u_gpio_mode_0_mode_15.q
+gpio_gpio_mode_1,Set the IO Mode of the GPIO.,12,32,,0,,,,,,,,,
+gpio_gpio_mode_1,,,,,,mode_16,For GPIO_MODE1,0,2,RW,0,0,,u_gpio_mode_1_mode_16.q
+gpio_gpio_mode_1,,,,,,mode_17,For GPIO_MODE1,2,2,RW,0,0,,u_gpio_mode_1_mode_17.q
+gpio_gpio_mode_1,,,,,,mode_18,For GPIO_MODE1,4,2,RW,0,0,,u_gpio_mode_1_mode_18.q
+gpio_gpio_mode_1,,,,,,mode_19,For GPIO_MODE1,6,2,RW,0,0,,u_gpio_mode_1_mode_19.q
+gpio_gpio_mode_1,,,,,,mode_20,For GPIO_MODE1,8,2,RW,0,0,,u_gpio_mode_1_mode_20.q
+gpio_gpio_mode_1,,,,,,mode_21,For GPIO_MODE1,10,2,RW,0,0,,u_gpio_mode_1_mode_21.q
+gpio_gpio_mode_1,,,,,,mode_22,For GPIO_MODE1,12,2,RW,0,0,,u_gpio_mode_1_mode_22.q
+gpio_gpio_mode_1,,,,,,mode_23,For GPIO_MODE1,14,2,RW,0,0,,u_gpio_mode_1_mode_23.q
+gpio_gpio_mode_1,,,,,,mode_24,For GPIO_MODE1,16,2,RW,0,0,,u_gpio_mode_1_mode_24.q
+gpio_gpio_mode_1,,,,,,mode_25,For GPIO_MODE1,18,2,RW,0,0,,u_gpio_mode_1_mode_25.q
+gpio_gpio_mode_1,,,,,,mode_26,For GPIO_MODE1,20,2,RW,0,0,,u_gpio_mode_1_mode_26.q
+gpio_gpio_mode_1,,,,,,mode_27,For GPIO_MODE1,22,2,RW,0,0,,u_gpio_mode_1_mode_27.q
+gpio_gpio_mode_1,,,,,,mode_28,For GPIO_MODE1,24,2,RW,0,0,,u_gpio_mode_1_mode_28.q
+gpio_gpio_mode_1,,,,,,mode_29,For GPIO_MODE1,26,2,RW,0,0,,u_gpio_mode_1_mode_29.q
+gpio_gpio_mode_1,,,,,,mode_30,For GPIO_MODE1,28,2,RW,0,0,,u_gpio_mode_1_mode_30.q
+gpio_gpio_mode_1,,,,,,mode_31,For GPIO_MODE1,30,2,RW,0,0,,u_gpio_mode_1_mode_31.q
+gpio_gpio_mode_2,Set the IO Mode of the GPIO.,16,32,,0,,,,,,,,,
+gpio_gpio_mode_2,,,,,,mode_32,For GPIO_MODE2,0,2,RW,0,0,,u_gpio_mode_2_mode_32.q
+gpio_gpio_mode_2,,,,,,mode_33,For GPIO_MODE2,2,2,RW,0,0,,u_gpio_mode_2_mode_33.q
+gpio_gpio_mode_2,,,,,,mode_34,For GPIO_MODE2,4,2,RW,0,0,,u_gpio_mode_2_mode_34.q
+gpio_gpio_mode_2,,,,,,mode_35,For GPIO_MODE2,6,2,RW,0,0,,u_gpio_mode_2_mode_35.q
+gpio_gpio_mode_2,,,,,,mode_36,For GPIO_MODE2,8,2,RW,0,0,,u_gpio_mode_2_mode_36.q
+gpio_gpio_mode_2,,,,,,mode_37,For GPIO_MODE2,10,2,RW,0,0,,u_gpio_mode_2_mode_37.q
+gpio_gpio_mode_2,,,,,,mode_38,For GPIO_MODE2,12,2,RW,0,0,,u_gpio_mode_2_mode_38.q
+gpio_gpio_mode_2,,,,,,mode_39,For GPIO_MODE2,14,2,RW,0,0,,u_gpio_mode_2_mode_39.q
+gpio_gpio_mode_2,,,,,,mode_40,For GPIO_MODE2,16,2,RW,0,0,,u_gpio_mode_2_mode_40.q
+gpio_gpio_mode_2,,,,,,mode_41,For GPIO_MODE2,18,2,RW,0,0,,u_gpio_mode_2_mode_41.q
+gpio_gpio_mode_2,,,,,,mode_42,For GPIO_MODE2,20,2,RW,0,0,,u_gpio_mode_2_mode_42.q
+gpio_gpio_mode_2,,,,,,mode_43,For GPIO_MODE2,22,2,RW,0,0,,u_gpio_mode_2_mode_43.q
+gpio_gpio_mode_2,,,,,,mode_44,For GPIO_MODE2,24,2,RW,0,0,,u_gpio_mode_2_mode_44.q
+gpio_gpio_mode_2,,,,,,mode_45,For GPIO_MODE2,26,2,RW,0,0,,u_gpio_mode_2_mode_45.q
+gpio_gpio_mode_2,,,,,,mode_46,For GPIO_MODE2,28,2,RW,0,0,,u_gpio_mode_2_mode_46.q
+gpio_gpio_mode_2,,,,,,mode_47,For GPIO_MODE2,30,2,RW,0,0,,u_gpio_mode_2_mode_47.q
+gpio_gpio_mode_3,Set the IO Mode of the GPIO.,20,32,,0,,,,,,,,,
+gpio_gpio_mode_3,,,,,,mode_48,For GPIO_MODE3,0,2,RW,0,0,,u_gpio_mode_3_mode_48.q
+gpio_gpio_mode_3,,,,,,mode_49,For GPIO_MODE3,2,2,RW,0,0,,u_gpio_mode_3_mode_49.q
+gpio_gpio_mode_3,,,,,,mode_50,For GPIO_MODE3,4,2,RW,0,0,,u_gpio_mode_3_mode_50.q
+gpio_gpio_mode_3,,,,,,mode_51,For GPIO_MODE3,6,2,RW,0,0,,u_gpio_mode_3_mode_51.q
+gpio_gpio_mode_3,,,,,,mode_52,For GPIO_MODE3,8,2,RW,0,0,,u_gpio_mode_3_mode_52.q
+gpio_gpio_mode_3,,,,,,mode_53,For GPIO_MODE3,10,2,RW,0,0,,u_gpio_mode_3_mode_53.q
+gpio_gpio_mode_3,,,,,,mode_54,For GPIO_MODE3,12,2,RW,0,0,,u_gpio_mode_3_mode_54.q
+gpio_gpio_mode_3,,,,,,mode_55,For GPIO_MODE3,14,2,RW,0,0,,u_gpio_mode_3_mode_55.q
+gpio_gpio_en_0,Enable sampling on the corresponding GPIO,128,32,,0,,,,,,,,,
+gpio_gpio_en_0,,,,,,gpio_en_0,,0,1,RW,,0,,u_gpio_en_0_gpio_en_0.q
+gpio_gpio_en_0,,,,,,gpio_en_1,,1,1,RW,,0,,u_gpio_en_0_gpio_en_1.q
+gpio_gpio_en_0,,,,,,gpio_en_2,,2,1,RW,,0,,u_gpio_en_0_gpio_en_2.q
+gpio_gpio_en_0,,,,,,gpio_en_3,,3,1,RW,,0,,u_gpio_en_0_gpio_en_3.q
+gpio_gpio_en_0,,,,,,gpio_en_4,,4,1,RW,,0,,u_gpio_en_0_gpio_en_4.q
+gpio_gpio_en_0,,,,,,gpio_en_5,,5,1,RW,,0,,u_gpio_en_0_gpio_en_5.q
+gpio_gpio_en_0,,,,,,gpio_en_6,,6,1,RW,,0,,u_gpio_en_0_gpio_en_6.q
+gpio_gpio_en_0,,,,,,gpio_en_7,,7,1,RW,,0,,u_gpio_en_0_gpio_en_7.q
+gpio_gpio_en_0,,,,,,gpio_en_8,,8,1,RW,,0,,u_gpio_en_0_gpio_en_8.q
+gpio_gpio_en_0,,,,,,gpio_en_9,,9,1,RW,,0,,u_gpio_en_0_gpio_en_9.q
+gpio_gpio_en_0,,,,,,gpio_en_10,,10,1,RW,,0,,u_gpio_en_0_gpio_en_10.q
+gpio_gpio_en_0,,,,,,gpio_en_11,,11,1,RW,,0,,u_gpio_en_0_gpio_en_11.q
+gpio_gpio_en_0,,,,,,gpio_en_12,,12,1,RW,,0,,u_gpio_en_0_gpio_en_12.q
+gpio_gpio_en_0,,,,,,gpio_en_13,,13,1,RW,,0,,u_gpio_en_0_gpio_en_13.q
+gpio_gpio_en_0,,,,,,gpio_en_14,,14,1,RW,,0,,u_gpio_en_0_gpio_en_14.q
+gpio_gpio_en_0,,,,,,gpio_en_15,,15,1,RW,,0,,u_gpio_en_0_gpio_en_15.q
+gpio_gpio_en_0,,,,,,gpio_en_16,,16,1,RW,,0,,u_gpio_en_0_gpio_en_16.q
+gpio_gpio_en_0,,,,,,gpio_en_17,,17,1,RW,,0,,u_gpio_en_0_gpio_en_17.q
+gpio_gpio_en_0,,,,,,gpio_en_18,,18,1,RW,,0,,u_gpio_en_0_gpio_en_18.q
+gpio_gpio_en_0,,,,,,gpio_en_19,,19,1,RW,,0,,u_gpio_en_0_gpio_en_19.q
+gpio_gpio_en_0,,,,,,gpio_en_20,,20,1,RW,,0,,u_gpio_en_0_gpio_en_20.q
+gpio_gpio_en_0,,,,,,gpio_en_21,,21,1,RW,,0,,u_gpio_en_0_gpio_en_21.q
+gpio_gpio_en_0,,,,,,gpio_en_22,,22,1,RW,,0,,u_gpio_en_0_gpio_en_22.q
+gpio_gpio_en_0,,,,,,gpio_en_23,,23,1,RW,,0,,u_gpio_en_0_gpio_en_23.q
+gpio_gpio_en_0,,,,,,gpio_en_24,,24,1,RW,,0,,u_gpio_en_0_gpio_en_24.q
+gpio_gpio_en_0,,,,,,gpio_en_25,,25,1,RW,,0,,u_gpio_en_0_gpio_en_25.q
+gpio_gpio_en_0,,,,,,gpio_en_26,,26,1,RW,,0,,u_gpio_en_0_gpio_en_26.q
+gpio_gpio_en_0,,,,,,gpio_en_27,,27,1,RW,,0,,u_gpio_en_0_gpio_en_27.q
+gpio_gpio_en_0,,,,,,gpio_en_28,,28,1,RW,,0,,u_gpio_en_0_gpio_en_28.q
+gpio_gpio_en_0,,,,,,gpio_en_29,,29,1,RW,,0,,u_gpio_en_0_gpio_en_29.q
+gpio_gpio_en_0,,,,,,gpio_en_30,,30,1,RW,,0,,u_gpio_en_0_gpio_en_30.q
+gpio_gpio_en_0,,,,,,gpio_en_31,,31,1,RW,,0,,u_gpio_en_0_gpio_en_31.q
+gpio_gpio_en_1,Enable sampling on the corresponding GPIO,132,32,,0,,,,,,,,,
+gpio_gpio_en_1,,,,,,gpio_en_32,For GPIO_EN1,0,1,RW,,0,,u_gpio_en_1_gpio_en_32.q
+gpio_gpio_en_1,,,,,,gpio_en_33,For GPIO_EN1,1,1,RW,,0,,u_gpio_en_1_gpio_en_33.q
+gpio_gpio_en_1,,,,,,gpio_en_34,For GPIO_EN1,2,1,RW,,0,,u_gpio_en_1_gpio_en_34.q
+gpio_gpio_en_1,,,,,,gpio_en_35,For GPIO_EN1,3,1,RW,,0,,u_gpio_en_1_gpio_en_35.q
+gpio_gpio_en_1,,,,,,gpio_en_36,For GPIO_EN1,4,1,RW,,0,,u_gpio_en_1_gpio_en_36.q
+gpio_gpio_en_1,,,,,,gpio_en_37,For GPIO_EN1,5,1,RW,,0,,u_gpio_en_1_gpio_en_37.q
+gpio_gpio_en_1,,,,,,gpio_en_38,For GPIO_EN1,6,1,RW,,0,,u_gpio_en_1_gpio_en_38.q
+gpio_gpio_en_1,,,,,,gpio_en_39,For GPIO_EN1,7,1,RW,,0,,u_gpio_en_1_gpio_en_39.q
+gpio_gpio_en_1,,,,,,gpio_en_40,For GPIO_EN1,8,1,RW,,0,,u_gpio_en_1_gpio_en_40.q
+gpio_gpio_en_1,,,,,,gpio_en_41,For GPIO_EN1,9,1,RW,,0,,u_gpio_en_1_gpio_en_41.q
+gpio_gpio_en_1,,,,,,gpio_en_42,For GPIO_EN1,10,1,RW,,0,,u_gpio_en_1_gpio_en_42.q
+gpio_gpio_en_1,,,,,,gpio_en_43,For GPIO_EN1,11,1,RW,,0,,u_gpio_en_1_gpio_en_43.q
+gpio_gpio_en_1,,,,,,gpio_en_44,For GPIO_EN1,12,1,RW,,0,,u_gpio_en_1_gpio_en_44.q
+gpio_gpio_en_1,,,,,,gpio_en_45,For GPIO_EN1,13,1,RW,,0,,u_gpio_en_1_gpio_en_45.q
+gpio_gpio_en_1,,,,,,gpio_en_46,For GPIO_EN1,14,1,RW,,0,,u_gpio_en_1_gpio_en_46.q
+gpio_gpio_en_1,,,,,,gpio_en_47,For GPIO_EN1,15,1,RW,,0,,u_gpio_en_1_gpio_en_47.q
+gpio_gpio_en_1,,,,,,gpio_en_48,For GPIO_EN1,16,1,RW,,0,,u_gpio_en_1_gpio_en_48.q
+gpio_gpio_en_1,,,,,,gpio_en_49,For GPIO_EN1,17,1,RW,,0,,u_gpio_en_1_gpio_en_49.q
+gpio_gpio_en_1,,,,,,gpio_en_50,For GPIO_EN1,18,1,RW,,0,,u_gpio_en_1_gpio_en_50.q
+gpio_gpio_en_1,,,,,,gpio_en_51,For GPIO_EN1,19,1,RW,,0,,u_gpio_en_1_gpio_en_51.q
+gpio_gpio_en_1,,,,,,gpio_en_52,For GPIO_EN1,20,1,RW,,0,,u_gpio_en_1_gpio_en_52.q
+gpio_gpio_en_1,,,,,,gpio_en_53,For GPIO_EN1,21,1,RW,,0,,u_gpio_en_1_gpio_en_53.q
+gpio_gpio_en_1,,,,,,gpio_en_54,For GPIO_EN1,22,1,RW,,0,,u_gpio_en_1_gpio_en_54.q
+gpio_gpio_en_1,,,,,,gpio_en_55,For GPIO_EN1,23,1,RW,,0,,u_gpio_en_1_gpio_en_55.q
+gpio_gpio_in_0,Read the current input values of all GPIOs.,256,32,,0,,,,,,,,,
+gpio_gpio_in_0,,,,,,gpio_in_0,,0,1,RO,,1,,u_gpio_in_0_gpio_in_0.qs
+gpio_gpio_in_0,,,,,,gpio_in_1,,1,1,RO,,1,,u_gpio_in_0_gpio_in_1.qs
+gpio_gpio_in_0,,,,,,gpio_in_2,,2,1,RO,,1,,u_gpio_in_0_gpio_in_2.qs
+gpio_gpio_in_0,,,,,,gpio_in_3,,3,1,RO,,1,,u_gpio_in_0_gpio_in_3.qs
+gpio_gpio_in_0,,,,,,gpio_in_4,,4,1,RO,,1,,u_gpio_in_0_gpio_in_4.qs
+gpio_gpio_in_0,,,,,,gpio_in_5,,5,1,RO,,1,,u_gpio_in_0_gpio_in_5.qs
+gpio_gpio_in_0,,,,,,gpio_in_6,,6,1,RO,,1,,u_gpio_in_0_gpio_in_6.qs
+gpio_gpio_in_0,,,,,,gpio_in_7,,7,1,RO,,1,,u_gpio_in_0_gpio_in_7.qs
+gpio_gpio_in_0,,,,,,gpio_in_8,,8,1,RO,,1,,u_gpio_in_0_gpio_in_8.qs
+gpio_gpio_in_0,,,,,,gpio_in_9,,9,1,RO,,1,,u_gpio_in_0_gpio_in_9.qs
+gpio_gpio_in_0,,,,,,gpio_in_10,,10,1,RO,,1,,u_gpio_in_0_gpio_in_10.qs
+gpio_gpio_in_0,,,,,,gpio_in_11,,11,1,RO,,1,,u_gpio_in_0_gpio_in_11.qs
+gpio_gpio_in_0,,,,,,gpio_in_12,,12,1,RO,,1,,u_gpio_in_0_gpio_in_12.qs
+gpio_gpio_in_0,,,,,,gpio_in_13,,13,1,RO,,1,,u_gpio_in_0_gpio_in_13.qs
+gpio_gpio_in_0,,,,,,gpio_in_14,,14,1,RO,,1,,u_gpio_in_0_gpio_in_14.qs
+gpio_gpio_in_0,,,,,,gpio_in_15,,15,1,RO,,1,,u_gpio_in_0_gpio_in_15.qs
+gpio_gpio_in_0,,,,,,gpio_in_16,,16,1,RO,,1,,u_gpio_in_0_gpio_in_16.qs
+gpio_gpio_in_0,,,,,,gpio_in_17,,17,1,RO,,1,,u_gpio_in_0_gpio_in_17.qs
+gpio_gpio_in_0,,,,,,gpio_in_18,,18,1,RO,,1,,u_gpio_in_0_gpio_in_18.qs
+gpio_gpio_in_0,,,,,,gpio_in_19,,19,1,RO,,1,,u_gpio_in_0_gpio_in_19.qs
+gpio_gpio_in_0,,,,,,gpio_in_20,,20,1,RO,,1,,u_gpio_in_0_gpio_in_20.qs
+gpio_gpio_in_0,,,,,,gpio_in_21,,21,1,RO,,1,,u_gpio_in_0_gpio_in_21.qs
+gpio_gpio_in_0,,,,,,gpio_in_22,,22,1,RO,,1,,u_gpio_in_0_gpio_in_22.qs
+gpio_gpio_in_0,,,,,,gpio_in_23,,23,1,RO,,1,,u_gpio_in_0_gpio_in_23.qs
+gpio_gpio_in_0,,,,,,gpio_in_24,,24,1,RO,,1,,u_gpio_in_0_gpio_in_24.qs
+gpio_gpio_in_0,,,,,,gpio_in_25,,25,1,RO,,1,,u_gpio_in_0_gpio_in_25.qs
+gpio_gpio_in_0,,,,,,gpio_in_26,,26,1,RO,,1,,u_gpio_in_0_gpio_in_26.qs
+gpio_gpio_in_0,,,,,,gpio_in_27,,27,1,RO,,1,,u_gpio_in_0_gpio_in_27.qs
+gpio_gpio_in_0,,,,,,gpio_in_28,,28,1,RO,,1,,u_gpio_in_0_gpio_in_28.qs
+gpio_gpio_in_0,,,,,,gpio_in_29,,29,1,RO,,1,,u_gpio_in_0_gpio_in_29.qs
+gpio_gpio_in_0,,,,,,gpio_in_30,,30,1,RO,,1,,u_gpio_in_0_gpio_in_30.qs
+gpio_gpio_in_0,,,,,,gpio_in_31,,31,1,RO,,1,,u_gpio_in_0_gpio_in_31.qs
+gpio_gpio_in_1,Read the current input values of all GPIOs.,260,32,,0,,,,,,,,,
+gpio_gpio_in_1,,,,,,gpio_in_32,For GPIO_IN1,0,1,RO,,1,,u_gpio_in_1_gpio_in_32.qs
+gpio_gpio_in_1,,,,,,gpio_in_33,For GPIO_IN1,1,1,RO,,1,,u_gpio_in_1_gpio_in_33.qs
+gpio_gpio_in_1,,,,,,gpio_in_34,For GPIO_IN1,2,1,RO,,1,,u_gpio_in_1_gpio_in_34.qs
+gpio_gpio_in_1,,,,,,gpio_in_35,For GPIO_IN1,3,1,RO,,1,,u_gpio_in_1_gpio_in_35.qs
+gpio_gpio_in_1,,,,,,gpio_in_36,For GPIO_IN1,4,1,RO,,1,,u_gpio_in_1_gpio_in_36.qs
+gpio_gpio_in_1,,,,,,gpio_in_37,For GPIO_IN1,5,1,RO,,1,,u_gpio_in_1_gpio_in_37.qs
+gpio_gpio_in_1,,,,,,gpio_in_38,For GPIO_IN1,6,1,RO,,1,,u_gpio_in_1_gpio_in_38.qs
+gpio_gpio_in_1,,,,,,gpio_in_39,For GPIO_IN1,7,1,RO,,1,,u_gpio_in_1_gpio_in_39.qs
+gpio_gpio_in_1,,,,,,gpio_in_40,For GPIO_IN1,8,1,RO,,1,,u_gpio_in_1_gpio_in_40.qs
+gpio_gpio_in_1,,,,,,gpio_in_41,For GPIO_IN1,9,1,RO,,1,,u_gpio_in_1_gpio_in_41.qs
+gpio_gpio_in_1,,,,,,gpio_in_42,For GPIO_IN1,10,1,RO,,1,,u_gpio_in_1_gpio_in_42.qs
+gpio_gpio_in_1,,,,,,gpio_in_43,For GPIO_IN1,11,1,RO,,1,,u_gpio_in_1_gpio_in_43.qs
+gpio_gpio_in_1,,,,,,gpio_in_44,For GPIO_IN1,12,1,RO,,1,,u_gpio_in_1_gpio_in_44.qs
+gpio_gpio_in_1,,,,,,gpio_in_45,For GPIO_IN1,13,1,RO,,1,,u_gpio_in_1_gpio_in_45.qs
+gpio_gpio_in_1,,,,,,gpio_in_46,For GPIO_IN1,14,1,RO,,1,,u_gpio_in_1_gpio_in_46.qs
+gpio_gpio_in_1,,,,,,gpio_in_47,For GPIO_IN1,15,1,RO,,1,,u_gpio_in_1_gpio_in_47.qs
+gpio_gpio_in_1,,,,,,gpio_in_48,For GPIO_IN1,16,1,RO,,1,,u_gpio_in_1_gpio_in_48.qs
+gpio_gpio_in_1,,,,,,gpio_in_49,For GPIO_IN1,17,1,RO,,1,,u_gpio_in_1_gpio_in_49.qs
+gpio_gpio_in_1,,,,,,gpio_in_50,For GPIO_IN1,18,1,RO,,1,,u_gpio_in_1_gpio_in_50.qs
+gpio_gpio_in_1,,,,,,gpio_in_51,For GPIO_IN1,19,1,RO,,1,,u_gpio_in_1_gpio_in_51.qs
+gpio_gpio_in_1,,,,,,gpio_in_52,For GPIO_IN1,20,1,RO,,1,,u_gpio_in_1_gpio_in_52.qs
+gpio_gpio_in_1,,,,,,gpio_in_53,For GPIO_IN1,21,1,RO,,1,,u_gpio_in_1_gpio_in_53.qs
+gpio_gpio_in_1,,,,,,gpio_in_54,For GPIO_IN1,22,1,RO,,1,,u_gpio_in_1_gpio_in_54.qs
+gpio_gpio_in_1,,,,,,gpio_in_55,For GPIO_IN1,23,1,RO,,1,,u_gpio_in_1_gpio_in_55.qs
+gpio_gpio_out_0,Set the output value of the corresponding GPIOs.,384,32,,0,,,,,,,,,
+gpio_gpio_out_0,,,,,,gpio_out_0,,0,1,RW,,1,,u_gpio_out_0_gpio_out_0.q
+gpio_gpio_out_0,,,,,,gpio_out_1,,1,1,RW,,1,,u_gpio_out_0_gpio_out_1.q
+gpio_gpio_out_0,,,,,,gpio_out_2,,2,1,RW,,1,,u_gpio_out_0_gpio_out_2.q
+gpio_gpio_out_0,,,,,,gpio_out_3,,3,1,RW,,1,,u_gpio_out_0_gpio_out_3.q
+gpio_gpio_out_0,,,,,,gpio_out_4,,4,1,RW,,1,,u_gpio_out_0_gpio_out_4.q
+gpio_gpio_out_0,,,,,,gpio_out_5,,5,1,RW,,1,,u_gpio_out_0_gpio_out_5.q
+gpio_gpio_out_0,,,,,,gpio_out_6,,6,1,RW,,1,,u_gpio_out_0_gpio_out_6.q
+gpio_gpio_out_0,,,,,,gpio_out_7,,7,1,RW,,1,,u_gpio_out_0_gpio_out_7.q
+gpio_gpio_out_0,,,,,,gpio_out_8,,8,1,RW,,1,,u_gpio_out_0_gpio_out_8.q
+gpio_gpio_out_0,,,,,,gpio_out_9,,9,1,RW,,1,,u_gpio_out_0_gpio_out_9.q
+gpio_gpio_out_0,,,,,,gpio_out_10,,10,1,RW,,1,,u_gpio_out_0_gpio_out_10.q
+gpio_gpio_out_0,,,,,,gpio_out_11,,11,1,RW,,1,,u_gpio_out_0_gpio_out_11.q
+gpio_gpio_out_0,,,,,,gpio_out_12,,12,1,RW,,1,,u_gpio_out_0_gpio_out_12.q
+gpio_gpio_out_0,,,,,,gpio_out_13,,13,1,RW,,1,,u_gpio_out_0_gpio_out_13.q
+gpio_gpio_out_0,,,,,,gpio_out_14,,14,1,RW,,1,,u_gpio_out_0_gpio_out_14.q
+gpio_gpio_out_0,,,,,,gpio_out_15,,15,1,RW,,1,,u_gpio_out_0_gpio_out_15.q
+gpio_gpio_out_0,,,,,,gpio_out_16,,16,1,RW,,1,,u_gpio_out_0_gpio_out_16.q
+gpio_gpio_out_0,,,,,,gpio_out_17,,17,1,RW,,1,,u_gpio_out_0_gpio_out_17.q
+gpio_gpio_out_0,,,,,,gpio_out_18,,18,1,RW,,1,,u_gpio_out_0_gpio_out_18.q
+gpio_gpio_out_0,,,,,,gpio_out_19,,19,1,RW,,1,,u_gpio_out_0_gpio_out_19.q
+gpio_gpio_out_0,,,,,,gpio_out_20,,20,1,RW,,1,,u_gpio_out_0_gpio_out_20.q
+gpio_gpio_out_0,,,,,,gpio_out_21,,21,1,RW,,1,,u_gpio_out_0_gpio_out_21.q
+gpio_gpio_out_0,,,,,,gpio_out_22,,22,1,RW,,1,,u_gpio_out_0_gpio_out_22.q
+gpio_gpio_out_0,,,,,,gpio_out_23,,23,1,RW,,1,,u_gpio_out_0_gpio_out_23.q
+gpio_gpio_out_0,,,,,,gpio_out_24,,24,1,RW,,1,,u_gpio_out_0_gpio_out_24.q
+gpio_gpio_out_0,,,,,,gpio_out_25,,25,1,RW,,1,,u_gpio_out_0_gpio_out_25.q
+gpio_gpio_out_0,,,,,,gpio_out_26,,26,1,RW,,1,,u_gpio_out_0_gpio_out_26.q
+gpio_gpio_out_0,,,,,,gpio_out_27,,27,1,RW,,1,,u_gpio_out_0_gpio_out_27.q
+gpio_gpio_out_0,,,,,,gpio_out_28,,28,1,RW,,1,,u_gpio_out_0_gpio_out_28.q
+gpio_gpio_out_0,,,,,,gpio_out_29,,29,1,RW,,1,,u_gpio_out_0_gpio_out_29.q
+gpio_gpio_out_0,,,,,,gpio_out_30,,30,1,RW,,1,,u_gpio_out_0_gpio_out_30.q
+gpio_gpio_out_0,,,,,,gpio_out_31,,31,1,RW,,1,,u_gpio_out_0_gpio_out_31.q
+gpio_gpio_out_1,Set the output value of the corresponding GPIOs.,388,32,,0,,,,,,,,,
+gpio_gpio_out_1,,,,,,gpio_out_32,For GPIO_OUT1,0,1,RW,,1,,u_gpio_out_1_gpio_out_32.q
+gpio_gpio_out_1,,,,,,gpio_out_33,For GPIO_OUT1,1,1,RW,,1,,u_gpio_out_1_gpio_out_33.q
+gpio_gpio_out_1,,,,,,gpio_out_34,For GPIO_OUT1,2,1,RW,,1,,u_gpio_out_1_gpio_out_34.q
+gpio_gpio_out_1,,,,,,gpio_out_35,For GPIO_OUT1,3,1,RW,,1,,u_gpio_out_1_gpio_out_35.q
+gpio_gpio_out_1,,,,,,gpio_out_36,For GPIO_OUT1,4,1,RW,,1,,u_gpio_out_1_gpio_out_36.q
+gpio_gpio_out_1,,,,,,gpio_out_37,For GPIO_OUT1,5,1,RW,,1,,u_gpio_out_1_gpio_out_37.q
+gpio_gpio_out_1,,,,,,gpio_out_38,For GPIO_OUT1,6,1,RW,,1,,u_gpio_out_1_gpio_out_38.q
+gpio_gpio_out_1,,,,,,gpio_out_39,For GPIO_OUT1,7,1,RW,,1,,u_gpio_out_1_gpio_out_39.q
+gpio_gpio_out_1,,,,,,gpio_out_40,For GPIO_OUT1,8,1,RW,,1,,u_gpio_out_1_gpio_out_40.q
+gpio_gpio_out_1,,,,,,gpio_out_41,For GPIO_OUT1,9,1,RW,,1,,u_gpio_out_1_gpio_out_41.q
+gpio_gpio_out_1,,,,,,gpio_out_42,For GPIO_OUT1,10,1,RW,,1,,u_gpio_out_1_gpio_out_42.q
+gpio_gpio_out_1,,,,,,gpio_out_43,For GPIO_OUT1,11,1,RW,,1,,u_gpio_out_1_gpio_out_43.q
+gpio_gpio_out_1,,,,,,gpio_out_44,For GPIO_OUT1,12,1,RW,,1,,u_gpio_out_1_gpio_out_44.q
+gpio_gpio_out_1,,,,,,gpio_out_45,For GPIO_OUT1,13,1,RW,,1,,u_gpio_out_1_gpio_out_45.q
+gpio_gpio_out_1,,,,,,gpio_out_46,For GPIO_OUT1,14,1,RW,,1,,u_gpio_out_1_gpio_out_46.q
+gpio_gpio_out_1,,,,,,gpio_out_47,For GPIO_OUT1,15,1,RW,,1,,u_gpio_out_1_gpio_out_47.q
+gpio_gpio_out_1,,,,,,gpio_out_48,For GPIO_OUT1,16,1,RW,,1,,u_gpio_out_1_gpio_out_48.q
+gpio_gpio_out_1,,,,,,gpio_out_49,For GPIO_OUT1,17,1,RW,,1,,u_gpio_out_1_gpio_out_49.q
+gpio_gpio_out_1,,,,,,gpio_out_50,For GPIO_OUT1,18,1,RW,,1,,u_gpio_out_1_gpio_out_50.q
+gpio_gpio_out_1,,,,,,gpio_out_51,For GPIO_OUT1,19,1,RW,,1,,u_gpio_out_1_gpio_out_51.q
+gpio_gpio_out_1,,,,,,gpio_out_52,For GPIO_OUT1,20,1,RW,,1,,u_gpio_out_1_gpio_out_52.q
+gpio_gpio_out_1,,,,,,gpio_out_53,For GPIO_OUT1,21,1,RW,,1,,u_gpio_out_1_gpio_out_53.q
+gpio_gpio_out_1,,,,,,gpio_out_54,For GPIO_OUT1,22,1,RW,,1,,u_gpio_out_1_gpio_out_54.q
+gpio_gpio_out_1,,,,,,gpio_out_55,For GPIO_OUT1,23,1,RW,,1,,u_gpio_out_1_gpio_out_55.q
+gpio_gpio_set_0,"For each asserted bit in this register, set the corresponding bit in the padout register.",512,32,,0,,,,,,,,,
+gpio_gpio_set_0,,,,,,gpio_set_0,,0,1,WO,,0,,u_gpio_set_0_gpio_set_0.qs
+gpio_gpio_set_0,,,,,,gpio_set_1,,1,1,WO,,0,,u_gpio_set_0_gpio_set_1.qs
+gpio_gpio_set_0,,,,,,gpio_set_2,,2,1,WO,,0,,u_gpio_set_0_gpio_set_2.qs
+gpio_gpio_set_0,,,,,,gpio_set_3,,3,1,WO,,0,,u_gpio_set_0_gpio_set_3.qs
+gpio_gpio_set_0,,,,,,gpio_set_4,,4,1,WO,,0,,u_gpio_set_0_gpio_set_4.qs
+gpio_gpio_set_0,,,,,,gpio_set_5,,5,1,WO,,0,,u_gpio_set_0_gpio_set_5.qs
+gpio_gpio_set_0,,,,,,gpio_set_6,,6,1,WO,,0,,u_gpio_set_0_gpio_set_6.qs
+gpio_gpio_set_0,,,,,,gpio_set_7,,7,1,WO,,0,,u_gpio_set_0_gpio_set_7.qs
+gpio_gpio_set_0,,,,,,gpio_set_8,,8,1,WO,,0,,u_gpio_set_0_gpio_set_8.qs
+gpio_gpio_set_0,,,,,,gpio_set_9,,9,1,WO,,0,,u_gpio_set_0_gpio_set_9.qs
+gpio_gpio_set_0,,,,,,gpio_set_10,,10,1,WO,,0,,u_gpio_set_0_gpio_set_10.qs
+gpio_gpio_set_0,,,,,,gpio_set_11,,11,1,WO,,0,,u_gpio_set_0_gpio_set_11.qs
+gpio_gpio_set_0,,,,,,gpio_set_12,,12,1,WO,,0,,u_gpio_set_0_gpio_set_12.qs
+gpio_gpio_set_0,,,,,,gpio_set_13,,13,1,WO,,0,,u_gpio_set_0_gpio_set_13.qs
+gpio_gpio_set_0,,,,,,gpio_set_14,,14,1,WO,,0,,u_gpio_set_0_gpio_set_14.qs
+gpio_gpio_set_0,,,,,,gpio_set_15,,15,1,WO,,0,,u_gpio_set_0_gpio_set_15.qs
+gpio_gpio_set_0,,,,,,gpio_set_16,,16,1,WO,,0,,u_gpio_set_0_gpio_set_16.qs
+gpio_gpio_set_0,,,,,,gpio_set_17,,17,1,WO,,0,,u_gpio_set_0_gpio_set_17.qs
+gpio_gpio_set_0,,,,,,gpio_set_18,,18,1,WO,,0,,u_gpio_set_0_gpio_set_18.qs
+gpio_gpio_set_0,,,,,,gpio_set_19,,19,1,WO,,0,,u_gpio_set_0_gpio_set_19.qs
+gpio_gpio_set_0,,,,,,gpio_set_20,,20,1,WO,,0,,u_gpio_set_0_gpio_set_20.qs
+gpio_gpio_set_0,,,,,,gpio_set_21,,21,1,WO,,0,,u_gpio_set_0_gpio_set_21.qs
+gpio_gpio_set_0,,,,,,gpio_set_22,,22,1,WO,,0,,u_gpio_set_0_gpio_set_22.qs
+gpio_gpio_set_0,,,,,,gpio_set_23,,23,1,WO,,0,,u_gpio_set_0_gpio_set_23.qs
+gpio_gpio_set_0,,,,,,gpio_set_24,,24,1,WO,,0,,u_gpio_set_0_gpio_set_24.qs
+gpio_gpio_set_0,,,,,,gpio_set_25,,25,1,WO,,0,,u_gpio_set_0_gpio_set_25.qs
+gpio_gpio_set_0,,,,,,gpio_set_26,,26,1,WO,,0,,u_gpio_set_0_gpio_set_26.qs
+gpio_gpio_set_0,,,,,,gpio_set_27,,27,1,WO,,0,,u_gpio_set_0_gpio_set_27.qs
+gpio_gpio_set_0,,,,,,gpio_set_28,,28,1,WO,,0,,u_gpio_set_0_gpio_set_28.qs
+gpio_gpio_set_0,,,,,,gpio_set_29,,29,1,WO,,0,,u_gpio_set_0_gpio_set_29.qs
+gpio_gpio_set_0,,,,,,gpio_set_30,,30,1,WO,,0,,u_gpio_set_0_gpio_set_30.qs
+gpio_gpio_set_0,,,,,,gpio_set_31,,31,1,WO,,0,,u_gpio_set_0_gpio_set_31.qs
+gpio_gpio_set_1,"For each asserted bit in this register, set the corresponding bit in the padout register.",516,32,,0,,,,,,,,,
+gpio_gpio_set_1,,,,,,gpio_set_32,For GPIO_SET1,0,1,WO,,0,,u_gpio_set_1_gpio_set_32.qs
+gpio_gpio_set_1,,,,,,gpio_set_33,For GPIO_SET1,1,1,WO,,0,,u_gpio_set_1_gpio_set_33.qs
+gpio_gpio_set_1,,,,,,gpio_set_34,For GPIO_SET1,2,1,WO,,0,,u_gpio_set_1_gpio_set_34.qs
+gpio_gpio_set_1,,,,,,gpio_set_35,For GPIO_SET1,3,1,WO,,0,,u_gpio_set_1_gpio_set_35.qs
+gpio_gpio_set_1,,,,,,gpio_set_36,For GPIO_SET1,4,1,WO,,0,,u_gpio_set_1_gpio_set_36.qs
+gpio_gpio_set_1,,,,,,gpio_set_37,For GPIO_SET1,5,1,WO,,0,,u_gpio_set_1_gpio_set_37.qs
+gpio_gpio_set_1,,,,,,gpio_set_38,For GPIO_SET1,6,1,WO,,0,,u_gpio_set_1_gpio_set_38.qs
+gpio_gpio_set_1,,,,,,gpio_set_39,For GPIO_SET1,7,1,WO,,0,,u_gpio_set_1_gpio_set_39.qs
+gpio_gpio_set_1,,,,,,gpio_set_40,For GPIO_SET1,8,1,WO,,0,,u_gpio_set_1_gpio_set_40.qs
+gpio_gpio_set_1,,,,,,gpio_set_41,For GPIO_SET1,9,1,WO,,0,,u_gpio_set_1_gpio_set_41.qs
+gpio_gpio_set_1,,,,,,gpio_set_42,For GPIO_SET1,10,1,WO,,0,,u_gpio_set_1_gpio_set_42.qs
+gpio_gpio_set_1,,,,,,gpio_set_43,For GPIO_SET1,11,1,WO,,0,,u_gpio_set_1_gpio_set_43.qs
+gpio_gpio_set_1,,,,,,gpio_set_44,For GPIO_SET1,12,1,WO,,0,,u_gpio_set_1_gpio_set_44.qs
+gpio_gpio_set_1,,,,,,gpio_set_45,For GPIO_SET1,13,1,WO,,0,,u_gpio_set_1_gpio_set_45.qs
+gpio_gpio_set_1,,,,,,gpio_set_46,For GPIO_SET1,14,1,WO,,0,,u_gpio_set_1_gpio_set_46.qs
+gpio_gpio_set_1,,,,,,gpio_set_47,For GPIO_SET1,15,1,WO,,0,,u_gpio_set_1_gpio_set_47.qs
+gpio_gpio_set_1,,,,,,gpio_set_48,For GPIO_SET1,16,1,WO,,0,,u_gpio_set_1_gpio_set_48.qs
+gpio_gpio_set_1,,,,,,gpio_set_49,For GPIO_SET1,17,1,WO,,0,,u_gpio_set_1_gpio_set_49.qs
+gpio_gpio_set_1,,,,,,gpio_set_50,For GPIO_SET1,18,1,WO,,0,,u_gpio_set_1_gpio_set_50.qs
+gpio_gpio_set_1,,,,,,gpio_set_51,For GPIO_SET1,19,1,WO,,0,,u_gpio_set_1_gpio_set_51.qs
+gpio_gpio_set_1,,,,,,gpio_set_52,For GPIO_SET1,20,1,WO,,0,,u_gpio_set_1_gpio_set_52.qs
+gpio_gpio_set_1,,,,,,gpio_set_53,For GPIO_SET1,21,1,WO,,0,,u_gpio_set_1_gpio_set_53.qs
+gpio_gpio_set_1,,,,,,gpio_set_54,For GPIO_SET1,22,1,WO,,0,,u_gpio_set_1_gpio_set_54.qs
+gpio_gpio_set_1,,,,,,gpio_set_55,For GPIO_SET1,23,1,WO,,0,,u_gpio_set_1_gpio_set_55.qs
+gpio_gpio_clear_0,"For each asserted bit in this register, clear the corresponding bit in the padout register.",640,32,,0,,,,,,,,,
+gpio_gpio_clear_0,,,,,,gpio_clear_0,,0,1,WO,,0,,u_gpio_clear_0_gpio_clear_0.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_1,,1,1,WO,,0,,u_gpio_clear_0_gpio_clear_1.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_2,,2,1,WO,,0,,u_gpio_clear_0_gpio_clear_2.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_3,,3,1,WO,,0,,u_gpio_clear_0_gpio_clear_3.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_4,,4,1,WO,,0,,u_gpio_clear_0_gpio_clear_4.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_5,,5,1,WO,,0,,u_gpio_clear_0_gpio_clear_5.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_6,,6,1,WO,,0,,u_gpio_clear_0_gpio_clear_6.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_7,,7,1,WO,,0,,u_gpio_clear_0_gpio_clear_7.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_8,,8,1,WO,,0,,u_gpio_clear_0_gpio_clear_8.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_9,,9,1,WO,,0,,u_gpio_clear_0_gpio_clear_9.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_10,,10,1,WO,,0,,u_gpio_clear_0_gpio_clear_10.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_11,,11,1,WO,,0,,u_gpio_clear_0_gpio_clear_11.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_12,,12,1,WO,,0,,u_gpio_clear_0_gpio_clear_12.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_13,,13,1,WO,,0,,u_gpio_clear_0_gpio_clear_13.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_14,,14,1,WO,,0,,u_gpio_clear_0_gpio_clear_14.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_15,,15,1,WO,,0,,u_gpio_clear_0_gpio_clear_15.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_16,,16,1,WO,,0,,u_gpio_clear_0_gpio_clear_16.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_17,,17,1,WO,,0,,u_gpio_clear_0_gpio_clear_17.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_18,,18,1,WO,,0,,u_gpio_clear_0_gpio_clear_18.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_19,,19,1,WO,,0,,u_gpio_clear_0_gpio_clear_19.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_20,,20,1,WO,,0,,u_gpio_clear_0_gpio_clear_20.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_21,,21,1,WO,,0,,u_gpio_clear_0_gpio_clear_21.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_22,,22,1,WO,,0,,u_gpio_clear_0_gpio_clear_22.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_23,,23,1,WO,,0,,u_gpio_clear_0_gpio_clear_23.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_24,,24,1,WO,,0,,u_gpio_clear_0_gpio_clear_24.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_25,,25,1,WO,,0,,u_gpio_clear_0_gpio_clear_25.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_26,,26,1,WO,,0,,u_gpio_clear_0_gpio_clear_26.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_27,,27,1,WO,,0,,u_gpio_clear_0_gpio_clear_27.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_28,,28,1,WO,,0,,u_gpio_clear_0_gpio_clear_28.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_29,,29,1,WO,,0,,u_gpio_clear_0_gpio_clear_29.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_30,,30,1,WO,,0,,u_gpio_clear_0_gpio_clear_30.qs
+gpio_gpio_clear_0,,,,,,gpio_clear_31,,31,1,WO,,0,,u_gpio_clear_0_gpio_clear_31.qs
+gpio_gpio_clear_1,"For each asserted bit in this register, clear the corresponding bit in the padout register.",644,32,,0,,,,,,,,,
+gpio_gpio_clear_1,,,,,,gpio_clear_32,For GPIO_CLEAR1,0,1,WO,,0,,u_gpio_clear_1_gpio_clear_32.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_33,For GPIO_CLEAR1,1,1,WO,,0,,u_gpio_clear_1_gpio_clear_33.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_34,For GPIO_CLEAR1,2,1,WO,,0,,u_gpio_clear_1_gpio_clear_34.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_35,For GPIO_CLEAR1,3,1,WO,,0,,u_gpio_clear_1_gpio_clear_35.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_36,For GPIO_CLEAR1,4,1,WO,,0,,u_gpio_clear_1_gpio_clear_36.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_37,For GPIO_CLEAR1,5,1,WO,,0,,u_gpio_clear_1_gpio_clear_37.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_38,For GPIO_CLEAR1,6,1,WO,,0,,u_gpio_clear_1_gpio_clear_38.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_39,For GPIO_CLEAR1,7,1,WO,,0,,u_gpio_clear_1_gpio_clear_39.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_40,For GPIO_CLEAR1,8,1,WO,,0,,u_gpio_clear_1_gpio_clear_40.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_41,For GPIO_CLEAR1,9,1,WO,,0,,u_gpio_clear_1_gpio_clear_41.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_42,For GPIO_CLEAR1,10,1,WO,,0,,u_gpio_clear_1_gpio_clear_42.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_43,For GPIO_CLEAR1,11,1,WO,,0,,u_gpio_clear_1_gpio_clear_43.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_44,For GPIO_CLEAR1,12,1,WO,,0,,u_gpio_clear_1_gpio_clear_44.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_45,For GPIO_CLEAR1,13,1,WO,,0,,u_gpio_clear_1_gpio_clear_45.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_46,For GPIO_CLEAR1,14,1,WO,,0,,u_gpio_clear_1_gpio_clear_46.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_47,For GPIO_CLEAR1,15,1,WO,,0,,u_gpio_clear_1_gpio_clear_47.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_48,For GPIO_CLEAR1,16,1,WO,,0,,u_gpio_clear_1_gpio_clear_48.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_49,For GPIO_CLEAR1,17,1,WO,,0,,u_gpio_clear_1_gpio_clear_49.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_50,For GPIO_CLEAR1,18,1,WO,,0,,u_gpio_clear_1_gpio_clear_50.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_51,For GPIO_CLEAR1,19,1,WO,,0,,u_gpio_clear_1_gpio_clear_51.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_52,For GPIO_CLEAR1,20,1,WO,,0,,u_gpio_clear_1_gpio_clear_52.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_53,For GPIO_CLEAR1,21,1,WO,,0,,u_gpio_clear_1_gpio_clear_53.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_54,For GPIO_CLEAR1,22,1,WO,,0,,u_gpio_clear_1_gpio_clear_54.qs
+gpio_gpio_clear_1,,,,,,gpio_clear_55,For GPIO_CLEAR1,23,1,WO,,0,,u_gpio_clear_1_gpio_clear_55.qs
+gpio_gpio_toggle_0,"For each asserted bit in this register, toggle the corresponding bit in the padout register.",768,32,,0,,,,,,,,,
+gpio_gpio_toggle_0,,,,,,gpio_toggle_0,,0,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_0.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_1,,1,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_1.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_2,,2,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_2.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_3,,3,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_3.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_4,,4,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_4.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_5,,5,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_5.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_6,,6,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_6.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_7,,7,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_7.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_8,,8,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_8.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_9,,9,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_9.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_10,,10,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_10.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_11,,11,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_11.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_12,,12,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_12.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_13,,13,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_13.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_14,,14,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_14.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_15,,15,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_15.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_16,,16,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_16.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_17,,17,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_17.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_18,,18,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_18.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_19,,19,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_19.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_20,,20,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_20.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_21,,21,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_21.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_22,,22,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_22.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_23,,23,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_23.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_24,,24,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_24.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_25,,25,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_25.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_26,,26,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_26.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_27,,27,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_27.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_28,,28,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_28.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_29,,29,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_29.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_30,,30,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_30.qs
+gpio_gpio_toggle_0,,,,,,gpio_toggle_31,,31,1,WO,,0,,u_gpio_toggle_0_gpio_toggle_31.qs
+gpio_gpio_toggle_1,"For each asserted bit in this register, toggle the corresponding bit in the padout register.",772,32,,0,,,,,,,,,
+gpio_gpio_toggle_1,,,,,,gpio_toggle_32,For GPIO_TOGGLE1,0,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_32.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_33,For GPIO_TOGGLE1,1,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_33.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_34,For GPIO_TOGGLE1,2,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_34.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_35,For GPIO_TOGGLE1,3,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_35.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_36,For GPIO_TOGGLE1,4,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_36.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_37,For GPIO_TOGGLE1,5,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_37.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_38,For GPIO_TOGGLE1,6,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_38.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_39,For GPIO_TOGGLE1,7,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_39.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_40,For GPIO_TOGGLE1,8,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_40.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_41,For GPIO_TOGGLE1,9,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_41.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_42,For GPIO_TOGGLE1,10,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_42.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_43,For GPIO_TOGGLE1,11,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_43.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_44,For GPIO_TOGGLE1,12,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_44.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_45,For GPIO_TOGGLE1,13,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_45.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_46,For GPIO_TOGGLE1,14,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_46.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_47,For GPIO_TOGGLE1,15,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_47.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_48,For GPIO_TOGGLE1,16,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_48.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_49,For GPIO_TOGGLE1,17,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_49.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_50,For GPIO_TOGGLE1,18,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_50.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_51,For GPIO_TOGGLE1,19,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_51.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_52,For GPIO_TOGGLE1,20,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_52.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_53,For GPIO_TOGGLE1,21,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_53.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_54,For GPIO_TOGGLE1,22,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_54.qs
+gpio_gpio_toggle_1,,,,,,gpio_toggle_55,For GPIO_TOGGLE1,23,1,WO,,0,,u_gpio_toggle_1_gpio_toggle_55.qs
+gpio_intrpt_rise_en_0,Enable Interrupts on rising edges for the corresponding GPIO,896,32,,0,,,,,,,,,
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_0,,0,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_0.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_1,,1,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_1.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_2,,2,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_2.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_3,,3,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_3.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_4,,4,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_4.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_5,,5,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_5.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_6,,6,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_6.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_7,,7,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_7.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_8,,8,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_8.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_9,,9,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_9.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_10,,10,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_10.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_11,,11,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_11.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_12,,12,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_12.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_13,,13,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_13.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_14,,14,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_14.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_15,,15,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_15.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_16,,16,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_16.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_17,,17,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_17.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_18,,18,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_18.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_19,,19,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_19.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_20,,20,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_20.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_21,,21,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_21.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_22,,22,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_22.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_23,,23,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_23.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_24,,24,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_24.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_25,,25,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_25.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_26,,26,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_26.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_27,,27,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_27.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_28,,28,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_28.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_29,,29,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_29.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_30,,30,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_30.q
+gpio_intrpt_rise_en_0,,,,,,intrpt_rise_en_31,,31,1,RW,,0,,u_intrpt_rise_en_0_intrpt_rise_en_31.q
+gpio_intrpt_rise_en_1,Enable Interrupts on rising edges for the corresponding GPIO,900,32,,0,,,,,,,,,
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_32,For INTRPT_RISE_EN1,0,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_32.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_33,For INTRPT_RISE_EN1,1,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_33.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_34,For INTRPT_RISE_EN1,2,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_34.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_35,For INTRPT_RISE_EN1,3,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_35.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_36,For INTRPT_RISE_EN1,4,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_36.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_37,For INTRPT_RISE_EN1,5,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_37.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_38,For INTRPT_RISE_EN1,6,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_38.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_39,For INTRPT_RISE_EN1,7,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_39.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_40,For INTRPT_RISE_EN1,8,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_40.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_41,For INTRPT_RISE_EN1,9,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_41.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_42,For INTRPT_RISE_EN1,10,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_42.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_43,For INTRPT_RISE_EN1,11,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_43.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_44,For INTRPT_RISE_EN1,12,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_44.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_45,For INTRPT_RISE_EN1,13,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_45.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_46,For INTRPT_RISE_EN1,14,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_46.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_47,For INTRPT_RISE_EN1,15,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_47.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_48,For INTRPT_RISE_EN1,16,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_48.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_49,For INTRPT_RISE_EN1,17,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_49.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_50,For INTRPT_RISE_EN1,18,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_50.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_51,For INTRPT_RISE_EN1,19,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_51.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_52,For INTRPT_RISE_EN1,20,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_52.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_53,For INTRPT_RISE_EN1,21,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_53.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_54,For INTRPT_RISE_EN1,22,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_54.q
+gpio_intrpt_rise_en_1,,,,,,intrpt_rise_en_55,For INTRPT_RISE_EN1,23,1,RW,,0,,u_intrpt_rise_en_1_intrpt_rise_en_55.q
+gpio_intrpt_fall_en_0,Enable Interrupts on falling edges for the corresponding GPIO,1024,32,,0,,,,,,,,,
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_0,,0,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_0.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_1,,1,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_1.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_2,,2,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_2.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_3,,3,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_3.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_4,,4,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_4.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_5,,5,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_5.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_6,,6,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_6.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_7,,7,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_7.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_8,,8,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_8.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_9,,9,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_9.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_10,,10,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_10.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_11,,11,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_11.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_12,,12,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_12.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_13,,13,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_13.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_14,,14,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_14.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_15,,15,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_15.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_16,,16,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_16.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_17,,17,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_17.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_18,,18,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_18.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_19,,19,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_19.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_20,,20,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_20.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_21,,21,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_21.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_22,,22,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_22.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_23,,23,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_23.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_24,,24,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_24.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_25,,25,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_25.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_26,,26,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_26.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_27,,27,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_27.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_28,,28,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_28.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_29,,29,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_29.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_30,,30,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_30.q
+gpio_intrpt_fall_en_0,,,,,,intrpt_fall_en_31,,31,1,RW,,0,,u_intrpt_fall_en_0_intrpt_fall_en_31.q
+gpio_intrpt_fall_en_1,Enable Interrupts on falling edges for the corresponding GPIO,1028,32,,0,,,,,,,,,
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_32,For INTRPT_FALL_EN1,0,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_32.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_33,For INTRPT_FALL_EN1,1,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_33.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_34,For INTRPT_FALL_EN1,2,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_34.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_35,For INTRPT_FALL_EN1,3,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_35.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_36,For INTRPT_FALL_EN1,4,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_36.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_37,For INTRPT_FALL_EN1,5,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_37.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_38,For INTRPT_FALL_EN1,6,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_38.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_39,For INTRPT_FALL_EN1,7,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_39.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_40,For INTRPT_FALL_EN1,8,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_40.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_41,For INTRPT_FALL_EN1,9,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_41.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_42,For INTRPT_FALL_EN1,10,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_42.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_43,For INTRPT_FALL_EN1,11,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_43.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_44,For INTRPT_FALL_EN1,12,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_44.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_45,For INTRPT_FALL_EN1,13,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_45.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_46,For INTRPT_FALL_EN1,14,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_46.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_47,For INTRPT_FALL_EN1,15,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_47.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_48,For INTRPT_FALL_EN1,16,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_48.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_49,For INTRPT_FALL_EN1,17,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_49.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_50,For INTRPT_FALL_EN1,18,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_50.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_51,For INTRPT_FALL_EN1,19,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_51.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_52,For INTRPT_FALL_EN1,20,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_52.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_53,For INTRPT_FALL_EN1,21,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_53.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_54,For INTRPT_FALL_EN1,22,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_54.q
+gpio_intrpt_fall_en_1,,,,,,intrpt_fall_en_55,For INTRPT_FALL_EN1,23,1,RW,,0,,u_intrpt_fall_en_1_intrpt_fall_en_55.q
+gpio_intrpt_lvl_high_en_0,Enable logic high level-sensitive Interrupts on the corresponding GPIO,1152,32,,0,,,,,,,,,
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_0,,0,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_0.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_1,,1,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_1.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_2,,2,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_2.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_3,,3,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_3.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_4,,4,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_4.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_5,,5,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_5.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_6,,6,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_6.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_7,,7,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_7.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_8,,8,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_8.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_9,,9,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_9.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_10,,10,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_10.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_11,,11,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_11.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_12,,12,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_12.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_13,,13,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_13.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_14,,14,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_14.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_15,,15,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_15.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_16,,16,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_16.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_17,,17,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_17.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_18,,18,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_18.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_19,,19,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_19.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_20,,20,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_20.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_21,,21,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_21.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_22,,22,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_22.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_23,,23,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_23.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_24,,24,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_24.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_25,,25,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_25.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_26,,26,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_26.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_27,,27,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_27.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_28,,28,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_28.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_29,,29,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_29.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_30,,30,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_30.q
+gpio_intrpt_lvl_high_en_0,,,,,,intrpt_lvl_high_en_31,,31,1,RW,,0,,u_intrpt_lvl_high_en_0_intrpt_lvl_high_en_31.q
+gpio_intrpt_lvl_high_en_1,Enable logic high level-sensitive Interrupts on the corresponding GPIO,1156,32,,0,,,,,,,,,
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_32,For INTRPT_LVL_HIGH_EN1,0,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_32.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_33,For INTRPT_LVL_HIGH_EN1,1,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_33.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_34,For INTRPT_LVL_HIGH_EN1,2,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_34.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_35,For INTRPT_LVL_HIGH_EN1,3,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_35.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_36,For INTRPT_LVL_HIGH_EN1,4,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_36.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_37,For INTRPT_LVL_HIGH_EN1,5,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_37.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_38,For INTRPT_LVL_HIGH_EN1,6,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_38.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_39,For INTRPT_LVL_HIGH_EN1,7,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_39.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_40,For INTRPT_LVL_HIGH_EN1,8,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_40.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_41,For INTRPT_LVL_HIGH_EN1,9,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_41.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_42,For INTRPT_LVL_HIGH_EN1,10,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_42.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_43,For INTRPT_LVL_HIGH_EN1,11,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_43.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_44,For INTRPT_LVL_HIGH_EN1,12,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_44.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_45,For INTRPT_LVL_HIGH_EN1,13,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_45.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_46,For INTRPT_LVL_HIGH_EN1,14,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_46.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_47,For INTRPT_LVL_HIGH_EN1,15,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_47.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_48,For INTRPT_LVL_HIGH_EN1,16,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_48.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_49,For INTRPT_LVL_HIGH_EN1,17,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_49.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_50,For INTRPT_LVL_HIGH_EN1,18,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_50.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_51,For INTRPT_LVL_HIGH_EN1,19,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_51.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_52,For INTRPT_LVL_HIGH_EN1,20,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_52.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_53,For INTRPT_LVL_HIGH_EN1,21,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_53.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_54,For INTRPT_LVL_HIGH_EN1,22,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_54.q
+gpio_intrpt_lvl_high_en_1,,,,,,intrpt_lvl_high_en_55,For INTRPT_LVL_HIGH_EN1,23,1,RW,,0,,u_intrpt_lvl_high_en_1_intrpt_lvl_high_en_55.q
+gpio_intrpt_lvl_low_en_0,Enable logic low level-sensitive Interrupts on the corresponding GPIO,1280,32,,0,,,,,,,,,
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_0,,0,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_0.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_1,,1,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_1.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_2,,2,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_2.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_3,,3,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_3.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_4,,4,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_4.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_5,,5,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_5.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_6,,6,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_6.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_7,,7,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_7.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_8,,8,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_8.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_9,,9,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_9.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_10,,10,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_10.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_11,,11,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_11.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_12,,12,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_12.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_13,,13,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_13.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_14,,14,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_14.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_15,,15,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_15.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_16,,16,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_16.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_17,,17,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_17.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_18,,18,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_18.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_19,,19,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_19.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_20,,20,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_20.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_21,,21,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_21.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_22,,22,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_22.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_23,,23,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_23.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_24,,24,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_24.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_25,,25,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_25.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_26,,26,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_26.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_27,,27,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_27.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_28,,28,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_28.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_29,,29,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_29.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_30,,30,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_30.q
+gpio_intrpt_lvl_low_en_0,,,,,,intrpt_lvl_low_en_31,,31,1,RW,,0,,u_intrpt_lvl_low_en_0_intrpt_lvl_low_en_31.q
+gpio_intrpt_lvl_low_en_1,Enable logic low level-sensitive Interrupts on the corresponding GPIO,1284,32,,0,,,,,,,,,
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_32,For INTRPT_LVL_LOW_EN1,0,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_32.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_33,For INTRPT_LVL_LOW_EN1,1,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_33.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_34,For INTRPT_LVL_LOW_EN1,2,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_34.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_35,For INTRPT_LVL_LOW_EN1,3,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_35.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_36,For INTRPT_LVL_LOW_EN1,4,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_36.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_37,For INTRPT_LVL_LOW_EN1,5,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_37.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_38,For INTRPT_LVL_LOW_EN1,6,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_38.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_39,For INTRPT_LVL_LOW_EN1,7,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_39.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_40,For INTRPT_LVL_LOW_EN1,8,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_40.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_41,For INTRPT_LVL_LOW_EN1,9,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_41.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_42,For INTRPT_LVL_LOW_EN1,10,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_42.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_43,For INTRPT_LVL_LOW_EN1,11,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_43.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_44,For INTRPT_LVL_LOW_EN1,12,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_44.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_45,For INTRPT_LVL_LOW_EN1,13,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_45.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_46,For INTRPT_LVL_LOW_EN1,14,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_46.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_47,For INTRPT_LVL_LOW_EN1,15,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_47.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_48,For INTRPT_LVL_LOW_EN1,16,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_48.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_49,For INTRPT_LVL_LOW_EN1,17,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_49.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_50,For INTRPT_LVL_LOW_EN1,18,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_50.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_51,For INTRPT_LVL_LOW_EN1,19,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_51.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_52,For INTRPT_LVL_LOW_EN1,20,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_52.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_53,For INTRPT_LVL_LOW_EN1,21,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_53.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_54,For INTRPT_LVL_LOW_EN1,22,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_54.q
+gpio_intrpt_lvl_low_en_1,,,,,,intrpt_lvl_low_en_55,For INTRPT_LVL_LOW_EN1,23,1,RW,,0,,u_intrpt_lvl_low_en_1_intrpt_lvl_low_en_55.q
+gpio_intrpt_status_0,"Asserted if there is any pending interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears all pending interrupts (rise, fall, low, high) of the corresponding GPIO.",1408,32,,0,,,,,,,,,
+gpio_intrpt_status_0,,,,,,intrpt_status_0,,0,1,W1C,,1,,u_intrpt_status_0_intrpt_status_0.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_1,,1,1,W1C,,1,,u_intrpt_status_0_intrpt_status_1.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_2,,2,1,W1C,,1,,u_intrpt_status_0_intrpt_status_2.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_3,,3,1,W1C,,1,,u_intrpt_status_0_intrpt_status_3.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_4,,4,1,W1C,,1,,u_intrpt_status_0_intrpt_status_4.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_5,,5,1,W1C,,1,,u_intrpt_status_0_intrpt_status_5.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_6,,6,1,W1C,,1,,u_intrpt_status_0_intrpt_status_6.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_7,,7,1,W1C,,1,,u_intrpt_status_0_intrpt_status_7.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_8,,8,1,W1C,,1,,u_intrpt_status_0_intrpt_status_8.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_9,,9,1,W1C,,1,,u_intrpt_status_0_intrpt_status_9.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_10,,10,1,W1C,,1,,u_intrpt_status_0_intrpt_status_10.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_11,,11,1,W1C,,1,,u_intrpt_status_0_intrpt_status_11.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_12,,12,1,W1C,,1,,u_intrpt_status_0_intrpt_status_12.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_13,,13,1,W1C,,1,,u_intrpt_status_0_intrpt_status_13.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_14,,14,1,W1C,,1,,u_intrpt_status_0_intrpt_status_14.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_15,,15,1,W1C,,1,,u_intrpt_status_0_intrpt_status_15.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_16,,16,1,W1C,,1,,u_intrpt_status_0_intrpt_status_16.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_17,,17,1,W1C,,1,,u_intrpt_status_0_intrpt_status_17.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_18,,18,1,W1C,,1,,u_intrpt_status_0_intrpt_status_18.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_19,,19,1,W1C,,1,,u_intrpt_status_0_intrpt_status_19.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_20,,20,1,W1C,,1,,u_intrpt_status_0_intrpt_status_20.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_21,,21,1,W1C,,1,,u_intrpt_status_0_intrpt_status_21.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_22,,22,1,W1C,,1,,u_intrpt_status_0_intrpt_status_22.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_23,,23,1,W1C,,1,,u_intrpt_status_0_intrpt_status_23.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_24,,24,1,W1C,,1,,u_intrpt_status_0_intrpt_status_24.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_25,,25,1,W1C,,1,,u_intrpt_status_0_intrpt_status_25.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_26,,26,1,W1C,,1,,u_intrpt_status_0_intrpt_status_26.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_27,,27,1,W1C,,1,,u_intrpt_status_0_intrpt_status_27.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_28,,28,1,W1C,,1,,u_intrpt_status_0_intrpt_status_28.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_29,,29,1,W1C,,1,,u_intrpt_status_0_intrpt_status_29.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_30,,30,1,W1C,,1,,u_intrpt_status_0_intrpt_status_30.qs
+gpio_intrpt_status_0,,,,,,intrpt_status_31,,31,1,W1C,,1,,u_intrpt_status_0_intrpt_status_31.qs
+gpio_intrpt_status_1,"Asserted if there is any pending interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears all pending interrupts (rise, fall, low, high) of the corresponding GPIO.",1412,32,,0,,,,,,,,,
+gpio_intrpt_status_1,,,,,,intrpt_status_32,For INTRPT_STATUS1,0,1,W1C,,1,,u_intrpt_status_1_intrpt_status_32.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_33,For INTRPT_STATUS1,1,1,W1C,,1,,u_intrpt_status_1_intrpt_status_33.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_34,For INTRPT_STATUS1,2,1,W1C,,1,,u_intrpt_status_1_intrpt_status_34.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_35,For INTRPT_STATUS1,3,1,W1C,,1,,u_intrpt_status_1_intrpt_status_35.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_36,For INTRPT_STATUS1,4,1,W1C,,1,,u_intrpt_status_1_intrpt_status_36.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_37,For INTRPT_STATUS1,5,1,W1C,,1,,u_intrpt_status_1_intrpt_status_37.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_38,For INTRPT_STATUS1,6,1,W1C,,1,,u_intrpt_status_1_intrpt_status_38.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_39,For INTRPT_STATUS1,7,1,W1C,,1,,u_intrpt_status_1_intrpt_status_39.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_40,For INTRPT_STATUS1,8,1,W1C,,1,,u_intrpt_status_1_intrpt_status_40.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_41,For INTRPT_STATUS1,9,1,W1C,,1,,u_intrpt_status_1_intrpt_status_41.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_42,For INTRPT_STATUS1,10,1,W1C,,1,,u_intrpt_status_1_intrpt_status_42.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_43,For INTRPT_STATUS1,11,1,W1C,,1,,u_intrpt_status_1_intrpt_status_43.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_44,For INTRPT_STATUS1,12,1,W1C,,1,,u_intrpt_status_1_intrpt_status_44.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_45,For INTRPT_STATUS1,13,1,W1C,,1,,u_intrpt_status_1_intrpt_status_45.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_46,For INTRPT_STATUS1,14,1,W1C,,1,,u_intrpt_status_1_intrpt_status_46.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_47,For INTRPT_STATUS1,15,1,W1C,,1,,u_intrpt_status_1_intrpt_status_47.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_48,For INTRPT_STATUS1,16,1,W1C,,1,,u_intrpt_status_1_intrpt_status_48.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_49,For INTRPT_STATUS1,17,1,W1C,,1,,u_intrpt_status_1_intrpt_status_49.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_50,For INTRPT_STATUS1,18,1,W1C,,1,,u_intrpt_status_1_intrpt_status_50.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_51,For INTRPT_STATUS1,19,1,W1C,,1,,u_intrpt_status_1_intrpt_status_51.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_52,For INTRPT_STATUS1,20,1,W1C,,1,,u_intrpt_status_1_intrpt_status_52.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_53,For INTRPT_STATUS1,21,1,W1C,,1,,u_intrpt_status_1_intrpt_status_53.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_54,For INTRPT_STATUS1,22,1,W1C,,1,,u_intrpt_status_1_intrpt_status_54.qs
+gpio_intrpt_status_1,,,,,,intrpt_status_55,For INTRPT_STATUS1,23,1,W1C,,1,,u_intrpt_status_1_intrpt_status_55.qs
+gpio_intrpt_rise_status_0,"Asserted if there is a pending rise interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1536,32,,0,,,,,,,,,
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_0,,0,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_0.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_1,,1,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_1.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_2,,2,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_2.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_3,,3,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_3.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_4,,4,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_4.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_5,,5,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_5.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_6,,6,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_6.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_7,,7,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_7.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_8,,8,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_8.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_9,,9,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_9.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_10,,10,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_10.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_11,,11,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_11.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_12,,12,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_12.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_13,,13,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_13.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_14,,14,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_14.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_15,,15,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_15.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_16,,16,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_16.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_17,,17,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_17.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_18,,18,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_18.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_19,,19,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_19.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_20,,20,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_20.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_21,,21,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_21.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_22,,22,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_22.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_23,,23,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_23.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_24,,24,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_24.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_25,,25,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_25.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_26,,26,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_26.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_27,,27,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_27.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_28,,28,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_28.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_29,,29,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_29.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_30,,30,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_30.q
+gpio_intrpt_rise_status_0,,,,,,intrpt_rise_status_31,,31,1,W1C,,1,,u_intrpt_rise_status_0_intrpt_rise_status_31.q
+gpio_intrpt_rise_status_1,"Asserted if there is a pending rise interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1540,32,,0,,,,,,,,,
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_32,For INTRPT_RISE_STATUS1,0,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_32.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_33,For INTRPT_RISE_STATUS1,1,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_33.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_34,For INTRPT_RISE_STATUS1,2,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_34.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_35,For INTRPT_RISE_STATUS1,3,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_35.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_36,For INTRPT_RISE_STATUS1,4,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_36.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_37,For INTRPT_RISE_STATUS1,5,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_37.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_38,For INTRPT_RISE_STATUS1,6,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_38.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_39,For INTRPT_RISE_STATUS1,7,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_39.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_40,For INTRPT_RISE_STATUS1,8,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_40.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_41,For INTRPT_RISE_STATUS1,9,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_41.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_42,For INTRPT_RISE_STATUS1,10,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_42.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_43,For INTRPT_RISE_STATUS1,11,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_43.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_44,For INTRPT_RISE_STATUS1,12,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_44.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_45,For INTRPT_RISE_STATUS1,13,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_45.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_46,For INTRPT_RISE_STATUS1,14,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_46.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_47,For INTRPT_RISE_STATUS1,15,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_47.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_48,For INTRPT_RISE_STATUS1,16,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_48.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_49,For INTRPT_RISE_STATUS1,17,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_49.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_50,For INTRPT_RISE_STATUS1,18,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_50.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_51,For INTRPT_RISE_STATUS1,19,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_51.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_52,For INTRPT_RISE_STATUS1,20,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_52.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_53,For INTRPT_RISE_STATUS1,21,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_53.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_54,For INTRPT_RISE_STATUS1,22,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_54.q
+gpio_intrpt_rise_status_1,,,,,,intrpt_rise_status_55,For INTRPT_RISE_STATUS1,23,1,W1C,,1,,u_intrpt_rise_status_1_intrpt_rise_status_55.q
+gpio_intrpt_fall_status_0,"Asserted if there is any pending fall interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1664,32,,0,,,,,,,,,
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_0,,0,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_0.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_1,,1,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_1.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_2,,2,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_2.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_3,,3,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_3.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_4,,4,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_4.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_5,,5,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_5.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_6,,6,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_6.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_7,,7,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_7.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_8,,8,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_8.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_9,,9,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_9.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_10,,10,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_10.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_11,,11,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_11.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_12,,12,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_12.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_13,,13,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_13.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_14,,14,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_14.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_15,,15,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_15.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_16,,16,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_16.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_17,,17,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_17.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_18,,18,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_18.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_19,,19,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_19.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_20,,20,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_20.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_21,,21,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_21.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_22,,22,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_22.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_23,,23,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_23.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_24,,24,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_24.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_25,,25,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_25.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_26,,26,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_26.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_27,,27,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_27.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_28,,28,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_28.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_29,,29,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_29.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_30,,30,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_30.q
+gpio_intrpt_fall_status_0,,,,,,intrpt_fall_status_31,,31,1,W1C,,1,,u_intrpt_fall_status_0_intrpt_fall_status_31.q
+gpio_intrpt_fall_status_1,"Asserted if there is any pending fall interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1668,32,,0,,,,,,,,,
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_32,For INTRPT_FALL_STATUS1,0,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_32.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_33,For INTRPT_FALL_STATUS1,1,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_33.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_34,For INTRPT_FALL_STATUS1,2,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_34.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_35,For INTRPT_FALL_STATUS1,3,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_35.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_36,For INTRPT_FALL_STATUS1,4,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_36.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_37,For INTRPT_FALL_STATUS1,5,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_37.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_38,For INTRPT_FALL_STATUS1,6,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_38.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_39,For INTRPT_FALL_STATUS1,7,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_39.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_40,For INTRPT_FALL_STATUS1,8,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_40.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_41,For INTRPT_FALL_STATUS1,9,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_41.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_42,For INTRPT_FALL_STATUS1,10,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_42.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_43,For INTRPT_FALL_STATUS1,11,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_43.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_44,For INTRPT_FALL_STATUS1,12,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_44.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_45,For INTRPT_FALL_STATUS1,13,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_45.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_46,For INTRPT_FALL_STATUS1,14,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_46.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_47,For INTRPT_FALL_STATUS1,15,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_47.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_48,For INTRPT_FALL_STATUS1,16,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_48.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_49,For INTRPT_FALL_STATUS1,17,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_49.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_50,For INTRPT_FALL_STATUS1,18,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_50.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_51,For INTRPT_FALL_STATUS1,19,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_51.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_52,For INTRPT_FALL_STATUS1,20,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_52.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_53,For INTRPT_FALL_STATUS1,21,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_53.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_54,For INTRPT_FALL_STATUS1,22,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_54.q
+gpio_intrpt_fall_status_1,,,,,,intrpt_fall_status_55,For INTRPT_FALL_STATUS1,23,1,W1C,,1,,u_intrpt_fall_status_1_intrpt_fall_status_55.q
+gpio_intrpt_lvl_high_status_0,"Asserted if there is any pending high-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1792,32,,0,,,,,,,,,
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_0,,0,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_0.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_1,,1,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_1.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_2,,2,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_2.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_3,,3,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_3.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_4,,4,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_4.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_5,,5,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_5.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_6,,6,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_6.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_7,,7,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_7.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_8,,8,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_8.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_9,,9,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_9.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_10,,10,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_10.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_11,,11,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_11.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_12,,12,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_12.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_13,,13,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_13.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_14,,14,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_14.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_15,,15,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_15.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_16,,16,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_16.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_17,,17,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_17.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_18,,18,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_18.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_19,,19,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_19.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_20,,20,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_20.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_21,,21,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_21.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_22,,22,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_22.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_23,,23,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_23.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_24,,24,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_24.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_25,,25,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_25.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_26,,26,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_26.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_27,,27,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_27.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_28,,28,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_28.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_29,,29,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_29.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_30,,30,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_30.q
+gpio_intrpt_lvl_high_status_0,,,,,,intrpt_lvl_high_status_31,,31,1,W1C,,1,,u_intrpt_lvl_high_status_0_intrpt_lvl_high_status_31.q
+gpio_intrpt_lvl_high_status_1,"Asserted if there is any pending high-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1796,32,,0,,,,,,,,,
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_32,For INTRPT_LVL_HIGH_STATUS1,0,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_32.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_33,For INTRPT_LVL_HIGH_STATUS1,1,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_33.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_34,For INTRPT_LVL_HIGH_STATUS1,2,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_34.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_35,For INTRPT_LVL_HIGH_STATUS1,3,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_35.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_36,For INTRPT_LVL_HIGH_STATUS1,4,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_36.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_37,For INTRPT_LVL_HIGH_STATUS1,5,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_37.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_38,For INTRPT_LVL_HIGH_STATUS1,6,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_38.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_39,For INTRPT_LVL_HIGH_STATUS1,7,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_39.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_40,For INTRPT_LVL_HIGH_STATUS1,8,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_40.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_41,For INTRPT_LVL_HIGH_STATUS1,9,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_41.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_42,For INTRPT_LVL_HIGH_STATUS1,10,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_42.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_43,For INTRPT_LVL_HIGH_STATUS1,11,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_43.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_44,For INTRPT_LVL_HIGH_STATUS1,12,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_44.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_45,For INTRPT_LVL_HIGH_STATUS1,13,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_45.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_46,For INTRPT_LVL_HIGH_STATUS1,14,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_46.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_47,For INTRPT_LVL_HIGH_STATUS1,15,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_47.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_48,For INTRPT_LVL_HIGH_STATUS1,16,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_48.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_49,For INTRPT_LVL_HIGH_STATUS1,17,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_49.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_50,For INTRPT_LVL_HIGH_STATUS1,18,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_50.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_51,For INTRPT_LVL_HIGH_STATUS1,19,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_51.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_52,For INTRPT_LVL_HIGH_STATUS1,20,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_52.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_53,For INTRPT_LVL_HIGH_STATUS1,21,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_53.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_54,For INTRPT_LVL_HIGH_STATUS1,22,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_54.q
+gpio_intrpt_lvl_high_status_1,,,,,,intrpt_lvl_high_status_55,For INTRPT_LVL_HIGH_STATUS1,23,1,W1C,,1,,u_intrpt_lvl_high_status_1_intrpt_lvl_high_status_55.q
+gpio_intrpt_lvl_low_status_0,"Asserted if there is any pending low-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1920,32,,0,,,,,,,,,
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_0,,0,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_0.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_1,,1,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_1.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_2,,2,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_2.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_3,,3,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_3.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_4,,4,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_4.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_5,,5,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_5.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_6,,6,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_6.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_7,,7,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_7.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_8,,8,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_8.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_9,,9,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_9.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_10,,10,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_10.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_11,,11,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_11.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_12,,12,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_12.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_13,,13,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_13.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_14,,14,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_14.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_15,,15,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_15.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_16,,16,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_16.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_17,,17,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_17.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_18,,18,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_18.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_19,,19,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_19.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_20,,20,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_20.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_21,,21,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_21.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_22,,22,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_22.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_23,,23,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_23.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_24,,24,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_24.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_25,,25,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_25.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_26,,26,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_26.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_27,,27,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_27.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_28,,28,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_28.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_29,,29,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_29.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_30,,30,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_30.q
+gpio_intrpt_lvl_low_status_0,,,,,,intrpt_lvl_low_status_31,,31,1,W1C,,1,,u_intrpt_lvl_low_status_0_intrpt_lvl_low_status_31.q
+gpio_intrpt_lvl_low_status_1,"Asserted if there is any pending low-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",1924,32,,0,,,,,,,,,
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_32,For INTRPT_LVL_LOW_STATUS1,0,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_32.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_33,For INTRPT_LVL_LOW_STATUS1,1,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_33.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_34,For INTRPT_LVL_LOW_STATUS1,2,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_34.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_35,For INTRPT_LVL_LOW_STATUS1,3,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_35.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_36,For INTRPT_LVL_LOW_STATUS1,4,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_36.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_37,For INTRPT_LVL_LOW_STATUS1,5,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_37.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_38,For INTRPT_LVL_LOW_STATUS1,6,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_38.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_39,For INTRPT_LVL_LOW_STATUS1,7,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_39.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_40,For INTRPT_LVL_LOW_STATUS1,8,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_40.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_41,For INTRPT_LVL_LOW_STATUS1,9,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_41.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_42,For INTRPT_LVL_LOW_STATUS1,10,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_42.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_43,For INTRPT_LVL_LOW_STATUS1,11,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_43.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_44,For INTRPT_LVL_LOW_STATUS1,12,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_44.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_45,For INTRPT_LVL_LOW_STATUS1,13,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_45.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_46,For INTRPT_LVL_LOW_STATUS1,14,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_46.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_47,For INTRPT_LVL_LOW_STATUS1,15,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_47.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_48,For INTRPT_LVL_LOW_STATUS1,16,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_48.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_49,For INTRPT_LVL_LOW_STATUS1,17,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_49.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_50,For INTRPT_LVL_LOW_STATUS1,18,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_50.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_51,For INTRPT_LVL_LOW_STATUS1,19,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_51.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_52,For INTRPT_LVL_LOW_STATUS1,20,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_52.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_53,For INTRPT_LVL_LOW_STATUS1,21,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_53.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_54,For INTRPT_LVL_LOW_STATUS1,22,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_54.q
+gpio_intrpt_lvl_low_status_1,,,,,,intrpt_lvl_low_status_55,For INTRPT_LVL_LOW_STATUS1,23,1,W1C,,1,,u_intrpt_lvl_low_status_1_intrpt_lvl_low_status_55.q

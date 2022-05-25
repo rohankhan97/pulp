@@ -1,0 +1,603 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved,Field Backdoor
+siracusa_pads_debug_config_pad_gpio00_cfg,Pad signal configuration.,344,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio00_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio00_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio00_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio00_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio00_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio00_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio00_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio00_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio00_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio00_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio00_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio00_mux_sel,"Pad signal port multiplex selection for pad pad_gpio00. The programmed value defines which port
+is connected to the pad.",348,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio00_mux_sel,,,,,,pad_gpio00_mux_sel,,0,4,RW,1,0,,u_pad_gpio00_mux_sel.q
+siracusa_pads_debug_config_pad_gpio01_cfg,Pad signal configuration.,352,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio01_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio01_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio01_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio01_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio01_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio01_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio01_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio01_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio01_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio01_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio01_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio01_mux_sel,"Pad signal port multiplex selection for pad pad_gpio01. The programmed value defines which port
+is connected to the pad.",356,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio01_mux_sel,,,,,,pad_gpio01_mux_sel,,0,4,RW,1,0,,u_pad_gpio01_mux_sel.q
+siracusa_pads_debug_config_pad_gpio02_cfg,Pad signal configuration.,360,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio02_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio02_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio02_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio02_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio02_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio02_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio02_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio02_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio02_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio02_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio02_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio02_mux_sel,"Pad signal port multiplex selection for pad pad_gpio02. The programmed value defines which port
+is connected to the pad.",364,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio02_mux_sel,,,,,,pad_gpio02_mux_sel,,0,4,RW,1,0,,u_pad_gpio02_mux_sel.q
+siracusa_pads_debug_config_pad_gpio03_cfg,Pad signal configuration.,368,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio03_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio03_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio03_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio03_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio03_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio03_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio03_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio03_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio03_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio03_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio03_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio03_mux_sel,"Pad signal port multiplex selection for pad pad_gpio03. The programmed value defines which port
+is connected to the pad.",372,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio03_mux_sel,,,,,,pad_gpio03_mux_sel,,0,2,RW,1,0,,u_pad_gpio03_mux_sel.q
+siracusa_pads_debug_config_pad_gpio04_cfg,Pad signal configuration.,376,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio04_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio04_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio04_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio04_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio04_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio04_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio04_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio04_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio04_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio04_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio04_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio04_mux_sel,"Pad signal port multiplex selection for pad pad_gpio04. The programmed value defines which port
+is connected to the pad.",380,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio04_mux_sel,,,,,,pad_gpio04_mux_sel,,0,2,RW,1,0,,u_pad_gpio04_mux_sel.q
+siracusa_pads_debug_config_pad_gpio05_cfg,Pad signal configuration.,384,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio05_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio05_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio05_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio05_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio05_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio05_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio05_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio05_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio05_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio05_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio05_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio05_mux_sel,"Pad signal port multiplex selection for pad pad_gpio05. The programmed value defines which port
+is connected to the pad.",388,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio05_mux_sel,,,,,,pad_gpio05_mux_sel,,0,2,RW,1,0,,u_pad_gpio05_mux_sel.q
+siracusa_pads_debug_config_pad_gpio06_cfg,Pad signal configuration.,392,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio06_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio06_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio06_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio06_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio06_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio06_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio06_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio06_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio06_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio06_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio06_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio06_mux_sel,"Pad signal port multiplex selection for pad pad_gpio06. The programmed value defines which port
+is connected to the pad.",396,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio06_mux_sel,,,,,,pad_gpio06_mux_sel,,0,4,RW,1,0,,u_pad_gpio06_mux_sel.q
+siracusa_pads_debug_config_pad_gpio07_cfg,Pad signal configuration.,400,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio07_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio07_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio07_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio07_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio07_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio07_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio07_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio07_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio07_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio07_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio07_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio07_mux_sel,"Pad signal port multiplex selection for pad pad_gpio07. The programmed value defines which port
+is connected to the pad.",404,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio07_mux_sel,,,,,,pad_gpio07_mux_sel,,0,4,RW,1,0,,u_pad_gpio07_mux_sel.q
+siracusa_pads_debug_config_pad_gpio08_cfg,Pad signal configuration.,408,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio08_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio08_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio08_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio08_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio08_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio08_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio08_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio08_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio08_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio08_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio08_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio08_mux_sel,"Pad signal port multiplex selection for pad pad_gpio08. The programmed value defines which port
+is connected to the pad.",412,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio08_mux_sel,,,,,,pad_gpio08_mux_sel,,0,4,RW,1,0,,u_pad_gpio08_mux_sel.q
+siracusa_pads_debug_config_pad_gpio09_cfg,Pad signal configuration.,416,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio09_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio09_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio09_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio09_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio09_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio09_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio09_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio09_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio09_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio09_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio09_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio09_mux_sel,"Pad signal port multiplex selection for pad pad_gpio09. The programmed value defines which port
+is connected to the pad.",420,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio09_mux_sel,,,,,,pad_gpio09_mux_sel,,0,4,RW,1,0,,u_pad_gpio09_mux_sel.q
+siracusa_pads_debug_config_pad_gpio10_cfg,Pad signal configuration.,424,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio10_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio10_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio10_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio10_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio10_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio10_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio10_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio10_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio10_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio10_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio10_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio10_mux_sel,"Pad signal port multiplex selection for pad pad_gpio10. The programmed value defines which port
+is connected to the pad.",428,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio10_mux_sel,,,,,,pad_gpio10_mux_sel,,0,4,RW,1,0,,u_pad_gpio10_mux_sel.q
+siracusa_pads_debug_config_pad_gpio11_cfg,Pad signal configuration.,432,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio11_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio11_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio11_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio11_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio11_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio11_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio11_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio11_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio11_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio11_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio11_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio11_mux_sel,"Pad signal port multiplex selection for pad pad_gpio11. The programmed value defines which port
+is connected to the pad.",436,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio11_mux_sel,,,,,,pad_gpio11_mux_sel,,0,4,RW,1,0,,u_pad_gpio11_mux_sel.q
+siracusa_pads_debug_config_pad_gpio12_cfg,Pad signal configuration.,440,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio12_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio12_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio12_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio12_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio12_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio12_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio12_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio12_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio12_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio12_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio12_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio12_mux_sel,"Pad signal port multiplex selection for pad pad_gpio12. The programmed value defines which port
+is connected to the pad.",444,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio12_mux_sel,,,,,,pad_gpio12_mux_sel,,0,2,RW,1,0,,u_pad_gpio12_mux_sel.q
+siracusa_pads_debug_config_pad_gpio13_cfg,Pad signal configuration.,448,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio13_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio13_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio13_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio13_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio13_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio13_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio13_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio13_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio13_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio13_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio13_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio13_mux_sel,"Pad signal port multiplex selection for pad pad_gpio13. The programmed value defines which port
+is connected to the pad.",452,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio13_mux_sel,,,,,,pad_gpio13_mux_sel,,0,2,RW,1,0,,u_pad_gpio13_mux_sel.q
+siracusa_pads_debug_config_pad_gpio14_cfg,Pad signal configuration.,456,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio14_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio14_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio14_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio14_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio14_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio14_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio14_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio14_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio14_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio14_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio14_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio14_mux_sel,"Pad signal port multiplex selection for pad pad_gpio14. The programmed value defines which port
+is connected to the pad.",460,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio14_mux_sel,,,,,,pad_gpio14_mux_sel,,0,2,RW,1,0,,u_pad_gpio14_mux_sel.q
+siracusa_pads_debug_config_pad_gpio15_cfg,Pad signal configuration.,464,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio15_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio15_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio15_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio15_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio15_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio15_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio15_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio15_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio15_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio15_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio15_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio15_mux_sel,"Pad signal port multiplex selection for pad pad_gpio15. The programmed value defines which port
+is connected to the pad.",468,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio15_mux_sel,,,,,,pad_gpio15_mux_sel,,0,2,RW,1,0,,u_pad_gpio15_mux_sel.q
+siracusa_pads_debug_config_pad_gpio16_cfg,Pad signal configuration.,472,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio16_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio16_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio16_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio16_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio16_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio16_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio16_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio16_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio16_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio16_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio16_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio16_mux_sel,"Pad signal port multiplex selection for pad pad_gpio16. The programmed value defines which port
+is connected to the pad.",476,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio16_mux_sel,,,,,,pad_gpio16_mux_sel,,0,2,RW,1,0,,u_pad_gpio16_mux_sel.q
+siracusa_pads_debug_config_pad_gpio17_cfg,Pad signal configuration.,480,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio17_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio17_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio17_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio17_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio17_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio17_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio17_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio17_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio17_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio17_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio17_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio17_mux_sel,"Pad signal port multiplex selection for pad pad_gpio17. The programmed value defines which port
+is connected to the pad.",484,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio17_mux_sel,,,,,,pad_gpio17_mux_sel,,0,2,RW,1,0,,u_pad_gpio17_mux_sel.q
+siracusa_pads_debug_config_pad_gpio18_cfg,Pad signal configuration.,488,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio18_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio18_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio18_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio18_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio18_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio18_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio18_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio18_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio18_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio18_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio18_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio18_mux_sel,"Pad signal port multiplex selection for pad pad_gpio18. The programmed value defines which port
+is connected to the pad.",492,32,,1,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio18_mux_sel,,,,,,pad_gpio18_mux_sel,,0,2,RW,1,0,,u_pad_gpio18_mux_sel.q
+siracusa_pads_debug_config_pad_gpio19_cfg,Pad signal configuration.,496,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio19_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio19_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio19_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio19_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio19_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio19_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio19_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio19_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio19_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio19_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio19_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio19_mux_sel,"Pad signal port multiplex selection for pad pad_gpio19. The programmed value defines which port
+is connected to the pad.",500,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio19_mux_sel,,,,,,pad_gpio19_mux_sel,,0,2,RW,0,0,,u_pad_gpio19_mux_sel.q
+siracusa_pads_debug_config_pad_gpio20_cfg,Pad signal configuration.,504,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio20_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio20_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio20_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio20_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio20_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio20_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio20_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio20_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio20_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio20_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio20_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio20_mux_sel,"Pad signal port multiplex selection for pad pad_gpio20. The programmed value defines which port
+is connected to the pad.",508,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio20_mux_sel,,,,,,pad_gpio20_mux_sel,,0,2,RW,0,0,,u_pad_gpio20_mux_sel.q
+siracusa_pads_debug_config_pad_gpio21_cfg,Pad signal configuration.,512,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio21_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio21_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio21_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio21_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio21_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio21_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio21_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio21_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio21_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio21_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio21_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio21_mux_sel,"Pad signal port multiplex selection for pad pad_gpio21. The programmed value defines which port
+is connected to the pad.",516,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio21_mux_sel,,,,,,pad_gpio21_mux_sel,,0,2,RW,0,0,,u_pad_gpio21_mux_sel.q
+siracusa_pads_debug_config_pad_gpio22_cfg,Pad signal configuration.,520,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio22_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio22_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio22_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio22_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio22_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio22_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio22_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio22_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio22_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio22_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio22_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio22_mux_sel,"Pad signal port multiplex selection for pad pad_gpio22. The programmed value defines which port
+is connected to the pad.",524,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio22_mux_sel,,,,,,pad_gpio22_mux_sel,,0,2,RW,0,0,,u_pad_gpio22_mux_sel.q
+siracusa_pads_debug_config_pad_gpio23_cfg,Pad signal configuration.,528,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio23_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio23_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio23_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio23_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio23_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio23_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio23_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio23_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio23_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio23_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio23_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio23_mux_sel,"Pad signal port multiplex selection for pad pad_gpio23. The programmed value defines which port
+is connected to the pad.",532,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio23_mux_sel,,,,,,pad_gpio23_mux_sel,,0,2,RW,0,0,,u_pad_gpio23_mux_sel.q
+siracusa_pads_debug_config_pad_gpio24_cfg,Pad signal configuration.,536,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio24_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio24_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio24_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio24_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio24_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio24_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio24_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio24_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio24_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio24_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio24_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio24_mux_sel,"Pad signal port multiplex selection for pad pad_gpio24. The programmed value defines which port
+is connected to the pad.",540,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio24_mux_sel,,,,,,pad_gpio24_mux_sel,,0,2,RW,0,0,,u_pad_gpio24_mux_sel.q
+siracusa_pads_debug_config_pad_gpio25_cfg,Pad signal configuration.,544,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio25_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio25_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio25_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio25_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio25_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio25_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio25_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio25_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio25_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio25_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio25_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio25_mux_sel,"Pad signal port multiplex selection for pad pad_gpio25. The programmed value defines which port
+is connected to the pad.",548,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio25_mux_sel,,,,,,pad_gpio25_mux_sel,,0,2,RW,0,0,,u_pad_gpio25_mux_sel.q
+siracusa_pads_debug_config_pad_gpio26_cfg,Pad signal configuration.,552,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio26_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio26_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio26_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio26_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio26_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio26_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio26_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio26_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio26_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio26_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio26_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio26_mux_sel,"Pad signal port multiplex selection for pad pad_gpio26. The programmed value defines which port
+is connected to the pad.",556,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio26_mux_sel,,,,,,pad_gpio26_mux_sel,,0,2,RW,0,0,,u_pad_gpio26_mux_sel.q
+siracusa_pads_debug_config_pad_gpio27_cfg,Pad signal configuration.,560,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio27_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio27_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio27_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio27_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio27_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio27_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio27_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio27_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio27_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio27_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio27_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio27_mux_sel,"Pad signal port multiplex selection for pad pad_gpio27. The programmed value defines which port
+is connected to the pad.",564,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio27_mux_sel,,,,,,pad_gpio27_mux_sel,,0,2,RW,0,0,,u_pad_gpio27_mux_sel.q
+siracusa_pads_debug_config_pad_gpio28_cfg,Pad signal configuration.,568,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio28_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio28_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio28_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio28_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio28_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio28_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio28_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio28_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio28_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio28_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio28_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio28_mux_sel,"Pad signal port multiplex selection for pad pad_gpio28. The programmed value defines which port
+is connected to the pad.",572,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio28_mux_sel,,,,,,pad_gpio28_mux_sel,,0,2,RW,0,0,,u_pad_gpio28_mux_sel.q
+siracusa_pads_debug_config_pad_gpio29_cfg,Pad signal configuration.,576,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio29_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio29_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio29_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio29_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio29_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio29_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio29_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio29_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio29_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio29_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio29_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio29_mux_sel,"Pad signal port multiplex selection for pad pad_gpio29. The programmed value defines which port
+is connected to the pad.",580,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio29_mux_sel,,,,,,pad_gpio29_mux_sel,,0,2,RW,0,0,,u_pad_gpio29_mux_sel.q
+siracusa_pads_debug_config_pad_gpio30_cfg,Pad signal configuration.,584,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio30_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio30_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio30_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio30_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio30_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio30_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio30_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio30_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio30_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio30_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio30_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio30_mux_sel,"Pad signal port multiplex selection for pad pad_gpio30. The programmed value defines which port
+is connected to the pad.",588,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio30_mux_sel,,,,,,pad_gpio30_mux_sel,,0,2,RW,0,0,,u_pad_gpio30_mux_sel.q
+siracusa_pads_debug_config_pad_gpio31_cfg,Pad signal configuration.,592,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio31_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio31_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio31_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio31_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio31_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio31_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio31_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio31_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio31_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio31_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio31_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio31_mux_sel,"Pad signal port multiplex selection for pad pad_gpio31. The programmed value defines which port
+is connected to the pad.",596,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio31_mux_sel,,,,,,pad_gpio31_mux_sel,,0,2,RW,0,0,,u_pad_gpio31_mux_sel.q
+siracusa_pads_debug_config_pad_gpio32_cfg,Pad signal configuration.,600,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio32_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio32_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio32_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio32_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio32_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio32_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio32_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio32_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio32_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio32_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio32_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio32_mux_sel,"Pad signal port multiplex selection for pad pad_gpio32. The programmed value defines which port
+is connected to the pad.",604,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio32_mux_sel,,,,,,pad_gpio32_mux_sel,,0,2,RW,0,0,,u_pad_gpio32_mux_sel.q
+siracusa_pads_debug_config_pad_gpio33_cfg,Pad signal configuration.,608,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio33_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio33_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio33_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio33_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio33_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio33_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio33_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio33_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio33_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio33_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio33_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio33_mux_sel,"Pad signal port multiplex selection for pad pad_gpio33. The programmed value defines which port
+is connected to the pad.",612,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio33_mux_sel,,,,,,pad_gpio33_mux_sel,,0,2,RW,0,0,,u_pad_gpio33_mux_sel.q
+siracusa_pads_debug_config_pad_gpio34_cfg,Pad signal configuration.,616,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio34_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio34_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio34_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio34_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio34_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio34_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio34_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio34_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio34_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio34_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio34_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio34_mux_sel,"Pad signal port multiplex selection for pad pad_gpio34. The programmed value defines which port
+is connected to the pad.",620,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio34_mux_sel,,,,,,pad_gpio34_mux_sel,,0,2,RW,0,0,,u_pad_gpio34_mux_sel.q
+siracusa_pads_debug_config_pad_gpio35_cfg,Pad signal configuration.,624,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio35_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio35_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio35_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio35_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio35_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio35_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio35_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio35_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio35_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio35_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio35_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio35_mux_sel,"Pad signal port multiplex selection for pad pad_gpio35. The programmed value defines which port
+is connected to the pad.",628,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio35_mux_sel,,,,,,pad_gpio35_mux_sel,,0,2,RW,0,0,,u_pad_gpio35_mux_sel.q
+siracusa_pads_debug_config_pad_gpio36_cfg,Pad signal configuration.,632,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio36_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio36_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio36_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio36_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio36_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio36_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio36_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio36_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio36_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio36_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio36_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio36_mux_sel,"Pad signal port multiplex selection for pad pad_gpio36. The programmed value defines which port
+is connected to the pad.",636,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio36_mux_sel,,,,,,pad_gpio36_mux_sel,,0,2,RW,0,0,,u_pad_gpio36_mux_sel.q
+siracusa_pads_debug_config_pad_gpio37_cfg,Pad signal configuration.,640,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio37_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio37_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio37_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio37_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio37_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio37_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio37_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio37_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio37_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio37_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio37_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio37_mux_sel,"Pad signal port multiplex selection for pad pad_gpio37. The programmed value defines which port
+is connected to the pad.",644,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio37_mux_sel,,,,,,pad_gpio37_mux_sel,,0,2,RW,0,0,,u_pad_gpio37_mux_sel.q
+siracusa_pads_debug_config_pad_gpio38_cfg,Pad signal configuration.,648,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio38_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio38_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio38_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio38_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio38_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio38_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio38_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio38_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio38_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio38_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio38_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio38_mux_sel,"Pad signal port multiplex selection for pad pad_gpio38. The programmed value defines which port
+is connected to the pad.",652,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio38_mux_sel,,,,,,pad_gpio38_mux_sel,,0,2,RW,0,0,,u_pad_gpio38_mux_sel.q
+siracusa_pads_debug_config_pad_gpio39_cfg,Pad signal configuration.,656,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio39_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio39_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio39_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio39_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio39_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio39_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio39_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio39_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio39_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio39_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio39_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio39_mux_sel,"Pad signal port multiplex selection for pad pad_gpio39. The programmed value defines which port
+is connected to the pad.",660,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio39_mux_sel,,,,,,pad_gpio39_mux_sel,,0,2,RW,0,0,,u_pad_gpio39_mux_sel.q
+siracusa_pads_debug_config_pad_gpio40_cfg,Pad signal configuration.,664,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio40_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio40_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio40_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio40_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio40_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio40_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio40_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio40_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio40_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio40_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio40_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio40_mux_sel,"Pad signal port multiplex selection for pad pad_gpio40. The programmed value defines which port
+is connected to the pad.",668,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio40_mux_sel,,,,,,pad_gpio40_mux_sel,,0,2,RW,0,0,,u_pad_gpio40_mux_sel.q
+siracusa_pads_debug_config_pad_gpio41_cfg,Pad signal configuration.,672,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio41_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio41_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio41_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio41_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio41_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio41_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio41_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio41_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio41_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio41_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio41_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio41_mux_sel,"Pad signal port multiplex selection for pad pad_gpio41. The programmed value defines which port
+is connected to the pad.",676,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio41_mux_sel,,,,,,pad_gpio41_mux_sel,,0,2,RW,0,0,,u_pad_gpio41_mux_sel.q
+siracusa_pads_debug_config_pad_gpio42_cfg,Pad signal configuration.,680,32,,16,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,chip2pad,Connects to pad's TX driver,0,1,RW,0,0,,u_pad_gpio42_cfg_chip2pad.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,drv0,Choose the driving strength of the pad. LSB = ~3mA,1,1,RW,0,0,,u_pad_gpio42_cfg_drv0.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,drv1,Choose the driving strength of the pad. LSB = ~3mA,2,1,RW,0,0,,u_pad_gpio42_cfg_drv1.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,drv2,Choose the driving strength of the pad. LSB = ~3mA,3,1,RW,0,0,,u_pad_gpio42_cfg_drv2.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,drv3,Choose the driving strength of the pad. LSB = ~3mA,4,1,RW,1,0,,u_pad_gpio42_cfg_drv3.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,pull_en,"Enable pull up/down (depends on pull_sel) resistor, active-high",5,1,RW,0,0,,u_pad_gpio42_cfg_pull_en.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,pull_sel,"1 -> use pull-up resistor (if pull_en == 1), 0 -> use pull-down resistor",6,1,RW,0,0,,u_pad_gpio42_cfg_pull_sel.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,ret_en,"Enable retention mode, active-high",7,1,RW,0,0,,u_pad_gpio42_cfg_ret_en.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,st_en,"Schmitt-trigger enable, active high",8,1,RW,0,0,,u_pad_gpio42_cfg_st_en.q
+siracusa_pads_debug_config_pad_gpio42_cfg,,,,,,tx_en,"TX driver enable, active low",9,1,RW,0,0,,u_pad_gpio42_cfg_tx_en.q
+siracusa_pads_debug_config_pad_gpio42_mux_sel,"Pad signal port multiplex selection for pad pad_gpio42. The programmed value defines which port
+is connected to the pad.",684,32,,0,,,,,,,,,
+siracusa_pads_debug_config_pad_gpio42_mux_sel,,,,,,pad_gpio42_mux_sel,,0,2,RW,0,0,,u_pad_gpio42_mux_sel.q

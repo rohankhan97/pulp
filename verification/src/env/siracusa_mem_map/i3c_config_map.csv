@@ -1,0 +1,6 @@
+Block Name,BlockMap Name,BlockMap Description,BlockMap is default,BlockMap Instance Name,BlockMap Instance Address,BlockMap Instance Access,BlockMap Address Offset
+i3c_config_block,i3c_config_map,Default Map,True,,,,
+i3c_config_block,i3c_config_map,,,swrst,0,,
+i3c_config_block,i3c_config_map,,,cfg1,4,,
+i3c_config_block,i3c_config_map,,,cfg2,8,,
+i3c_config_block,i3c_config_map,,,asf_cfg,12,,

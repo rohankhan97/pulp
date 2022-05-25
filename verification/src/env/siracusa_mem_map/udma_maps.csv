@@ -1,0 +1,3 @@
+Block Name,BlockMap Name,BlockMap Description,BlockMap is default,BlockMap Instance Name,BlockMap Instance Address,BlockMap Instance Access,BlockMap Address Offset
+soc_peripherals_block,soc_peripherals_map,,TRUE,pulp_io,0x1a102000,,
+soc_block,soc_map,,,cpi_l2_vmem_map,0x1c020000,,

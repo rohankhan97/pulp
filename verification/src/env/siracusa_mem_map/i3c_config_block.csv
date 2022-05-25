@@ -1,0 +1,6 @@
+Block Name,Block Description,Block Coverage,Block Backdoor,Block Component Name,Block Instance Name,Block Instance Type,Block Instance Description,Block Instance Dimension,Block Instance Backdoor,Block Instance No Reg Tests,Block Instance No Reg Access Test,Block Instance No Reg Shared Access Test,Block Instance No Reg Bit Bash Test,Block Instance No Reg HW Reset Test,Block Instance No Mem Tests,Block Instance No Mem Access Test,Block Instance No Mem Shared Access Test,Block Instance No Mem Walk Test,Project Extra Imports
+i3c_config_block,,,,,,,,,,,,,,,,,,,
+i3c_config_block,,,,i3c_config_swrst,swrst,reg,Perform software reset of the whole IP ,,%(FIELDS),,,,,,,,,,
+i3c_config_block,,,,i3c_config_cfg1,cfg1,reg,Configure static device configuration. Any change to this register (except for RSTCYCLES) requires reseting the I3C peripheral,,%(FIELDS),,,,,,,,,,
+i3c_config_block,,,,i3c_config_cfg2,cfg2,reg,Configure static device configuration. Any change to this register (except for RSTCYCLES) requires reseting the I3C peripheral,,%(FIELDS),,,,,,,,,,
+i3c_config_block,,,,i3c_config_asf_cfg,asf_cfg,reg,Active-safety feature configuration,,%(FIELDS),,,,,,,,,,

@@ -1,0 +1,3 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Register Constraints,Register Custom Type,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Covered,Field is Reserved,Field is Volatile,Field Constraints
+apb_soc_ctrl_corestatus,Software Run/Exit Status,0xa0,32,RW,0x0,,,eoc,Set to 1 once the core reaches end of computation,31,1,,0,,,1,
+apb_soc_ctrl_corestatus,,,,,,,,exit_code,The 31 LSBs of the exit code,0,31,,0,,,1,

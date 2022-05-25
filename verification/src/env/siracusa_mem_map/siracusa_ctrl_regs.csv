@@ -1,0 +1,46 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved,Field Backdoor
+siracusa_ctrl_pad_dbg_mode_en_0,Enable the corresponding GPIO pads debug functionality. ,0,32,,0,,,,,,,,,
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_0,,0,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_0.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_1,,1,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_1.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_2,,2,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_2.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_3,,3,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_3.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_4,,4,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_4.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_5,,5,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_5.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_6,,6,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_6.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_7,,7,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_7.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_8,,8,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_8.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_9,,9,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_9.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_10,,10,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_10.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_11,,11,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_11.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_12,,12,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_12.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_13,,13,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_13.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_14,,14,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_14.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_15,,15,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_15.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_16,,16,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_16.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_17,,17,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_17.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_18,,18,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_18.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_19,,19,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_19.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_20,,20,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_20.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_21,,21,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_21.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_22,,22,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_22.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_23,,23,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_23.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_24,,24,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_24.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_25,,25,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_25.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_26,,26,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_26.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_27,,27,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_27.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_28,,28,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_28.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_29,,29,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_29.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_30,,30,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_30.q
+siracusa_ctrl_pad_dbg_mode_en_0,,,,,,pad_dbg_mode_en_31,,31,1,RW,,0,,u_pad_dbg_mode_en_0_pad_dbg_mode_en_31.q
+siracusa_ctrl_pad_dbg_mode_en_1,Enable the corresponding GPIO pads debug functionality. ,4,32,,0,,,,,,,,,
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_32,For PAD_DBG_MODE_EN1,0,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_32.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_33,For PAD_DBG_MODE_EN1,1,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_33.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_34,For PAD_DBG_MODE_EN1,2,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_34.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_35,For PAD_DBG_MODE_EN1,3,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_35.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_36,For PAD_DBG_MODE_EN1,4,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_36.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_37,For PAD_DBG_MODE_EN1,5,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_37.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_38,For PAD_DBG_MODE_EN1,6,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_38.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_39,For PAD_DBG_MODE_EN1,7,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_39.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_40,For PAD_DBG_MODE_EN1,8,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_40.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_41,For PAD_DBG_MODE_EN1,9,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_41.q
+siracusa_ctrl_pad_dbg_mode_en_1,,,,,,pad_dbg_mode_en_42,For PAD_DBG_MODE_EN1,10,1,RW,,0,,u_pad_dbg_mode_en_1_pad_dbg_mode_en_42.q

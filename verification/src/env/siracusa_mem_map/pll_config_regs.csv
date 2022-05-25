@@ -1,0 +1,64 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved,Field Backdoor
+pll_config_status,Status register of the PLL,0,32,,0,,,,,,,,,
+pll_config_status,,,,,,lock,"Lock signal Indicates no cycle slips between the feedback clock and FPFD for
+LOCKCOUNT consecutive cycles.",0,1,RO,,1,,u_status_lock.qs
+pll_config_status,,,,,,fcalout,"LOCK calibration output code
+Can be read out synchronously with rising edge of FREF
+This is the final value used by the SAR algorithm to set the initial VCO
+frequency.
+It can be stored for future use with FCALBYP to speed up subsequent
+lock times.",16,8,RO,,1,,u_status_fcalout.qs
+pll_config_cfg1,Configure general PLL settings,4,32,,83,,,,,,,,,
+pll_config_cfg1,,,,,,pllen,"Global enable signal for the PLL
+1’b0 –> PLL is in low-leakage power down mode. All digital logic is reset.
+1’b1 –> PLL is enabled
+Minimum low pulse width is 4ns in order to properly reset the PLL.",0,1,RW,1,0,,u_cfg1_pllen.q
+pll_config_cfg1,,,,,,foutpostdiven,"Post divided output enable
+1’b0 –> FOUTPOSTDIV=0
+1’b1 –> FOUTPOSTDIV is enabled
+The PLL contains circuitry to ensure that FOUTPOSTDIV is glitch-free
+when FOUTPOSTDIVEN is toggled. Turning this PLL port of disables the
+output clock of the PLL used in the system!",1,1,RW,1,0,,u_cfg1_foutpostdiven.q
+pll_config_cfg1,,,,,,foutvcoen,"VCO rate output clock enable
+1’b0 –> FOUTVCO=0
+1’b1 –> FOUTVCO is enabled
+This port is not in Siracusa so it should remain powered off by default.",2,1,RW,0,0,,u_cfg1_foutvcoen.q
+pll_config_cfg1,,,,,,lockcount,"Number of PFD cycles to count without a cycle slip before LOCK goes
+high
+2'b00 -> 8
+2'b01 -> 16 (default)
+2'b10 -> 32
+2'b11 -> 64",4,2,RW,1,0,,u_cfg1_lockcount.q
+pll_config_cfg1,,,,,,lockgate,"Enable clock gate on output clock with LOCK signal.
+1'b0 -> The output clock gate is enabled regardless the value of LOCK.
+1'b1 -> Output clock is gated with LOCK signal to filter unstable output clock.",6,1,RW,1,0,,u_cfg1_lockgate.q
+pll_config_cfg2,"Configure the target frequency of the PLL. After reset, the PLL starts up at 50 MHz.",8,32,,34343915,,,,,,,,,
+pll_config_cfg2,,,,,,fbdiv,"PLL Feedback divide value (256 to 13333)
+Actual maximum is 16383, but this value is outside of
+the useful functional range of the VCO and PFD",0,14,RW,3051,0,,u_cfg2_fbdiv.q
+pll_config_cfg2,,,,,,postdiv,"Post divider value (1 to 16)
+Actual divide value is POSTDIV+1 (e.g if POSTDIV=0, divide = 1)",14,4,RW,0,0,,u_cfg2_postdiv.q
+pll_config_cfg2,,,,,,vcodivsel,"Fixed VCO divider
+1’b0 –> Divide-by-1
+1’b1 –> Divide-by-2",18,1,RW,1,0,,u_cfg2_vcodivsel.q
+pll_config_cfg2,,,,,,failsafe_en,"Enable a failsafe mode where the clock enable signal is asserted after at most 256 reference
+clock cycles, regardless whether the PLL asserts the LOCK signal. This mode should be used in
+the bootrom to prevent us locking us out of the system due to a PLL that never locks during booting.",19,1,RW,1,0,,u_cfg2_failsafe_en.q
+pll_config_cfg2,,,,,,freq_change_mask_cnt,"Enable a masking of the PLL clock for FREQ_CHANGE_CNT number of reference clock cycles after any changes to the CFG2 register to
+prevent cycle glitches arriving to logic.",20,8,RW,32,0,,u_cfg2_freq_change_mask_cnt.q
+pll_config_cfg3,Configure calibration settings of the PLL.,12,32,,0,,,,,,,,,
+pll_config_cfg3,,,,,,fcalin,"LOCK calibration input code
+8’d0 –> minimum frequency at startup
+8’d255 –> maximum frequency at startup
+If FCA LBYP=1 then this value is used to set the startup current DAC for
+three FREF periods after PLLEN goes high, or indefinitely if FCALTEST=1’b1",0,8,RW,,0,,u_cfg3_fcalin.q
+pll_config_cfg3,,,,,,fcaltest,"LOCK calibration input code
+8’d0 –> minimum frequency at startup
+8’d255 –> maximum frequency at startup
+If FCALBYP=1 then this value is used to set the startup current DAC for
+three FREF periods
+after PLLEN goes high, or indefinitely if FCALTEST=1’b1",30,1,RW,,0,,u_cfg3_fcaltest.q
+pll_config_cfg3,,,,,,fcalbyp,"Frequency calibration bypass
+1'b0 -> Use internal SAR frequency calibration method
+1'b1 -> FCALIN is used to set the startup current DAC for three FREF
+periods after PLLEN goes high, or indefinitely if FCALTEST=1'b1.",31,1,RW,0,0,,u_cfg3_fcalbyp.q

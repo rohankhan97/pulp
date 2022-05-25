@@ -1,0 +1,14 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved,Field Backdoor
+cluster_write_fifo_status,"The current fill state, error count and other status of the cluster write fifo",0,32,,0,,,,,,,,,
+cluster_write_fifo_status,,,,,,req_fifo_fill,"The current number of elements in the request FIFO. Once the FIFO is full, new requests will be stalled.",0,8,RO,,1,,u_status_req_fifo_fill.qs
+cluster_write_fifo_status,,,,,,pend_req_fifo_fill,"The current number of outstanding requests. Once this FIFO is full, new requests will be stalled.",8,8,RO,,1,,u_status_pend_req_fifo_fill.qs
+cluster_write_fifo_status,,,,,,error_fifo_fill,"
+The current number of error responses in the response FIFO. The cluster write FIFO will issue a SoC event whenever an
+outstanding request is answered with an error response. Simultaneously the address of the request that failed is pushed
+into the error FIFO and can be read out via the corresponding register.",16,8,RO,,1,,u_status_error_fifo_fill.qs
+cluster_write_fifo_ctrl,Allows flushing the various FIFOs within the module.,4,32,,0,,,,,,,,,
+cluster_write_fifo_ctrl,,,,,,flush_req_fifo,Writing 1 flushes the request FIFO,0,1,WO,,0,,u_ctrl_flush_req_fifo.qs
+cluster_write_fifo_ctrl,,,,,,flush_outstd_req_fifo,Writing 1 flushes the outstanding requests FIFO,1,1,WO,,0,,u_ctrl_flush_outstd_req_fifo.qs
+cluster_write_fifo_ctrl,,,,,,flush_error_fifo,Writing 1 flushes the error response FIFO,2,1,WO,,0,,u_ctrl_flush_error_fifo.qs
+cluster_write_fifo_error_rsp_fifo,Read from error response FIFO. The error response FIFO contains the address of every request that was answered with an error response. Every read from this reg will pop one error item from the FIFO.,8,32,,0,,,,,,,,,
+cluster_write_fifo_error_rsp_fifo,,,,,,error_rsp_fifo,,0,32,RO,,1,,u_error_rsp_fifo.qs

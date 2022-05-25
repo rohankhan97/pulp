@@ -1,0 +1,5 @@
+Block Name,BlockMap Name,BlockMap Description,BlockMap is default,BlockMap Instance Name,BlockMap Instance Address,BlockMap Instance Access,BlockMap Address Offset
+cluster_write_fifo_block,cluster_write_fifo_map,Default Map,True,,,,
+cluster_write_fifo_block,cluster_write_fifo_map,,,status,0,,
+cluster_write_fifo_block,cluster_write_fifo_map,,,ctrl,4,,
+cluster_write_fifo_block,cluster_write_fifo_map,,,error_rsp_fifo,8,,

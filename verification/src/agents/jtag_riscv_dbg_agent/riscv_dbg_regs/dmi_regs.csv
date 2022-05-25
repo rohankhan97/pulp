@@ -1,0 +1,18 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved
+BYPASS0,BYPASS,0x00,1,,,,,,,,,,
+IDCODE,IDCODE,0x01,32,,,,,,,,,,
+IDCODE,,,,,,Version,,28,4,RO,,FALSE,FALSE
+IDCODE,,,,,,PartNumber,,12,16,RO,,FALSE,FALSE
+IDCODE,,,,,,ManufId,,1,11,RO,,FALSE,FALSE
+dtmcs,DTM Control and Status,0x10,32,,,,,,,,,,
+dtmcs,,,,,,dmihardreset,,17,1,WO,,TRUE,FALSE
+dtmcs,,,,,,dmireset,,16,1,WO,,TRUE,FALSE
+dtmcs,,,,,,idle,,12,3,RO,,TRUE,FALSE
+dtmcs,,,,,,dmistat,,10,2,RO,0,TRUE,FALSE
+dtmcs,,,,,,abits,,4,6,RO,,FALSE,FALSE
+dtmcs,,,,,,version,,0,4,RO,1,FALSE,FALSE
+dmi,Debug Module Interface Access,0x11,41,,,,,,,,,,
+dmi,,,,,,address,,34,7,RW,0,FALSE,FALSE
+dmi,,,,,,data,,2,32,RW,0,TRUE,FALSE
+dmi,,,,,,op,,0,2,RW,0,TRUE,FALSE
+BYPASS,BYPASS,0x1f,1,,,,,,,,,,

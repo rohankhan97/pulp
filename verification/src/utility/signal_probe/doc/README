@@ -1,0 +1,292 @@
+-----------------------------------------------------------------------------
+Project:     vlab_probes
+Author:      Jonathan Bromley, Verilab <jonathan.bromley@verilab.com>
+Description: SystemVerilog+DPI+VPI package to get value-change callback
+             on signals identified by their string names in the hierarchy
+File:        README documentation
+Version:     This documentation describes version 1.0beta of the package,
+             which was published at www.verilab.com on 24 May 2012.
+----------------------------------------------------------------------------
+Copyright 2012 Verilab GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+----------------------------------------------------------------------------
+This version has no support for probing VHDL signals.
+
+Unfortunately, it seems that some simulator-specific #ifdefs will be needed 
+to allow VHDL mixed-language operation across multiple simulators.  We aim
+to add such support in a future version.  By contrast, the code that probes
+SystemVerilog signals is completely portable.
+
+Attempting to probe VHDL signals will cause a run-time error.
+-----------------------------------------------------------------------------
+
+
+=================
+Usage and purpose
+=================
+
+The intent of this package is to allow your SystemVerilog testbench to
+select one or more signals for probing, using their full Verilog
+hierarchical name.  For each probed signal, a SystemVerilog object
+is created.  The user can then call various methods on that object
+to wait for value-change on the signal, and find the signal's value 
+and various other properties.
+
+
+===========
+Compilation
+===========
+
+You must compile <vlab_probes_pkg.sv> along with the rest of your testbench.
+You must also compile the DPI file <vlab_probes.c> using your chosen 
+tool's normal DPI compile flow.  Consult your simulator's user guide for
+full details.  In many cases it will be easiest to use the simulator's
+one-step flow command (qverilog, irun, vcs), which can correctly handle 
+a mixture of Verilog and C source files
+
+Because of the string-based signal lookup, you must enable VPI access
+to signals using compilation options.  There are various ways to do this.
+The first option listed below for each tool should work correctly. Defeating 
+all optimizations (the second option listed) will usually do the job too, 
+but is likely to give poorer performance.
+
+* Questa
+      +acc=rn (preferred): give access to variables and nets
+      -novopt (alternative): defeat all optimizations
+
+* Incisive
+      -access +rw (preferred): give read/write access to objects
+      -linedebug (alternative): defeat all optimizations
+
+* VCS
+      +vpi +acc+2 (preferred): enable VPI functionality and allow read/write access
+      -debug (alternative): defeat all optimizations
+      Note that slightly better performance can be achieved using the 
+      vpi_learn flow.  See VCS documentation for further details.
+
+
+============
+API overview
+============
+
+The purpose of this software is to allow value changes on a Verilog
+vector signal to be monitored by a testbench, just as you might do
+with the native Verilog @signal construct.  However, this software
+allows you to pick a signal dynamically, using its string name.
+
+The basic usage flow is:
+
+* Import the signal_probe class definition using
+    import vlab_probes_pkg::signal_probe;
+
+* Compute the full hierarchical path name of your desired signal,
+  as a SystemVerilog string.  Typically this will be done as 
+  part of a UVM testbench's configuration or build phase.
+
+* Using the class's static create() method, construct a signal_probe 
+  object for the chosen signal and keep a reference to it in a variable:
+       signal_probe my_probe;
+       my_probe = signal_probe::create("your.signal.name");
+
+* Now, you can use 
+       my_probe.waitForChange();
+  at any time to suspend execution until the signal's value changes,
+  just as you could in regular Verilog by doing
+       @your.signal.name
+  
+* You can find the signal's value at any time by using
+       value = my_probe.getValue32();
+  This method returns the signal's value as a 32-bit 4-state (logic)
+  result.  If the signal is narrower than 32 bits, its value is
+  widened to 32 bits by zero-padding (if the signal is unsigned)
+  or sign extension (if signed).  If the signal is 32 bits or wider,
+  the 32 LSBs are returned.
+  
+
+=========================
+Additional considerations
+=========================
+
+* There is no good reason to use wildcard (::*) import of the package.
+  Class signal_probe is the only thing you need.
+* By default, the probe object constructed by signal_probe::create()
+  is already sensitive to value changes on your chosen signal.  
+  However, you can pass a value of 0 to the optional enable argument.
+  This causes the probe to be created without being sensitised.  You
+  can then call my_probe,setVcEnable(1) at some later time to enable
+  value-change detection on that signal.  Value-change detection can
+  be freely turned on and off at any time, but this facility should
+  be used with care as it carries a significant runtime overhead for
+  each enable/disable operation.
+* You can read the value of signals wider than 32 bits by providing
+  a second, optional "chunk" argument to getValue32.  The method then
+  returns slice [32*chunk+:32] of the wider vector, zero-padded or
+  sign-extended if necessary to fill the 32-bit result.
+* You can mimic a value-change on a signal (i.e., release any 
+  threads that are waiting in the signal's waitForChange() method)
+  by invoking the signal's releaseWaiters() method from another
+  thread.  This triggers the internal value-change event, but
+  does not affect the signal's value in any way,
+  
+
+==================
+User API in detail
+==================
+
+The entire user-accessible API of the signal probe functionality
+is described by this code excerpt.  No other packages, functions
+or variables from this software should be accessed by user code.
+In particular, user code must not use the internal package
+vlab_probes_pkg_private, nor any of its functions or variables.
+Attempting to do so may leave the package's data structures in
+an incoherent state and cause erratic or unexpected behaviour.
+
+   package vlab_probes_pkg;
+      class signal_probe extends signal_probe_private;
+         extern static  function signal_probe create(string fullname, bit enable = 1);
+         extern virtual task                  waitForChange();
+         extern virtual function logic [31:0] getValue32(int chunk = 0);
+         extern virtual function string       getName();
+         extern virtual function int          getSize();
+         extern virtual function bit          getSigned();
+         extern virtual function void         setVcEnable(bit enable);
+         extern virtual function bit          getVcEnable();
+         extern virtual function void         releaseWaiters();
+         ...
+      endclass
+   endpackage   
+
+
+===================================================
+Detailed description of user-accessible API methods
+===================================================
+
+Note that function <create> is a static method of the class.
+All other methods are class members, and must be called on a specific
+object of the class type.  Note also that users should never call
+the class's constructor <new> directly; instead, always use <create>
+to make a signal probe object.
+
+* static function signal_probe create(string fullname, bit enable = 1);
+-
+Create a <signal_probe> object to observe the signal whose full Verilog
+hierarchical name is <fullname>.  If <enable> is not supplied, or is 1,
+the probe object will be initialized with value-change detection active.
+If <enable> is zero, the probe object will be created but value-change
+detection will be inactive and must be activated later using method
+<setVcEnable>.  If the probe cannot be created, this function returns 
+NULL and will display a warning message on the simulator console.
+The signal to be probed must be a Verilog net or variable of integral 
+type, i.e. a vector of bit or logic, or a packed struc, union or array,
+or one of the integer-like types such as int, integer, byte etc.
+
+* task waitForChange();
+-
+Call this task to suspend execution until the next value-change on the
+probed signal.  However, value-changes that occur while value-change
+detection is inactive (see <setVcEnable>) will not cause execution to
+be resumed.  Execution can also be resumed by some other process calling
+function <releaseWaiters> (q.v.) on the object.
+
+* function logic [31:0] getValue32(int chunk = 0);
+-
+This function returns a 32-bit slice of the probed signal's vector
+value.  The least significant bit of the slice is at bit position
+<32*chunk> (assuming that the probed signal's vector range is 
+normalized to [width-1:0]).  Any bits of the resulting 32-bit slice 
+that are beyond the actual signal's most-significant bit are padded
+with zero if the signal is unsigned, or by sign extension from the
+signal's most significant bit if the signal is signed.  It is an error
+for <chunk> to be negative.  Note that this function invariably returns
+an unsigned result, even if the original signal is signed and has a
+negative value; however, sign extension assures that the returned bit
+pattern will be appropriate for the signal's signedness.
+
+* function string getName();
+-
+This function returns a copy of the probed signal's full hierarchical 
+string name, exactly as was supplied in the original call to <create>
+that was used to create the probe object.
+
+* function int getSize();
+-
+This function returns the number of bits in the probed signal.  For
+example, if you create a probe on a signal that is declared as
+   wire [20:10] w;
+then the result of <getSize> for that probe would be 11.
+
+* function bit getSigned();
+-
+This function returns a bit flag indicating whether the probed 
+signal is declared (in Verilog) as signed or unsigned.  The result
+is 1 for a signed signal and 0 for unsigned.  Note that some 
+SystemVerilog data types (for example byte, int, integer) are
+implicitly signed.
+
+* function void setVcEnable(bit enable);
+-
+This function controls whether value change detection is enabled
+(active) for a probe object.  During the time when the probe is
+inactive, value-changes on its signal are ignored by the probe.
+When the probe is active, each value-change is detected by the probe
+and causes all processes waiting on the probe's <waitForChange> 
+to be released.  Disabling and enabling a probe's value change
+detection carries a non-trivial runtime cost, and should be done
+only if there is a very strong reason: for example, if it is known
+that a signal will have a very large number of value changes, all of 
+which must be ignored.  To ignore just a few value changes it is 
+more efficient to make a runtime decision whenever <waitForChange>
+returns, using code such as the following example:
+    do begin
+       my_probe.waitForChange();
+    end while (probe_should_be_disabled);
+By default. probes are active (enabled) when created.  However, an
+optional <enable> argument to the <create> function allows you to 
+create a probe that is initially inactive (disabled) and must be
+explicitly enabled using <setVcEnable(1)> at some future time.
+    
+* function bit getVcEnable();
+-
+This function returns a bit flag indicating whether the probe is
+currently active (1) or inactive (0).
+
+* function void releaseWaiters();
+-
+This function mimics the effect of a value-change on the probed
+signal.  It causes all processes waiting on the probe's <waitForChange>
+method to be released.  It may be useful for debugging, or for giving
+processes a final opportunity to run at the end of a simulation.
+<releaseWaiters> does not respect the probe's active/inactive state;
+it will cause waiting processes to be released even if the probe
+is currently inactive (disabled).
+
+
+============
+Restrictions
+============
+
+In the current version, there is no support for probing of VHDL signals 
+in a mixed-language simulation.
+
+On a simulator restart to time zero, the state of the signal_probe package
+is reset to its initial condition ready for the new simulation run.  
+There should be no memory leaks or other unexpected behaviour after a 
+restart.  The package prints an informative message to the simulator's
+console on such a restart.
+
+Simulator checkpoint/resume behaviour is not correctly supported by this
+package.  If you attempt to restart the simulation from a checkpoint, the
+signal_probe package's C data structures will probably be out of step with
+the simulation and the package will give unpredictable results, or perhaps
+run-time failures.

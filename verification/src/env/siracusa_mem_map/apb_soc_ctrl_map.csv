@@ -1,0 +1,2 @@
+Block Name,BlockMap Name,BlockMap Description,BlockMap is default,BlockMap Instance Name,BlockMap Instance Address,BlockMap Instance Access,BlockMap Address Offset
+apb_soc_ctrl_block,apb_soc_ctrl_map,,TRUE,corestatus,0xa0,,

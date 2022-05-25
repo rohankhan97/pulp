@@ -1,0 +1,4 @@
+Block Name,BlockMap Name,BlockMap Description,BlockMap is default,BlockMap Instance Name,BlockMap Instance Address,BlockMap Instance Access,BlockMap Address Offset
+weight_mem_block,weight_mem_map,Weight Memory Subsystem Mapping,TRUE,weights_mram,0x400000,,
+weight_mem_block,weight_mem_map,,,weights_sram,0x800000,,
+weight_mem_block,weight_mem_map,,,weight_mem_ctrl.weight_memory_config_map,0xc00000,,

@@ -1,0 +1,48 @@
+Block Name,Block Description,Block Coverage,Block Backdoor,Block Component Name,Block Instance Name,Block Instance Type,Block Instance Description,Block Instance Dimension,Block Instance Backdoor,Block Instance No Reg Tests,Block Instance No Reg Access Test,Block Instance No Reg Shared Access Test,Block Instance No Reg Bit Bash Test,Block Instance No Reg HW Reset Test,Block Instance No Mem Tests,Block Instance No Mem Access Test,Block Instance No Mem Shared Access Test,Block Instance No Mem Walk Test,Project Extra Imports
+gpio_block,,,,,,,,,,,,,,,,,,,
+gpio_block,,,,gpio_info,info,reg,Info register that contains information about this peripheral.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_cfg,cfg,reg,Global configuration register for the peripheral,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_mode_0,gpio_mode_0,reg,Set the IO Mode of the GPIO.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_mode_1,gpio_mode_1,reg,Set the IO Mode of the GPIO.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_mode_2,gpio_mode_2,reg,Set the IO Mode of the GPIO.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_mode_3,gpio_mode_3,reg,Set the IO Mode of the GPIO.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_en_0,gpio_en_0,reg,Enable sampling on the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_en_1,gpio_en_1,reg,Enable sampling on the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_in_0,gpio_in_0,reg,Read the current input values of all GPIOs.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_in_1,gpio_in_1,reg,Read the current input values of all GPIOs.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_out_0,gpio_out_0,reg,Set the output value of the corresponding GPIOs.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_out_1,gpio_out_1,reg,Set the output value of the corresponding GPIOs.,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_set_0,gpio_set_0,reg,"For each asserted bit in this register, set the corresponding bit in the padout register.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_set_1,gpio_set_1,reg,"For each asserted bit in this register, set the corresponding bit in the padout register.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_clear_0,gpio_clear_0,reg,"For each asserted bit in this register, clear the corresponding bit in the padout register.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_clear_1,gpio_clear_1,reg,"For each asserted bit in this register, clear the corresponding bit in the padout register.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_toggle_0,gpio_toggle_0,reg,"For each asserted bit in this register, toggle the corresponding bit in the padout register.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_gpio_toggle_1,gpio_toggle_1,reg,"For each asserted bit in this register, toggle the corresponding bit in the padout register.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_rise_en_0,intrpt_rise_en_0,reg,Enable Interrupts on rising edges for the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_rise_en_1,intrpt_rise_en_1,reg,Enable Interrupts on rising edges for the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_fall_en_0,intrpt_fall_en_0,reg,Enable Interrupts on falling edges for the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_fall_en_1,intrpt_fall_en_1,reg,Enable Interrupts on falling edges for the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_high_en_0,intrpt_lvl_high_en_0,reg,Enable logic high level-sensitive Interrupts on the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_high_en_1,intrpt_lvl_high_en_1,reg,Enable logic high level-sensitive Interrupts on the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_low_en_0,intrpt_lvl_low_en_0,reg,Enable logic low level-sensitive Interrupts on the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_low_en_1,intrpt_lvl_low_en_1,reg,Enable logic low level-sensitive Interrupts on the corresponding GPIO,,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_status_0,intrpt_status_0,reg,"Asserted if there is any pending interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears all pending interrupts (rise, fall, low, high) of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_status_1,intrpt_status_1,reg,"Asserted if there is any pending interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears all pending interrupts (rise, fall, low, high) of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_rise_status_0,intrpt_rise_status_0,reg,"Asserted if there is a pending rise interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_rise_status_1,intrpt_rise_status_1,reg,"Asserted if there is a pending rise interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_fall_status_0,intrpt_fall_status_0,reg,"Asserted if there is any pending fall interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_fall_status_1,intrpt_fall_status_1,reg,"Asserted if there is any pending fall interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_high_status_0,intrpt_lvl_high_status_0,reg,"Asserted if there is any pending high-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_high_status_1,intrpt_lvl_high_status_1,reg,"Asserted if there is any pending high-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_low_status_0,intrpt_lvl_low_status_0,reg,"Asserted if there is any pending low-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,
+gpio_block,,,,gpio_intrpt_lvl_low_status_1,intrpt_lvl_low_status_1,reg,"Asserted if there is any pending low-level interrupts on corresponding GPIOs.
+Writing 1 to a specific bit clears the pending interrupt of the corresponding GPIO.",,%(FIELDS),,,,,,,,,,

@@ -1,0 +1,5 @@
+Memory Name,Memory Description,Memory Address,Memory Width,Memory Range,Memory Access,Memory Constraints
+private_bank_soc,Private Memory Bank used in SoC domain,,32,8192,RW,
+l2_memory,L2 Memory (modeled as single memory since UVM RAL does not really support interleaved address mapping),,32,524288,RW,
+l1_memory,L1 Memory (modeled as single memory since UVM RAL does not really support interleaved address mapping),,32,65536,RW,
+weight_memory,4 MB weight memory block,,32,1048576,RW,

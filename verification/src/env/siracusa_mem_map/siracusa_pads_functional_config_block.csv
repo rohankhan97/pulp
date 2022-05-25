@@ -1,0 +1,131 @@
+Block Name,Block Description,Block Coverage,Block Backdoor,Block Component Name,Block Instance Name,Block Instance Type,Block Instance Description,Block Instance Dimension,Block Instance Backdoor,Block Instance No Reg Tests,Block Instance No Reg Access Test,Block Instance No Reg Shared Access Test,Block Instance No Reg Bit Bash Test,Block Instance No Reg HW Reset Test,Block Instance No Mem Tests,Block Instance No Mem Access Test,Block Instance No Mem Shared Access Test,Block Instance No Mem Walk Test,Project Extra Imports
+siracusa_pads_functional_config_block,,,,,,,,,,,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio00_cfg,pad_gpio00_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio00_mux_sel,pad_gpio00_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio00. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio01_cfg,pad_gpio01_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio01_mux_sel,pad_gpio01_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio01. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio02_cfg,pad_gpio02_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio02_mux_sel,pad_gpio02_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio02. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio03_cfg,pad_gpio03_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio03_mux_sel,pad_gpio03_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio03. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio04_cfg,pad_gpio04_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio04_mux_sel,pad_gpio04_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio04. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio05_cfg,pad_gpio05_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio05_mux_sel,pad_gpio05_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio05. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio06_cfg,pad_gpio06_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio06_mux_sel,pad_gpio06_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio06. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio07_cfg,pad_gpio07_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio07_mux_sel,pad_gpio07_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio07. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio08_cfg,pad_gpio08_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio08_mux_sel,pad_gpio08_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio08. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio09_cfg,pad_gpio09_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio09_mux_sel,pad_gpio09_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio09. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio10_cfg,pad_gpio10_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio10_mux_sel,pad_gpio10_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio10. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio11_cfg,pad_gpio11_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio11_mux_sel,pad_gpio11_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio11. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio12_cfg,pad_gpio12_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio12_mux_sel,pad_gpio12_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio12. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio13_cfg,pad_gpio13_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio13_mux_sel,pad_gpio13_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio13. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio14_cfg,pad_gpio14_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio14_mux_sel,pad_gpio14_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio14. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio15_cfg,pad_gpio15_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio15_mux_sel,pad_gpio15_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio15. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio16_cfg,pad_gpio16_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio16_mux_sel,pad_gpio16_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio16. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio17_cfg,pad_gpio17_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio17_mux_sel,pad_gpio17_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio17. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio18_cfg,pad_gpio18_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio18_mux_sel,pad_gpio18_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio18. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio19_cfg,pad_gpio19_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio19_mux_sel,pad_gpio19_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio19. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio20_cfg,pad_gpio20_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio20_mux_sel,pad_gpio20_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio20. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio21_cfg,pad_gpio21_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio21_mux_sel,pad_gpio21_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio21. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio22_cfg,pad_gpio22_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio22_mux_sel,pad_gpio22_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio22. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio23_cfg,pad_gpio23_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio23_mux_sel,pad_gpio23_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio23. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio24_cfg,pad_gpio24_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio24_mux_sel,pad_gpio24_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio24. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio25_cfg,pad_gpio25_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio25_mux_sel,pad_gpio25_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio25. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio26_cfg,pad_gpio26_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio26_mux_sel,pad_gpio26_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio26. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio27_cfg,pad_gpio27_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio27_mux_sel,pad_gpio27_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio27. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio28_cfg,pad_gpio28_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio28_mux_sel,pad_gpio28_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio28. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio29_cfg,pad_gpio29_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio29_mux_sel,pad_gpio29_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio29. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio30_cfg,pad_gpio30_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio30_mux_sel,pad_gpio30_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio30. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio31_cfg,pad_gpio31_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio31_mux_sel,pad_gpio31_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio31. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio32_cfg,pad_gpio32_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio32_mux_sel,pad_gpio32_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio32. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio33_cfg,pad_gpio33_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio33_mux_sel,pad_gpio33_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio33. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio34_cfg,pad_gpio34_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio34_mux_sel,pad_gpio34_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio34. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio35_cfg,pad_gpio35_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio35_mux_sel,pad_gpio35_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio35. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio36_cfg,pad_gpio36_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio36_mux_sel,pad_gpio36_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio36. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio37_cfg,pad_gpio37_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio37_mux_sel,pad_gpio37_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio37. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio38_cfg,pad_gpio38_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio38_mux_sel,pad_gpio38_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio38. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio39_cfg,pad_gpio39_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio39_mux_sel,pad_gpio39_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio39. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio40_cfg,pad_gpio40_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio40_mux_sel,pad_gpio40_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio40. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio41_cfg,pad_gpio41_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio41_mux_sel,pad_gpio41_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio41. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio42_cfg,pad_gpio42_cfg,reg,Pad signal configuration.,,%(FIELDS),,,,,,,,,,
+siracusa_pads_functional_config_block,,,,siracusa_pads_functional_config_pad_gpio42_mux_sel,pad_gpio42_mux_sel,reg,"Pad signal port multiplex selection for pad pad_gpio42. The programmed value defines which port
+is connected to the pad.",,%(FIELDS),,,,,,,,,,

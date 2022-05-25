@@ -1,0 +1,166 @@
+<registers name="JTAG DTM TAP Registers" label="table:jtag_registers" prefix="DTM_">
+    <!-- JTAG standard registers, everything starting with 0 -->
+    <register name="BYPASS" address="0x00" sdesc="JTAG recommends this encoding"/>
+    <register name="IDCODE" address="0x01" sdesc="To identify a specific silicon version">
+        This register is selected (in IR) when the TAP state machine is reset.
+        Its definition is exactly as defined in IEEE Std 1149.1-2013.
+
+        <field name="Version" bits="31:28" access="R" reset="Preset">
+            Identifies the release version of this part.
+        </field>
+        <field name="PartNumber" bits="27:12" access="R" reset="Preset">
+            Identifies the designer's part number of this part.
+        </field>
+        <field name="ManufId" bits="11:1" access="R" reset="Preset">
+            Identifies the designer/manufacturer of this part. Bits 6:0 must be
+            bits 6:0 of the designer/manufacturer's Identification Code as
+            assigned by JEDEC Standard JEP106. Bits 10:7 contain the modulo-16
+            count of the number of continuation characters (0x7f) in that same
+            Identification Code.
+        </field>
+        <field name="1" bits="0" access="R" reset="1"></field>
+    </register>
+    <!-- All our registers start with 1. -->
+
+    <register name="DTM Control and Status" short="dtmcs" address="0x10"
+        sdesc="For Debugging" define="1">
+        The size of this register will remain constant in future versions so
+        that a debugger can always determine the version of the DTM.
+        <field name="0" bits="31:18" access="R" reset="0" />
+        <field name="dmihardreset" bits="17" access="W1" reset="-">
+          Writing 1 to this bit does a hard reset of the DTM,
+          causing the DTM to forget about any outstanding DMI transactions, and
+          returning all registers and internal state to their reset value.
+          In general this should only be used when the Debugger has
+          reason to expect that the outstanding DMI transaction will never
+          complete (e.g. a reset condition caused an inflight DMI transaction to
+          be cancelled).
+        </field>
+        <field name="dmireset" bits="16" access="W1" reset="-">
+            Writing 1 to this bit clears the sticky error state, but does
+            not affect outstanding DMI transactions.
+        </field>
+        <field name="0" bits="15" access="R" reset="0" />
+        <field name="idle" bits="14:12" access="R" reset="Preset">
+            This is a hint to the debugger of the minimum number of
+            cycles a debugger should spend in
+            Run-Test/Idle after every DMI scan to avoid a `busy'
+            return code (\FdtmDtmcsDmistat of 3). A debugger must still
+            check \FdtmDtmcsDmistat when necessary.
+
+            0: It is not necessary to enter Run-Test/Idle at all.
+
+            1: Enter Run-Test/Idle and leave it immediately.
+
+            2: Enter Run-Test/Idle and stay there for 1 cycle before leaving.
+
+            And so on.
+        </field>
+        <field name="dmistat" bits="11:10" access="R" reset="0">
+            0: No error.
+
+            1: Reserved. Interpret the same as 2.
+
+            2: An operation failed (resulted in \FdtmDmiOp of 2).
+
+            3: An operation was attempted while a DMI access was still in
+            progress (resulted in \FdtmDmiOp of 3).
+        </field>
+        <field name="abits" bits="9:4" access="R" reset="Preset">
+            The size of \FdmSbaddressZeroAddress in \RdtmDmi.
+        </field>
+        <field name="version" bits="3:0" access="R" reset="1">
+            0: Version described in spec version 0.11.
+
+            1: Version described in spec versions 0.13 and 1.0.
+
+            15: Version not described in any available version of this spec.
+        </field>
+    </register>
+
+    <register name="Debug Module Interface Access" short="dmi" address="0x11"
+        sdesc="For Debugging">
+        This register allows access to the Debug Module Interface (DMI).
+
+        In Update-DR, the DTM starts the operation specified in \FdtmDmiOp unless the
+        current status reported in \FdtmDmiOp is sticky.
+
+        In Capture-DR, the DTM updates \FdmSbdataZeroData with the result from that
+        operation, updating \FdtmDmiOp if the current \FdtmDmiOp isn't sticky.
+
+        See Section~\ref{dmiaccess} for examples of how this is used.
+
+        \begin{commentary}
+        The still-in-progress status is sticky to accommodate debuggers that
+        batch together a number of scans, which must all be executed or stop as
+        soon as there's a problem.
+
+        For instance a series of scans may write a Debug Program and execute
+        it.  If one of the writes fails but the execution continues, then the
+        Debug Program may hang or have other unexpected side effects.
+        \end{commentary}
+
+        <field name="address" bits="65:34" access="R/W" reset="0">
+            Address used for DMI access. In Update-DR this value is used
+            to access the DM over the DMI.
+        </field>
+        <field name="data" bits="33:2" access="R/W" reset="0">
+            The data to send to the DM over the DMI during Update-DR, and
+            the data returned from the DM as a result of the previous operation.
+        </field>
+        <field name="op" bits="1:0" access="R/W" reset="0">
+            When the debugger writes this field, it has the following meaning:
+
+            0: Ignore \FdmSbdataZeroData and \FdmSbaddressZeroAddress. (nop)
+
+            Don't send anything over the DMI during Update-DR.
+            This operation should never result in a busy or error response.
+            The address and data reported in the following Capture-DR
+            are undefined.
+
+            1: Read from \FdmSbaddressZeroAddress. (read)
+
+            2: Write \FdmSbdataZeroData to \FdmSbaddressZeroAddress. (write)
+
+            3: Reserved.
+
+            When the debugger reads this field, it means the following:
+
+            0: The previous operation completed successfully.
+
+            1: Reserved.
+
+            2: A previous operation failed.  The data scanned into \RdtmDmi in
+            this access will be ignored.  This status is sticky and can be
+            cleared by writing \FdtmDtmcsDmireset in \RdtmDtmcs.
+
+            This indicates that the DM itself responded with an error.
+            There are no specified cases in which the DM would
+            respond with an error, and DMI is not required to support
+            returning errors.
+
+            3: An operation was attempted while a DMI request is still in
+            progress. The data scanned into \RdtmDmi in this access will be
+            ignored. This status is sticky and can be cleared by writing
+            \FdtmDtmcsDmireset in \RdtmDtmcs. If a debugger sees this status, it
+            needs to give the target more TCK edges between Update-DR and
+            Capture-DR. The simplest way to do that is to add extra transitions
+            in Run-Test/Idle.
+        </field>
+    </register>
+
+    <register name="Reserved (BYPASS)" address="0x12" sdesc="Reserved for future RISC-V debugging"/>
+    <register name="Reserved (BYPASS)" address="0x13" sdesc="Reserved for future RISC-V debugging"/>
+    <register name="Reserved (BYPASS)" address="0x14" sdesc="Reserved for future RISC-V debugging"/>
+    <register name="Reserved (BYPASS)" address="0x15" sdesc="Reserved for future RISC-V standards"/>
+    <register name="Reserved (BYPASS)" address="0x16" sdesc="Reserved for future RISC-V standards"/>
+    <register name="Reserved (BYPASS)" address="0x17" sdesc="Reserved for future RISC-V standards"/>
+
+    <register name="BYPASS" address="0x1f" sdesc="JTAG requires this encoding">
+        1-bit register that has no effect. It is used when a debugger does not
+        want to communicate with this TAP.
+
+        <field name="0" bits="0" access="R" reset="0" />
+    </register>
+
+</registers>

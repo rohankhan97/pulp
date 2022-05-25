@@ -1,0 +1,162 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved
+dmstatus,Debug Module Status,0x11,32,,,,,,,,,,
+dmstatus,,,,,,ndmresetpending,,24,1,RO,,TRUE,FALSE
+dmstatus,,,,,,stickyunavail,,23,1,RO,,TRUE,FALSE
+dmstatus,,,,,,impebreak,,22,1,RO,,TRUE,FALSE
+dmstatus,,,,,,allhavereset,,19,1,RO,,TRUE,FALSE
+dmstatus,,,,,,anyhavereset,,18,1,RO,,TRUE,FALSE
+dmstatus,,,,,,allresumeack,,17,1,RO,,TRUE,FALSE
+dmstatus,,,,,,anyresumeack,,16,1,RO,,TRUE,FALSE
+dmstatus,,,,,,allnonexistent,,15,1,RO,,TRUE,FALSE
+dmstatus,,,,,,anynonexistent,,14,1,RO,,TRUE,FALSE
+dmstatus,,,,,,allunavail,,13,1,RO,,TRUE,FALSE
+dmstatus,,,,,,anyunavail,,12,1,RO,,TRUE,FALSE
+dmstatus,,,,,,allrunning,,11,1,RO,,TRUE,FALSE
+dmstatus,,,,,,anyrunning,,10,1,RO,,TRUE,FALSE
+dmstatus,,,,,,allhalted,,9,1,RO,,TRUE,FALSE
+dmstatus,,,,,,anyhalted,,8,1,RO,,TRUE,FALSE
+dmstatus,,,,,,authenticated,,7,1,RO,,TRUE,FALSE
+dmstatus,,,,,,authbusy,,6,1,RO,0,TRUE,FALSE
+dmstatus,,,,,,hasresethaltreq,,5,1,RO,,TRUE,FALSE
+dmstatus,,,,,,confstrptrvalid,,4,1,RO,,TRUE,FALSE
+dmstatus,,,,,,version,,0,4,RO,3,TRUE,FALSE
+dmcontrol,Debug Module Control,0x10,32,,,,,,,,,,
+dmcontrol,,,,,,haltreq,,31,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,resumereq,,30,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,hartreset,,29,1,RW,0,TRUE,FALSE
+dmcontrol,,,,,,ackhavereset,,28,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,ackunavail,,27,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,hasel,,26,1,RW,0,TRUE,FALSE
+dmcontrol,,,,,,hartsello,,16,10,RW,0,TRUE,FALSE
+dmcontrol,,,,,,hartselhi,,6,10,RW,0,TRUE,FALSE
+dmcontrol,,,,,,setkeepalive,,5,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,clrkeepalive,,4,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,setresethaltreq,,3,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,clrresethaltreq,,2,1,WO,,TRUE,FALSE
+dmcontrol,,,,,,ndmreset,,1,1,RW,0,TRUE,FALSE
+dmcontrol,,,,,,dmactive,,0,1,RW,0,TRUE,FALSE
+hartinfo,Hart Info,0x12,32,,,,,,,,,,
+hartinfo,,,,,,nscratch,,20,4,RO,,TRUE,FALSE
+hartinfo,,,,,,dataaccess,,16,1,RO,,TRUE,FALSE
+hartinfo,,,,,,datasize,,12,4,RO,,TRUE,FALSE
+hartinfo,,,,,,dataaddr,,0,12,RO,,TRUE,FALSE
+hawindowsel,Hart Array Window Select,0x14,32,,,,,,,,,,
+hawindowsel,,,,,,hawindowsel,,0,15,RW,0,TRUE,FALSE
+hawindow,Hart Array Window ,0x15,32,,,,,,,,,,
+hawindow,,,,,,maskdata,,0,32,RW,0,TRUE,FALSE
+abstractcs,Abstract Control and Status,0x16,32,,,,,,,,,,
+abstractcs,,,,,,progbufsize,,24,5,RO,,TRUE,FALSE
+abstractcs,,,,,,busy,,12,1,RO,0,TRUE,FALSE
+abstractcs,,,,,,relaxedpriv,,11,1,RW,,TRUE,FALSE
+abstractcs,,,,,,cmderr,,8,3,W1C,0,TRUE,FALSE
+abstractcs,,,,,,datacount,,0,4,RO,,TRUE,FALSE
+command,Abstract Command,0x17,32,,,,,,,,,,
+command,,,,,,cmdtype,,24,8,WO,0,TRUE,FALSE
+command,,,,,,control,,0,24,WO,0,TRUE,FALSE
+abstractauto,Abstract Command Autoexec,0x18,32,,,,,,,,,,
+abstractauto,,,,,,autoexecprogbuf,,16,16,RW,0,TRUE,FALSE
+abstractauto,,,,,,autoexecdata,,0,12,RW,0,TRUE,FALSE
+confstrptr0,Configuration String Pointer 0,0x19,32,,,,,,,,,,
+confstrptr0,,,,,,addr,,0,32,RO,,TRUE,FALSE
+confstrptr1,Configuration String Pointer 1,0x1a,32,,,,,,,,,,
+confstrptr1,,,,,,addr,,0,32,RO,,TRUE,FALSE
+confstrptr2,Configuration String Pointer 2,0x1b,32,,,,,,,,,,
+confstrptr2,,,,,,addr,,0,32,RO,,TRUE,FALSE
+confstrptr3,Configuration String Pointer 3,0x1c,32,,,,,,,,,,
+confstrptr3,,,,,,addr,,0,32,RO,,TRUE,FALSE
+nextdm,Next Debug Module,0x1d,32,,,,,,,,,,
+nextdm,,,,,,addr,,0,32,RO,,TRUE,FALSE
+data0,Abstract Data 0,0x04,32,,,,,,,,,,
+data0,,,,,,data,,0,32,RW,0,TRUE,FALSE
+data1,Abstract Data 1,0x05,32,,,,,,,,,,
+data2,Abstract Data 2,0x06,32,,,,,,,,,,
+data3,Abstract Data 3,0x07,32,,,,,,,,,,
+data4,Abstract Data 4,0x08,32,,,,,,,,,,
+data5,Abstract Data 5,0x09,32,,,,,,,,,,
+data6,Abstract Data 6,0x0a,32,,,,,,,,,,
+data7,Abstract Data 7,0x0b,32,,,,,,,,,,
+data8,Abstract Data 8,0x0c,32,,,,,,,,,,
+data9,Abstract Data 9,0x0d,32,,,,,,,,,,
+data10,Abstract Data 10,0x0e,32,,,,,,,,,,
+data11,Abstract Data 11,0x0f,32,,,,,,,,,,
+progbuf0,Program Buffer 0,0x20,32,,,,,,,,,,
+progbuf0,,,,,,data,,0,32,RW,0,TRUE,FALSE
+progbuf1,Program Buffer 1,0x21,32,,,,,,,,,,
+progbuf2,Program Buffer 2,0x22,32,,,,,,,,,,
+progbuf3,Program Buffer 3,0x23,32,,,,,,,,,,
+progbuf4,Program Buffer 4,0x24,32,,,,,,,,,,
+progbuf5,Program Buffer 5,0x25,32,,,,,,,,,,
+progbuf6,Program Buffer 6,0x26,32,,,,,,,,,,
+progbuf7,Program Buffer 7,0x27,32,,,,,,,,,,
+progbuf8,Program Buffer 8,0x28,32,,,,,,,,,,
+progbuf9,Program Buffer 9,0x29,32,,,,,,,,,,
+progbuf10,Program Buffer 10,0x2a,32,,,,,,,,,,
+progbuf11,Program Buffer 11,0x2b,32,,,,,,,,,,
+progbuf12,Program Buffer 12,0x2c,32,,,,,,,,,,
+progbuf13,Program Buffer 13,0x2d,32,,,,,,,,,,
+progbuf14,Program Buffer 14,0x2e,32,,,,,,,,,,
+progbuf15,Program Buffer 15,0x2f,32,,,,,,,,,,
+authdata,Authentication Data,0x30,32,,,,,,,,,,
+authdata,,,,,,data,,0,32,RW,0,TRUE,FALSE
+dmcs2,Debug Module Control and Status 2,0x32,32,,,,,,,,,,
+dmcs2,,,,,,grouptype,,11,1,RW,0,TRUE,FALSE
+dmcs2,,,,,,dmexttrigger,,7,4,RW,0,TRUE,FALSE
+dmcs2,,,,,,group,,2,5,RW,,TRUE,FALSE
+dmcs2,,,,,,hgwrite,,1,1,WO,,TRUE,FALSE
+dmcs2,,,,,,hgselect,,0,1,RW,0,TRUE,FALSE
+haltsum0,Halt Summary 0,0x40,32,,,,,,,,,,
+haltsum0,,,,,,haltsum0,,0,32,RO,0,TRUE,FALSE
+haltsum1,Halt Summary 1,0x13,32,,,,,,,,,,
+haltsum1,,,,,,haltsum1,,0,32,RO,0,TRUE,FALSE
+haltsum2,Halt Summary 2,0x34,32,,,,,,,,,,
+haltsum2,,,,,,haltsum2,,0,32,RO,0,TRUE,FALSE
+haltsum3,Halt Summary 3,0x35,32,,,,,,,,,,
+haltsum3,,,,,,haltsum3,,0,32,RO,0,TRUE,FALSE
+sbcs,System Bus Access Control and Status,0x38,32,,,,,,,,,,
+sbcs,,,,,,sbversion,,29,3,RO,1,TRUE,FALSE
+sbcs,,,,,,sbbusyerror,,22,1,W1C,0,TRUE,FALSE
+sbcs,,,,,,sbbusy,,21,1,RO,0,TRUE,FALSE
+sbcs,,,,,,sbreadonaddr,,20,1,RW,0,TRUE,FALSE
+sbcs,,,,,,sbaccess,,17,3,RW,2,TRUE,FALSE
+sbcs,,,,,,sbautoincrement,,16,1,RW,0,TRUE,FALSE
+sbcs,,,,,,sbreadondata,,15,1,RW,0,TRUE,FALSE
+sbcs,,,,,,sberror,,12,3,W1C,0,TRUE,FALSE
+sbcs,,,,,,sbasize,,5,7,RO,,TRUE,FALSE
+sbcs,,,,,,sbaccess128,,4,1,RO,,TRUE,FALSE
+sbcs,,,,,,sbaccess64,,3,1,RO,,TRUE,FALSE
+sbcs,,,,,,sbaccess32,,2,1,RO,,TRUE,FALSE
+sbcs,,,,,,sbaccess16,,1,1,RO,,TRUE,FALSE
+sbcs,,,,,,sbaccess8,,0,1,RO,,TRUE,FALSE
+sbaddress0,System Bus Address 31:0,0x39,32,,,,,,,,,,
+sbaddress0,,,,,,address,,0,32,RW,0,TRUE,FALSE
+sbaddress1,System Bus Address 63:32,0x3a,32,,,,,,,,,,
+sbaddress1,,,,,,address,,0,32,RW,0,TRUE,FALSE
+sbaddress2,System Bus Address 95:64,0x3b,32,,,,,,,,,,
+sbaddress2,,,,,,address,,0,32,RW,0,TRUE,FALSE
+sbaddress3,System Bus Address 127:96,0x37,32,,,,,,,,,,
+sbaddress3,,,,,,address,,0,32,RW,0,TRUE,FALSE
+sbdata0,System Bus Data 31:0,0x3c,32,,,,,,,,,,
+sbdata0,,,,,,data,,0,32,RW,0,TRUE,FALSE
+sbdata1,System Bus Data 63:32,0x3d,32,,,,,,,,,,
+sbdata1,,,,,,data,,0,32,RW,0,TRUE,FALSE
+sbdata2,System Bus Data 95:64,0x3e,32,,,,,,,,,,
+sbdata2,,,,,,data,,0,32,RW,0,TRUE,FALSE
+sbdata3,System Bus Data 127:96,0x3f,32,,,,,,,,,,
+sbdata3,,,,,,data,,0,32,RW,0,TRUE,FALSE
+custom,Custom Features,0x1f,32,,,,,,,,,,
+custom0,Custom Features 0,0x70,32,,,,,,,,,,
+custom1,Custom Features 1,0x71,32,,,,,,,,,,
+custom2,Custom Features 2,0x72,32,,,,,,,,,,
+custom3,Custom Features 3,0x73,32,,,,,,,,,,
+custom4,Custom Features 4,0x74,32,,,,,,,,,,
+custom5,Custom Features 5,0x75,32,,,,,,,,,,
+custom6,Custom Features 6,0x76,32,,,,,,,,,,
+custom7,Custom Features 7,0x77,32,,,,,,,,,,
+custom8,Custom Features 8,0x78,32,,,,,,,,,,
+custom9,Custom Features 9,0x79,32,,,,,,,,,,
+custom10,Custom Features 10,0x7a,32,,,,,,,,,,
+custom11,Custom Features 11,0x7b,32,,,,,,,,,,
+custom12,Custom Features 12,0x7c,32,,,,,,,,,,
+custom13,Custom Features 13,0x7d,32,,,,,,,,,,
+custom14,Custom Features 14,0x7e,32,,,,,,,,,,
+custom15,Custom Features 15,0x7f,32,,,,,,,,,,

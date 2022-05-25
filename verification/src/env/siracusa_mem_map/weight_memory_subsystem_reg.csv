@@ -1,0 +1,4 @@
+Block Name,Block Description,Block Coverage,Block Backdoor,Block Component Name,Block Instance Name,Block Instance Type,Block Instance Description,Block Instance Dimension,Block Instance Backdoor,Block Instance No Reg Tests,Block Instance No Reg Access Test,Block Instance No Reg Shared Access Test,Block Instance No Reg Bit Bash Test,Block Instance No Reg HW Reset Test,Block Instance No Mem Tests,Block Instance No Mem Access Test,Block Instance No Mem Shared Access Test,Block Instance No Mem Walk Test,Project Extra Imports
+weight_mem_block,Weight Memory Subsystem,,,weight_memory_config_block,weight_mem_ctrl,block,Control & Status Registers of the Weight Memory Subsystem,,i_regfile,,,,,,,,,,
+weight_mem_block,,,,weight_memory,weights_mram,mem,MRAM Weight Memory,,,,,,,,,,,,
+weight_mem_block,,,,weight_memory,weights_sram,mem,SRAM Weight Memory,,,,,,,,,,,,

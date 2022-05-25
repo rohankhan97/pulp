@@ -1,0 +1,6 @@
+irun -clean
+irun -elaborate -access +rw \
+      ../src/vlab_probes.c \
+      ../src/vlab_probes_pkg.sv \
+      ../test/test.sv
+time irun -R 

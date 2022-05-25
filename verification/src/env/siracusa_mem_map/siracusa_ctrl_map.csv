@@ -1,0 +1,4 @@
+Block Name,BlockMap Name,BlockMap Description,BlockMap is default,BlockMap Instance Name,BlockMap Instance Address,BlockMap Instance Access,BlockMap Address Offset
+siracusa_ctrl_block,siracusa_ctrl_map,Default Map,True,,,,
+siracusa_ctrl_block,siracusa_ctrl_map,,,pad_dbg_mode_en_0,0,,
+siracusa_ctrl_block,siracusa_ctrl_map,,,pad_dbg_mode_en_1,4,,

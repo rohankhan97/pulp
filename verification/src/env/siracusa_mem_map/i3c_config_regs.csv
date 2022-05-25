@@ -1,0 +1,66 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Volatile,Field is Reserved,Field Backdoor
+i3c_config_swrst,Perform software reset of the whole IP ,0,32,,3,,,,,,,,,
+i3c_config_swrst,,,,,,globrst,"Global reset signal. Writing a logic one asserts the global reset for RSTCYCLES number of
+peripheral clock cycles. The bit is auto cleared.",0,1,WO,1,1,,u_swrst_globrst.q
+i3c_config_swrst,,,,,,locrst,"LOCK calibration output code
+Can be read out synchronously with rising edge of FREF
+This is the final value used by the SAR algorithm to set the initial VCO
+frequency.
+It can be stored for future use with FCALBYP to speed up subsequent
+lock times.",1,1,WO,1,1,,u_swrst_locrst.q
+i3c_config_cfg1,Configure static device configuration. Any change to this register (except for RSTCYCLES) requires reseting the I3C peripheral,4,32,,234004,,,,,,,,,
+i3c_config_cfg1,,,,,,rstcycles,"Configures for how many peripheral clock cycles the reset signals shall remain asserted
+when using local or global reset on the system.",0,8,RW,20,0,,u_cfg1_rstcycles.q
+i3c_config_cfg1,,,,,,device_role,"Change the device mode (master or slave) of the I3C peripheral. After the device
+mode has been changed, the I3C peripheral needs to be reset!",8,1,RW,0,0,,u_cfg1_device_role.q
+i3c_config_cfg1,,,,,,pid_mfr,"This input represents Provisional ID bits [47:33]. It is
+used for manufacturer identification code assigned by MIPI
+Alliance to chip vendors.
+
+This port should be stable after de-assertion
+of local reset thus can be considered as
+quasi static during the IP operation.
+
+The actual value of device PID will be
+updated after the first sys_clk clock cycle
+after reset de-assertion.",9,15,RW,457,0,,u_cfg1_pid_mfr.q
+i3c_config_cfg1,,,,,,pid_inst_id,"This input represents Provisional ID bits [15:12]. It is
+used for identifying individual devices.
+
+This port should be stable after de-assertion
+of local reset thus can be considered as
+quasi static during the IP operation.
+
+The actual value of device PID will be
+updated after the first sys_clk clock cycle
+after reset de-assertion.",24,4,RW,0,0,,u_cfg1_pid_inst_id.q
+i3c_config_cfg2,Configure static device configuration. Any change to this register (except for RSTCYCLES) requires reseting the I3C peripheral,8,32,,25625700,,,,,,,,,
+i3c_config_cfg2,,,,,,bus_avail_timer,"Input that correlates the per_clk frequency with the
+timing requirement of Bus Available Condition.
+
+Thus it sets the number of sys_clk cycles when both the
+SCL Line and the SDA Line are released High, needed to
+indicate that the Bus Available Condition is met. The
+correct value of this port is defined by the following
+equation: bus_avail_timer[7: 0] = per_clk_freq ∗ 1.0μs
+
+This port should be stable after de-assertion of
+n_sys_reset_l thus can be considered as quasi during the
+IP operation.",0,8,RW,100,0,,u_cfg2_bus_avail_timer.q
+i3c_config_cfg2,,,,,,bus_idle_timer,"Input that correlates the per_clk frequency
+with the timing requirement of Bus Idle
+Condition.
+
+Thus it sets the number of per_clk cycles when both the SCL Line and the SDA Line are
+released High, needed to indicate that the Bus Idle Condition is met. The correct value of this port is
+defined by the following equation:
+bus_idle_timer[17: 0] = per_clk_freq ∗ 1001.0μs
+
+This port should be stable after de-assertion
+of n_sys_reset_l thus can be considered as
+quasi static during the IP operation.",8,18,RW,100100,0,,u_cfg2_bus_idle_timer.q
+i3c_config_asf_cfg,Active-safety feature configuration,12,32,,0,,,,,,,,,
+i3c_config_asf_cfg,,,,,,asf_passthrough_en,"Tie-off control bit, when set to: 1’b1 – the parity is
+sourced from the external parity port 1’b0 – the parity is
+sourced from an internal parity generator placed right
+after top level I/O boundary",0,1,RW,0,0,,u_asf_cfg.q
