@@ -21,6 +21,23 @@ module tb;
 `include "i3c_defs.svh"
 
   int error_count = 1;
+
+
+  // Choose your Fabric Controller core: 
+   // 0 for RISCY, 1 for IBEX RV32IMC (formerly ZERORISCY), 2 for IBEX RV32EC (formerly MICRORISCY)
+   parameter CORE_TYPE_FC         = 0;
+   // if RISCY is instantiated (CORE_TYPE == 0), RISCY_FPU enables the FPU
+   parameter RISCY_FPU            = 1;
+
+   parameter USE_HWPE             = 0; // HWPE in SoC
+
+   // Choose your Cluster core: 
+   // 0 for RISCY, 1 for IBEX RV32IMC (formerly ZERORISCY), 2 for IBEX RV32EC (formerly MICRORISCY)
+   parameter CORE_TYPE_CL         = 0;
+
+   parameter USE_HWPE_CL          = 0; // HWPE in Cluster
+
+
   ///////////////////////////////////////////////
   // Instantiate interfaces and wiring signals //
   ///////////////////////////////////////////////
@@ -85,9 +102,11 @@ module tb;
   // GPIO IF
   pins_if#(.Width(DUT_SIGNAL_COUNT)) gpio_signals_if();
 
+/*
   // IO-mux agent to DUT IF
   pins_if#(.Width(IO_SIGNAL_COUNT)) vip2io_mux_agent_if();
   pins_if#(.Width(DUT_SIGNAL_COUNT)) io_mux_agent2dut_if();
+*/
 
   wire pad_clk_byp;
   wire pad_debug_en;
@@ -109,7 +128,7 @@ module tb;
   wire pad_hyper_rwds;
 
 
-
+/*
   // Connect vip interfaces to io_mux_agent interface. Make sure you don't
   // forget to add the IO signals to the io_mux_agent's configuration file IN
   // THE SAME ORDER.
@@ -169,6 +188,8 @@ module tb;
     alias vip2io_mux_agent_if.pins[offset + i*num_sigs + 4] = spim_sd2;
     alias vip2io_mux_agent_if.pins[offset + i*num_sigs + 5] = spim_sd3;
   end
+  */
+
 
   assign pad_clk_byp = 1'b0;
   assign pad_debug_en = 1'b0;
@@ -196,14 +217,18 @@ module tb;
     .pad_ref_clk(clk),
     .pad_clk_byp(clk_byp),
     .pad_reset_n(rst_n),
+
     .pad_bootsel0(boot_mode0),
     .pad_bootsel1(boot_mode1),
+
     .pad_debug_en(debug_en),
-    .pad_jtag_tck(jtag_tck),
-    .pad_jtag_tms(jtag_if.tms),
-    .pad_jtag_tdi(jtag_if.tdi),
-    .pad_jtag_tdo(jtag_if.tdo),
+
+    .pad_jtag_tck (jtag_tck   ),  
+    .pad_jtag_tms (jtag_if.tms),
+    .pad_jtag_tdi (jtag_if.tdi),
+    .pad_jtag_tdo (jtag_if.tdo),
     .pad_jtag_trst(jtag_trst_n),
+
     .pad_hyper_csn0(pad_hyper_csn0),
     .pad_hyper_csn1(pad_hyper_csn1),
     .pad_hyper_reset_n(pad_hyper_reset_n),
@@ -218,6 +243,7 @@ module tb;
     .pad_hyper_dq6(pad_hyper_dq6),
     .pad_hyper_dq7(pad_hyper_dq7),
     .pad_hyper_rwds(pad_hyper_rwds),
+
     .pad_gpio00(io_mux_agent2dut_if.pins[0]),
     .pad_gpio01(io_mux_agent2dut_if.pins[1]),
     .pad_gpio02(io_mux_agent2dut_if.pins[2]),
@@ -276,6 +302,82 @@ module tb;
     .pad_gpio55(cpi_if[0].data[9])
  );
 
+// PULP chip (design under test)
+   pulp #(
+      .CORE_TYPE_FC ( CORE_TYPE_FC ),
+      .CORE_TYPE_CL ( CORE_TYPE_CL ),
+      .USE_FPU      ( RISCY_FPU    ),
+      .USE_HWPE     ( USE_HWPE     ),
+      .USE_HWPE_CL  ( USE_HWPE_CL  )
+   )
+   i_dut (
+      .pad_spim_sdio0     ( spim_sd0   ),  // done
+      .pad_spim_sdio1     ( spim_sd1   ),  // done
+      .pad_spim_sdio2     ( spim_sd2   ),  // done
+      .pad_spim_sdio3     ( spim_sd3   ),  // done
+      .pad_spim_csn0      ( spim_csn[0]),  // done
+      .pad_spim_csn1      ( spim_csn[1]),  // done
+      .pad_spim_sck       ( spim_sck   ),  // done
+
+      .pad_uart_rx        ( uart_if[0].uart_rx ),  // done
+      .pad_uart_tx        ( uart_if[0].uart_tx ),  // done
+
+      .pad_cam_pclk       ( cpi_if[0].pclk         ),   // done
+      .pad_cam_hsync      ( cpi_if[0].href         ),   // done
+      .pad_cam_data0      ( cpi_if[0].data[0]      ),   // done
+      .pad_cam_data1      ( cpi_if[0].data[1]      ),   // done
+      .pad_cam_data2      ( cpi_if[0].data[2]      ),   // done
+      .pad_cam_data3      ( cpi_if[0].data[3]      ),   // done
+      .pad_cam_data4      ( cpi_if[0].data[4]      ),   // done
+      .pad_cam_data5      ( cpi_if[0].data[5]      ),   // done
+      .pad_cam_data6      ( cpi_if[0].data[6]      ),   // done
+      .pad_cam_data7      ( cpi_if[0].data[7]      ),   // done
+      .pad_cam_vsync      ( cpi_if[0].vref         ),   // done
+
+      .pad_sdio_clk       (                    ),
+      .pad_sdio_cmd       (                    ),
+      .pad_sdio_data0     ( w_sdio_data0       ),
+      .pad_sdio_data1     (                    ),
+      .pad_sdio_data2     (                    ),
+      .pad_sdio_data3     (                    ),
+
+      .pad_i2c0_sda       ( i2c_if[0].sda_o         ),   // done
+      .pad_i2c0_scl       ( i2c_if[0].scl_o         ),   // done
+
+      .pad_gpios          ( gpio_signals_if.pins    ),   // done
+
+      .pad_i2c1_sda       ( i2c_if[1].sda_o         ),   // done
+      .pad_i2c1_scl       ( i2c_if[1].scl_o         ),   // done
+
+      .pad_i2s0_sck       ( w_i2s0_sck         ),
+      .pad_i2s0_ws        ( w_i2s0_ws          ),
+      .pad_i2s0_sdi       ( w_i2s0_sdi         ),
+      .pad_i2s1_sdi       ( w_i2s1_sdi         ),
+
+      .pad_hyper_dq0     ( pad_hyper_dq0         ),   // done
+      .pad_hyper_dq1     ( pad_hyper_dq1         ),   // done
+      .pad_hyper_ck      ( pad_hyper_ck          ),   // done
+      .pad_hyper_ckn     ( pad_hyper_ckn         ),   // done
+      .pad_hyper_csn0    ( pad_hyper_csn0        ),   // done
+      .pad_hyper_csn1    ( pad_hyper_csn1        ),   // done
+      .pad_hyper_rwds0   ( pad_hyper_rwds        ),   // done
+      .pad_hyper_rwds1   ( w_hyper_rwds1         ),   
+      .pad_hyper_reset   ( pad_hyper_reset_n     ),   // done
+
+      .pad_reset_n        ( rst_n            ),   // done    
+      .pad_bootsel0       ( boot_mode0       ),   // done
+      .pad_bootsel1       ( boot_mode1       ),   // done
+
+
+      .pad_jtag_tck       ( jtag_tck          ),   // done
+      .pad_jtag_tms       ( jtag_if.tms       ),   // done
+      .pad_jtag_tdi       ( jtag_if.tdi       ),   // done
+      .pad_jtag_tdo       ( jtag_if.tdo       ),   // done
+      .pad_jtag_trst      ( jtag_trst_n       ),   // done
+
+      .pad_xtal_in        ( clk          )   // done
+   );
+
   /////////////////////////////////////////////////////
   // Bind internal agent BFM interfaces into the DUT //
   /////////////////////////////////////////////////////
@@ -306,10 +408,12 @@ module tb;
     uvm_config_db#(virtual boot_dbg_if)::set(null, "*.env", "boot_dbg_vif", boot_dbg_vif);
     uvm_config_db#(virtual pins_if#(DUT_SIGNAL_COUNT))::set(null, "*.env", "gpios_vif", gpio_signals_if);
     uvm_config_db#(virtual jtag_if)::set(null, "*.env.jtag_chain_agent.jtag_agent", "vif", jtag_if);
+    /*
     uvm_config_db#(virtual pins_if#(IO_SIGNAL_COUNT))::set(null, "*.env.io_mux_a.vip_driver", "vif", vip2io_mux_agent_if);
     uvm_config_db#(virtual pins_if#(IO_SIGNAL_COUNT))::set(null, "*.env.io_mux_a.vip_monitor", "vif", vip2io_mux_agent_if);
     uvm_config_db#(virtual pins_if#(DUT_SIGNAL_COUNT))::set(null, "*.env.io_mux_a.dut_driver", "vif", io_mux_agent2dut_if);
     uvm_config_db#(virtual pins_if#(DUT_SIGNAL_COUNT))::set(null, "*.env.io_mux_a.dut_monitor", "vif", io_mux_agent2dut_if);
+    */
     uvm_config_db#(virtual tcdm_if)::set(null, "*.env.fc_data_port_a.driver", "vif", tb.i_dut.soc_domain_i.pulp_soc_i.fc_subsystem_i.s_uvm_bind_fc_data_if);
     uvm_config_db#(virtual tcdm_if)::set(null, "*.env.fc_data_port_a.monitor", "vif", tb.i_dut.soc_domain_i.pulp_soc_i.fc_subsystem_i.s_uvm_bind_fc_data_if);
 
